@@ -105,15 +105,65 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 @keyframes floatAnim { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
 
 /* ==========================================================
-   4. ENGINE COUNTER STATS BAR
+   4. ENGINE COUNTER STATS BAR (DESKTOP: 1 KOLOM KE BAWAH)
 ========================================================== */
-.stats-k3-wrapper { padding: 0 10%; margin-top: -3rem; position: relative; z-index: 20; width: 100%; }
-.stats-k3-container { display: flex; justify-content: space-between; align-items: center; background: rgba(11, 15, 25, 0.75); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 1.6rem; padding: 2.5rem 4rem; box-shadow: 0 20px 50px rgba(0,0,0,0.5); width: 100%; }
-.stat-k3-item { display: flex; align-items: center; gap: 1.5rem; position: relative; width: 100%; justify-content: center; }
-.stat-k3-icon { font-size: 3.2rem; color: var(--neon-blue); }
-.stat-k3-text h2 { font-size: 2.4rem; font-weight: 700; color: #fff; }
-.stat-k3-text p { font-size: 1.1rem; color: var(--text-muted); }
-.stat-divider { position: absolute; right: -2rem; top: 50%; transform: translateY(-50%); width: 1px; height: 40px; background: var(--border-color); }
+.stats-k3-wrapper { 
+    width: 35%; 
+    position: relative; 
+    z-index: 20; 
+}
+
+.stats-k3-container { 
+    display: grid; 
+    grid-template-columns: 1fr; /* KUNCI: Diubah menjadi 1fr agar berbaris lurus 1 kolom ke bawah */
+    gap: 1.5rem; 
+    width: 100%; 
+}
+
+.stat-k3-item { 
+    background: rgba(11, 15, 25, 0.75); 
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); 
+    border: 1px solid var(--glass-border); 
+    border-radius: 1.6rem; 
+    padding: 2rem 2.5rem; /* Padding disesuaikan agar proporsional saat memanjang */
+    display: flex; 
+    align-items: center; 
+    gap: 1.5rem; 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3); 
+    transition: 0.3s ease;
+    width: 100%;
+}
+
+.stat-k3-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.stat-k3-icon { 
+    font-size: 3.5rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.stat-k3-text h2 { 
+    font-size: 2.2rem; 
+    font-weight: 700; 
+    color: #fff; 
+    line-height: 1.1; 
+}
+
+.stat-k3-text p { 
+    font-size: 1.1rem; 
+    color: var(--text-muted); 
+    margin-top: 0.4rem; 
+}
+
+/* Membuang garis pembatas usang */
+.stat-divider { 
+    display: none; 
+}
 
 /* ==========================================================
    5. SISA KOMPONEN UTAMA (TETAP SAMA)
@@ -211,6 +261,49 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
 .footer .list a:hover { color: var(--neon-blue); text-shadow: var(--neon-glow); }
 .footer .copyright { color: var(--text-muted); font-size: 1.2rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 3rem; width: 100%; max-width: 800px; text-align: center; margin-top: 1rem; }
 
+/* ==========================================================
+   LATAR BELAKANG TOPOGRAFI & SATELIT (ANTI-TUMPANG TINDIH)
+========================================================== */
+.topography-bg {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; 
+    height: 45%; /* Hanya mengisi bagian bawah layar */
+    z-index: 0;  /* Berada MURNI di belakang teks & foto */
+    pointer-events: none;
+    display: flex;
+    align-items: flex-end;
+}
+
+.topography-bg svg {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-satellite-icon {
+    position: absolute;
+    width: 45px; height: 45px;
+    right: -20px; top: 10px; /* Melayang di pojok atas foto */
+    background: var(--bg-dark);
+    border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 1.5rem; color: var(--neon-blue);
+    z-index: 10;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+    animation: floatAnim 4s ease-in-out infinite;
+}
+
+/* Responsivitas Satelit di Mobile */
+@media (max-width: 991px) {
+    .hero-satellite-icon { 
+        right: 15px; 
+        top: 15px; 
+        width: 35px; 
+        height: 35px; 
+        font-size: 1.2rem; 
+    }
+}
 
 /* ==========================================================
    11. ULTIMATE MOBILE RESPONSIVE (SANGAT KECIL & PRESISI)
@@ -342,4 +435,144 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
     .clients-grid-container.is-collapsed { max-height: 420px; } 
 
     .footer { padding-top: 4rem; }
+}
+/* ==========================================================
+   12. EXTRA GALLERY INTERACTIVE & LIGHTBOX BLUR
+========================================================== */
+.gallery-section {
+    padding: 12rem 10% 8rem;
+    min-height: 100vh;
+    background-color: var(--bg-dark);
+}
+
+.gallery-desc {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    margin-bottom: 4rem;
+    line-height: 1.6;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.gallery-card {
+    position: relative;
+    border-radius: 1.4rem;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    height: 240px;
+    transition: 0.3s ease;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.gallery-card-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(79, 70, 229, 0.2);
+    display: flex; justify-content: center; align-items: center;
+    opacity: 0; transition: 0.3s ease;
+}
+
+.gallery-card-overlay i {
+    font-size: 3rem;
+    color: var(--neon-blue);
+    text-shadow: var(--neon-glow);
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-blue);
+}
+
+.gallery-card:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-card:hover .gallery-card-overlay {
+    opacity: 1;
+}
+
+/* POPUP LIGHTBOX DENGAN LATAR BELAKANG BURAM TOTAL */
+.lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: rgba(2, 6, 23, 0.85) !important; /* Latar gelap pekat */
+    backdrop-filter: blur(15px) !important;           /* Efek buram premium */
+    -webkit-backdrop-filter: blur(15px) !important;
+    display: flex; justify-content: center; align-items: center;
+    z-index: 99999 !important;
+    opacity: 0; visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-container {
+    position: relative;
+    max-width: 85%;
+    max-height: 80vh;
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox.show .lightbox-container {
+    transform: scale(1);
+}
+
+.lightbox-content {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 1rem;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: -5rem; right: 0;
+    color: var(--text-light);
+    font-size: 4.5rem;
+    cursor: pointer;
+    font-weight: 300;
+    transition: 0.3s ease;
+}
+
+.close-lightbox:hover {
+    color: var(--neon-blue);
+    transform: rotate(90deg);
+}
+
+.gallery-error {
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.gallery-loading {
+    color: white;
+    text-align: center;
+    padding: 15rem 0;
+    font-size: 1.6rem;
+}
+
+/* Responsivitas Layar HP */
+@media (max-width: 768px) {
+    .gallery-section { padding: 10rem 6% 4rem; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-card { height: 200px; }
+    .lightbox-container { max-width: 95%; }
 }

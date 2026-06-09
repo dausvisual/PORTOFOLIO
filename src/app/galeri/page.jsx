@@ -37,30 +37,32 @@ function GalleryContent() {
 
       {currentGallery ? (
         <div className="gallery-group active">
-          <h2 className="heading">Galeri <span>{currentGallery.title}</span></h2>
+          <h2 className="heading">Galeri Proyek: <span>{currentGallery.title}</span></h2>
           <p className="gallery-desc">{currentGallery.desc}</p>
           
           <div className="gallery-grid">
             {currentGallery.images.map((src, index) => (
-              <img 
-                key={index} 
-                src={src} 
-                alt={`${currentGallery.title} ${index + 1}`} 
-                loading="lazy" 
-                onClick={() => setActiveImg(src)}
-              />
+              <div className="gallery-card" key={index} onClick={() => setActiveImg(src)}>
+                <img src={src} alt={`${currentGallery.title} ${index + 1}`} loading="lazy" />
+                <div className="gallery-card-overlay">
+                  <i className='bx bx-zoom-in'></i>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       ) : (
-        <h2 className="heading" style={{marginTop: '4rem'}}>Pilih proyek dari halaman utama.</h2>
+        <div className="gallery-error">
+          <h2 className="heading">Silakan pilih proyek valid dari halaman utama.</h2>
+          <Link href="/#projects" className="btn btn-primary">Lihat Project</Link>
+        </div>
       )}
 
-      {/* Lightbox Pop-up */}
+      {/* Lightbox Pop-up Sempurna dengan Latar Belakang Buram */}
       <div className={`lightbox ${activeImg ? 'show' : ''}`} onClick={() => setActiveImg(null)}>
         <span className="close-lightbox" onClick={() => setActiveImg(null)}>&times;</span>
         <div className="lightbox-container" onClick={(e) => e.stopPropagation()}>
-          <img className="lightbox-content" src={activeImg || ''} alt="Enlarged" />
+          <img className="lightbox-content" src={activeImg || ''} alt="Preview Hasil Potret Spasial" />
         </div>
       </div>
     </section>
@@ -69,7 +71,7 @@ function GalleryContent() {
 
 export default function Page() {
   return (
-    <Suspense fallback={<div style={{padding: '10rem', color: 'white', textAlign: 'center'}}>Loading Gallery...</div>}>
+    <Suspense fallback={<div className="gallery-loading">Memuat Galeri Kerja Spasial...</div>}>
       <GalleryContent />
     </Suspense>
   );

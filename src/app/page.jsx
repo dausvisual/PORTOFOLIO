@@ -16,18 +16,21 @@ import Footer from '../componen/Footer';
 
 export default function Home() {
   // Kontrol Jembatan Interaksi Klik Popup CV
-  const [isCvPopupOpen, setIsCvPopupOpen] = useState(false);
-  const link = document.createElement('a');
-  link.href = '/cv/CV_Firdaus_Ikram.pdf';
-  link.download = 'CV_Firdaus_Ikram.pdf';
-  link.click();
+  const handleDownloadCv = () => {
+    const link = document.createElement('a');
+    link.href = '/cv/CV_Firdaus_Ikram.pdf';
+    link.download = 'CV_Firdaus_Ikram.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <>
       {/* 1. Header & Navigasi Utama */}
-      <Navbar />
+      <Navbar onOpenCv={handleDownloadCv} />
 
       {/* 2. Beranda Profil Utama */}
-      <Hero onOpenCv={() => setIsCvPopupOpen(true)} />
+      <Hero onOpenCv={handleDownloadCv} />
 
       {/* 4. Tentang Saya & Kartu Melayang */}
       <About />

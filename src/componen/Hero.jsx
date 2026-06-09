@@ -3,11 +3,24 @@ export default function Hero({ onOpenCv }) {
     <section className="hero-k3" id="home">
       <div className="hero-bg-glow"></div>
       <div id="particles-js" className="particles-k3"></div>
-      
+      {/* Latar Belakang Garis Kontur Topografi (Elegan, Halus, Anti-Numpuk Teks) */}
+      <div className="topography-bg">
+        <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path fill="none" stroke="rgba(0, 229, 255, 0.15)" strokeWidth="2" d="M0,160 C320,300 420,0 720,160 C1020,320 1120,50 1440,160"></path>
+          <path fill="none" stroke="rgba(79, 70, 229, 0.15)" strokeWidth="2" d="M0,200 C280,10 520,350 720,200 C920,50 1160,390 1440,200"></path>
+          <path fill="none" stroke="rgba(255, 255, 255, 0.05)" strokeWidth="1" d="M0,240 C350,350 450,10 720,240 C990,470 1090,130 1440,240"></path>
+        </svg>
+      </div>
+
       <div className="hero-k3-container">
         
         {/* === BAGIAN 1 (ATAS MOBILE, KANAN DESKTOP): FOTO & CINCIN RAPI === */}
         <div className="hero-k3-visuals">
+
+          {/* Ikon Satelit / Drone Kecil Melayang */}
+          <div className="hero-satellite-icon">
+            <i className='bx bx-navigation'></i>
+          </div>
           <div className="profile-wrapper">
             <div className="glowing-ring-1"></div>
             <div className="glowing-ring-2"></div>
@@ -68,9 +81,9 @@ export default function Hero({ onOpenCv }) {
           
           {/* Buttons - Row layout HP (Baris) */}
           <div className="hero-btn-group">
-            <a href="/cv/CV_Firdaus_Ikram.pdf" download="CV_Firdaus_Ikram.pdf" className="btn btn-primary-glow" onClick={() => { onOpenCv(); }}>
+            <button className="btn btn-primary-glow" onClick={onOpenCv}>
               <i className='bx bx-download'></i> DOWNLOAD CV
-            </a>
+            </button>
             <a href="#contact" className="btn btn-outline-glow">
               <i className='bx bx-send'></i> CONTACT ME
             </a>
