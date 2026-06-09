@@ -68,7 +68,7 @@ export default function Hero({ onOpenCv }) {
           
           {/* Buttons - Row layout HP (Baris) */}
           <div className="hero-btn-group">
-            <a href="/cv/CV_Firdaus_Ikram.pdf" download="CV_Firdaus_Ikram.pdf" className="btn btn-primary-glow" onClick={(e) => { e.preventDefault(); onOpenCv(); }}>
+            <a href="/cv/CV_Firdaus_Ikram.pdf" download="CV_Firdaus_Ikram.pdf" className="btn btn-primary-glow" onClick={() => { onOpenCv(); }}>
               <i className='bx bx-download'></i> DOWNLOAD CV
             </a>
             <a href="#contact" className="btn btn-outline-glow">
