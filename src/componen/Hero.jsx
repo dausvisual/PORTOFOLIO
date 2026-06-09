@@ -43,7 +43,7 @@ export default function Hero({ onOpenCv }) {
 
           {/* Location Tag - Clustered tighter below Rings */}
           <div className="profile-location">
-            <p><i className='bx bx-map'></i> Makassar, Indonesia</p>
+            <p><i className='bx bx-map'></i> Morowali, Indonesia</p>
             <span>5° 8' 6" S • 119° 24' 37" E</span>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function Hero({ onOpenCv }) {
         <div className="hero-k3-content">
           {/* Badge Rata Kiri */}
           <div className="avail-badge">
-            <span className="avail-dot"></span> Available for Work
+            <span className="avail-dot"></span> On Work
           </div>
           
           {/* Title Rata Kiri & Mengecil di HP */}
@@ -68,7 +68,7 @@ export default function Hero({ onOpenCv }) {
           
           {/* Buttons - Row layout HP (Baris) */}
           <div className="hero-btn-group">
-            <a href="#" className="btn btn-primary-glow" onClick={(e) => { e.preventDefault(); onOpenCv(); }}>
+            <a href="/public/cv/CV_Firdaus_Ikram.pdf" download className="btn btn-primary-glow" onClick={(e) => { e.preventDefault(); onOpenCv(); }}>
               <i className='bx bx-download'></i> DOWNLOAD CV
             </a>
             <a href="#contact" className="btn btn-outline-glow">

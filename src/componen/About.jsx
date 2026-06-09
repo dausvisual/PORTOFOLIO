@@ -9,8 +9,8 @@ export default function About() {
         <p className="about-desc">Saya membantu instansi pemerintah dan sektor swasta merancang keputusan yang presisi demi pembangunan yang berkelanjutan.</p>
         
         <div className="tech-tags">
-          <span>ArcGIS</span><span>QGIS</span><span>AutoCAD</span><span>Drone Mapping</span>
-          <span>SketchUp</span><span>Global Mapper</span><span>ENVI</span><span>Python</span>
+          <span>ArcGIS</span><span>QGIS</span><span>Adobe Creative</span><span>Drone Mapping</span>
+          <span>SketchUp</span><span>Global Mapper</span><span>Environment Survey</span><span>Graphic Design</span>
         </div>
       </div>
       <div className="about-right-grid">

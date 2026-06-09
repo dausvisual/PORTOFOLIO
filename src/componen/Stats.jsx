@@ -1,10 +1,10 @@
 export default function Stats() {
   const stats = [
-    { icon: 'bx-briefcase-alt-2', num: '150+', label: 'Proyek Selesai', color: '#a855f7' }, // Ungu
-    { icon: 'bx-layer', num: '10+', label: 'Tahun Pengalaman', color: '#3b82f6' }, // Biru
+    { icon: 'bx-briefcase-alt-2', num: '30+', label: 'Proyek Selesai', color: '#a855f7' }, // Ungu
+    { icon: 'bx-layer', num: '3+', label: 'Tahun Pengalaman', color: '#3b82f6' }, // Biru
     { icon: 'bx-target-lock', num: '50.000+', label: 'Ha Area Survei', color: '#00e5ff' }, // Cyan
-    { icon: 'bx-group', num: '100+', label: 'Klien & Instansi', color: '#8b5cf6' }, // Ungu Muda
-    { icon: 'bx-medal', num: '20+', label: 'Sertifikasi & Lisensi', color: '#10b981' } // Hijau
+    { icon: 'bx-group', num: '50+', label: 'Klien & Instansi', color: '#8b5cf6' }, // Ungu Muda
+    { icon: 'bx-medal', num: '6', label: 'Sertifikasi & Lisensi', color: '#10b981' } // Hijau
   ];
 
   return (
