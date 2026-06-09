@@ -1,7 +1,6 @@
 export default function Hero({ onOpenCv }) {
   return (
     <section className="hero-k3" id="home">
-      {/* Efek Latar Belakang Cahaya & Partikel */}
       <div className="hero-bg-glow"></div>
       <div id="particles-js" className="particles-k3"></div>
       
@@ -43,26 +42,23 @@ export default function Hero({ onOpenCv }) {
           </div>
         </div>
         
-        {/* BAGIAN KANAN: Foto Lingkaran & Kartu Melayang */}
+        {/* BAGIAN KANAN: Foto Lingkaran (Sudah diperbaiki namanya) */}
         <div className="hero-k3-visuals">
-          
-          {/* Cincin Lingkaran, Foto, DAN Kartu Melayang dijadikan 1 Grup */}
           <div className="profile-wrapper">
             <div className="glowing-ring-1"></div>
             <div className="glowing-ring-2"></div>
-            <img src="/images/profile/Desain Tanpa Judul (3).png" alt="Firdaus Ikram" className="profile-img" />
+            {/* PASTIKAN NAMA FILE DI FOLDER SUDAH DIUBAH JADI profile.png */}
+            <img src="/images/profile/profile.png" alt="Firdaus Ikram" className="profile-img" />
 
             {/* KARTU KIRI */}
             <div className="float-card card-tl">
               <div className="icon-box"><i className='bx bx-layer'></i></div>
               <div className="text-box"><h4>GIS Analysis</h4><p>Spatial Insight</p></div>
             </div>
-
             <div className="float-card card-ml">
               <div className="icon-box"><i className='bx bx-target-lock'></i></div>
               <div className="text-box"><h4>Survey & Mapping</h4><p>High Accuracy</p></div>
             </div>
-
             <div className="float-card card-bl">
               <div className="icon-box"><i className='bx bx-paper-plane'></i></div>
               <div className="text-box"><h4>Drone Mapping</h4><p>Aerial Intelligence</p></div>
@@ -70,27 +66,22 @@ export default function Hero({ onOpenCv }) {
 
             {/* KARTU KANAN */}
             <div className="float-card card-tr">
-                {/* Ganti dengan <img src="/images/drone.png" /> jika kamu punya file gambar drone tanpa background */}
                 <div className="icon-box-drone"><i className='bx bx-paper-plane'></i></div>
             </div>
-
             <div className="float-card card-mr">
               <div className="icon-box"><i className='bx bx-buildings'></i></div>
               <div className="text-box"><h4>Urban Planning</h4><p>Better Future</p></div>
             </div>
-
             <div className="float-card card-br">
               <div className="icon-box" style={{color: '#22c55e'}}><i className='bx bx-leaf'></i></div>
               <div className="text-box"><h4>Environmental</h4><p>Sustainable Solution</p></div>
             </div>
           </div>
 
-          {/* Lokasi di bawah foto */}
           <div className="profile-location">
             <p><i className='bx bx-map'></i> Makassar, Indonesia</p>
             <span>5° 8' 6" S • 119° 24' 37" E</span>
           </div>
-
         </div>
       </div>
     </section>
