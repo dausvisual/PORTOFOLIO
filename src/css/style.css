@@ -211,7 +211,7 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 .certificates-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; width: 100%; padding-bottom: 2rem;}
 
 .project-card { background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 1.4rem; overflow: hidden; padding: 2rem; display: flex; flex-direction: column; }
-.project-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 1rem; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.03); }
+.project-card img { width: 100%; height: 300px; object-fit: cover; border-radius: 1rem; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.03); }
 .project-card h3 { font-size: 1.6rem; font-weight: 600; color: #fff; margin-bottom: 0.6rem; line-height: 1.3; }
 .project-card p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem; }
 .project-card .view-link { color: var(--neon-blue); font-size: 1.3rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; margin-top: auto; transition: 0.3s; }

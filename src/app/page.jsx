@@ -18,7 +18,7 @@ export default function Home() {
   // Kontrol Jembatan Interaksi Klik Popup CV
   const handleDownloadCv = () => {
     const link = document.createElement('a');
-    link.href = '/cv/CV_Firdaus_Ikram.pdf';
+    link.href = '/cv/CV FIRDAUS IKRAM.pdf';
     link.download = 'CV_Firdaus_Ikram.pdf';
     document.body.appendChild(link);
     link.click();
