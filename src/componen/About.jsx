@@ -15,8 +15,9 @@ export default function About() {
       </div>
       <div className="about-right-grid">
         <div className="about-img-box"><img src="/images/projects/fcm1.jpg" alt="Field 1" /></div>
-        <div className="about-img-box"><img src="/images/projects/pam1.jpg" alt="Field 2" /></div>
-        <div className="about-img-box"><img src="/images/projects/mti3.jpg" alt="Field 3" style={{gridColumn: 'span 2'}} /></div>
+        <div className="about-img-box"><img src="/images/projects/awk1.jpg" alt="Field 2" /></div>
+        <div className="about-img-box"><img src="/images/projects/awk4.jpg" alt="Field 3" /></div>
+        <div className="about-img-box"><img src="/images/projects/awk3.jpg" alt="Field 4" style={{gridColumn: 'span 2'}} /></div>
       </div>
     </section>
   );

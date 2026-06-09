@@ -7,10 +7,10 @@ export default function Certificates() {
 
   // Data Sertifikat
   const certs = [
-    { img: '/images/certificate/APDI-Logo.png', title: 'Asosiasi Pilot Drone Indonesia', link: '/galeri?proyek=apdi', desc: 'Sertifikat Lisensi Pilot Drone Resmi dari APDI.', tags: ['Drone Pilot', 'Sertifikasi'] },
-    { img: '/images/certificate/DJPU.png', title: 'Direktorat Jenderal Perhubungan Udara', link: '/galeri?proyek=djpu', desc: 'Sertifikasi Registrasi Remote Pilot Resmi Kementerian.', tags: ['Drone Pilot', 'Sertifikasi'] },
+    { img: '/images/certificate/APDI.jpg', title: 'Asosiasi Pilot Drone Indonesia', link: '/galeri?proyek=apdi', desc: 'Sertifikat Lisensi Pilot Drone Resmi dari APDI.', tags: ['Drone Pilot', 'Sertifikasi'] },
+    { img: '/images/certificate/DJPU.jpg', title: 'Direktorat Jenderal Perhubungan Udara', link: '/galeri?proyek=djpu', desc: 'Sertifikasi Registrasi Remote Pilot Resmi Kementerian.', tags: ['Drone Pilot', 'Sertifikasi'] },
     { img: '/images/certificate/IMC.jpg', title: 'Indonesia Mapping Community', link: '/galeri?proyek=imc', desc: 'Pelatihan pemetaan terestris menggunakan Drone Tingkat Dasar.', tags: ['Pelatihan', 'Pemetaan'] },
-    { img: '/images/certificate/ITS.png', title: 'HMP Planologi ITS Surabaya', link: '/galeri?proyek=its', desc: 'ArcGIS Schooling: Tingkat Lanjut Pemrosesan Spasial Kawasan Kota.', tags: ['Pelatihan', 'ArcGIS'] },
+    { img: '/images/certificate/ITS.jpg', title: 'HMP Planologi ITS Surabaya', link: '/galeri?proyek=its', desc: 'ArcGIS Schooling: Tingkat Lanjut Pemrosesan Spasial Kawasan Kota.', tags: ['Pelatihan', 'ArcGIS'] },
     { img: '/images/certificate/LAB.jpg', title: 'PT. Laboratorindo Alam Bestari', link: '/galeri?proyek=lab_cert', desc: 'Pelatihan Teknis Pengambilan Sampel Air Limbah & Baku Mutu Udara.', tags: ['Pelatihan', 'Pengambilan Sampel'] },
     { img: '/images/certificate/PGP.jpg', title: 'PT. Professional Global Persada', link: '/galeri?proyek=pgp', desc: 'Pelatihan Teknik Pengujian Parameter Udara Ambien Sesuai Regulasi SNI.', tags: ['Pelatihan', 'Pengujian SNI'] }
   ];
