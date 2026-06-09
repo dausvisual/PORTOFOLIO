@@ -10,7 +10,7 @@
 }
 
 :root {
-    --bg-dark: #08080b;         
+    --bg-dark: #020617;         
     --bg-panel: #101015;        
     --main-color: #4f46e5;      
     --main-hover: #6366f1;
@@ -19,30 +19,24 @@
     --border-color: #27272a;    
     --neon-glow: 0 0 20px rgba(79, 70, 229, 0.4);
     
-    /* Variabel Khusus Tema K3 Sci-Fi */
     --neon-blue: #00e5ff;
     --neon-purple: #4f46e5;
     --glass-bg: rgba(20, 20, 28, 0.45);
     --glass-border: rgba(255, 255, 255, 0.15);
 }
 
-/* Skala 90% pada Layar Desktop (Poin 2) */
-@media (min-width: 1024px) {
-    html { font-size: 90%; }
-}
+@media (min-width: 1024px) { html { font-size: 90%; } }
 
 body { background: var(--bg-dark); color: var(--text-light); overflow-x: hidden; }
 section { padding: 8rem 8%; }
 .heading { font-size: 3.5rem; font-weight: 600; margin-bottom: 4rem; }
 .heading-sm { color: var(--main-color); font-size: 1.4rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
 
-/* Tombol Global */
 .btn { display: inline-flex; align-items: center; gap: 1rem; padding: 1.2rem 2.5rem; border-radius: 0.8rem; font-size: 1.4rem; font-weight: 500; cursor: pointer; transition: 0.3s; }
 .btn-primary { background: var(--main-color); color: white; border: 1px solid var(--main-color); }
 .btn-primary:hover { background: var(--main-hover); box-shadow: var(--neon-glow); }
 .btn-outline { background: transparent; color: var(--text-light); border: 1px solid var(--border-color); }
 .btn-outline:hover { border-color: var(--main-color); color: var(--main-color); }
-
 
 /* ==========================================================
    2. NAVBAR & HEADER
@@ -52,7 +46,6 @@ section { padding: 8rem 8%; }
 .navbar a { color: var(--text-muted); font-size: 1.4rem; transition: 0.3s; }
 .navbar a:hover, .navbar a.active { color: white; }
 
-/* Logo K3 FI */
 .logo-k3 { display: flex; align-items: center; gap: 1rem; }
 .logo-fi { position: relative; width: 35px; height: 35px; background: transparent; display: flex; align-items: center; justify-content: center; }
 .logo-fi .f { position: absolute; left: 0; font-size: 2.2rem; font-weight: 800; color: var(--neon-blue); z-index: 1;}
@@ -62,9 +55,8 @@ section { padding: 8rem 8%; }
 .btn-nav-cv { background: transparent; border: 1px solid var(--text-muted); color: #fff; padding: 0.8rem 1.5rem; border-radius: 0.8rem; font-size: 1.3rem; display: flex; align-items: center; gap: 0.5rem; transition: 0.3s; }
 .btn-nav-cv:hover { border-color: var(--neon-blue); color: var(--neon-blue); box-shadow: 0 0 15px rgba(0, 229, 255, 0.2); }
 
-
 /* ==========================================================
-   3. HERO K3 (SCI-FI, KOTA, SATELIT & KARTU MELAYANG)
+   3. HERO K3 (SCI-FI)
 ========================================================== */
 .hero-k3 { position: relative; min-height: 100vh; padding-top: 14rem; padding-bottom: 8rem; display: flex; flex-direction: column; overflow: hidden; background-color: var(--bg-dark); }
 .hero-k3::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(circle at 80% 40%, rgba(79, 70, 229, 0.15) 0%, transparent 50%), linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px); background-size: 100% 100%, 50px 50px, 50px 50px; z-index: 0; pointer-events: none; }
@@ -72,7 +64,6 @@ section { padding: 8rem 8%; }
 .hero-bg-glow { position: absolute; top: 10%; right: 10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, transparent 70%); z-index: -1; }
 .hero-k3-container { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: center; position: relative; z-index: 2; }
 
-/* Teks Kiri Hero */
 .hero-k3-content .avail-badge { display: inline-flex; align-items: center; gap: 0.8rem; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); color: #22c55e; padding: 0.6rem 1.5rem; border-radius: 3rem; font-size: 1.2rem; margin-bottom: 2.5rem; backdrop-filter: blur(10px); }
 .avail-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 10px #22c55e; }
 .hero-k3-content .hero-title { font-size: 5.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; color: #fff;}
@@ -81,8 +72,8 @@ section { padding: 8rem 8%; }
 .hero-k3-content .hero-subtitle span { color: var(--text-muted); margin: 0 0.5rem; }
 .hero-k3-content .hero-subtitle .highlight-purple { color: #a855f7; }
 .hero-k3-content .hero-desc { font-size: 1.5rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 4rem; max-width: 90%; }
-.hero-btn-group { display: flex; gap: 2rem; align-items: center; }
 
+.hero-btn-group { display: flex; gap: 2rem; align-items: center; }
 .btn-primary-glow { background: linear-gradient(135deg, var(--neon-purple), var(--neon-blue)); color: #fff; padding: 1.2rem 2.5rem; border-radius: 0.8rem; font-weight: 600; font-size: 1.4rem; display: inline-flex; align-items: center; gap: 0.8rem; border: none; box-shadow: 0 5px 20px rgba(79, 70, 229, 0.4); transition: 0.3s; }
 .btn-primary-glow:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0, 229, 255, 0.5); }
 .btn-outline-glow { background: transparent; color: #fff; padding: 1.2rem 2.5rem; border-radius: 0.8rem; font-weight: 500; font-size: 1.4rem; display: inline-flex; align-items: center; gap: 0.8rem; border: 1px solid var(--text-muted); transition: 0.3s; }
@@ -92,7 +83,6 @@ section { padding: 8rem 8%; }
 .hero-socials a { width: 4.5rem; height: 4.5rem; border: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center; border-radius: 50%; color: var(--text-muted); font-size: 2rem; transition: 0.3s ease; background: transparent; }
 .hero-socials a:hover { border-color: var(--main-color); background: var(--main-color); color: white; transform: translateY(-5px); }
 
-/* Visual Foto & Kartu Melayang (Kanan) */
 .hero-k3-visuals { position: relative; display: flex; justify-content: center; align-items: center; height: 500px; flex-direction: column;}
 .profile-wrapper { position: relative; width: 340px; height: 340px; display: flex; justify-content: center; align-items: center; z-index: 5; }
 .profile-img { width: 310px; height: 310px; border-radius: 50%; object-fit: cover; z-index: 5; border: 4px solid var(--bg-dark); position: relative; }
@@ -100,23 +90,19 @@ section { padding: 8rem 8%; }
 .glowing-ring-2 { position: absolute; width: 330px; height: 330px; border-radius: 50%; background: var(--bg-dark); z-index: 2; }
 @keyframes spinGlow { 100% { transform: rotate(360deg); } }
 
-/* Kota & Satelit di Belakang Profil */
 .hero-cityscape-bg { position: absolute; width: 600px; height: 300px; left: 50%; bottom: -150px; transform: translateX(-50%); opacity: 0.15; z-index: -2; }
 .hero-cityscape-bg path { fill: var(--border-color); }
 .hero-satellite-icon { position: absolute; width: 35px; height: 35px; right: 50px; top: 50px; background: var(--bg-dark); border-radius: 50%; padding: 0.5rem; z-index: 5; border: 2px solid rgba(255, 255, 255, 0.2); box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.3); }
 
-/* Lokasi Kordinat */
 .profile-location { position: absolute; bottom: -60px; text-align: center; width: 100%; z-index: 10; }
 .profile-location p { font-size: 1.3rem; font-weight: 600; color: #fff; margin-bottom: 2px; }
 .profile-location p i { color: var(--neon-blue); }
 .profile-location span { font-size: 1.1rem; color: var(--text-muted); }
 
-/* Floating Cards Glassmorphism */
 .float-card { position: absolute; background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--glass-border); padding: 1.2rem; border-radius: 1.2rem; display: flex; align-items: center; gap: 1.2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 10; animation: floatAnim 4s ease-in-out infinite; white-space: nowrap; }
 .float-card .icon-box { width: 42px; height: 42px; border-radius: 0.8rem; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: center; align-items: center; font-size: 2rem; color: var(--neon-blue); }
 .float-card .text-box h4 { font-size: 1.3rem; color: #fff; font-weight: 600; margin-bottom: 2px; }
 .float-card .text-box p { font-size: 1.1rem; color: var(--text-muted); }
-
 .card-tl { top: 0; left: -140px; animation-delay: 0s; }
 .card-ml { top: 120px; left: -170px; animation-delay: 1s; }
 .card-bl { bottom: 20px; left: -130px; animation-delay: 2s; }
@@ -126,9 +112,8 @@ section { padding: 8rem 8%; }
 .card-br { bottom: 20px; right: -140px; animation-delay: 2.5s; }
 @keyframes floatAnim { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 
-
 /* ==========================================================
-   4. STATS BAR (MELAYANG DI BAWAH HERO)
+   4. STATS BAR 
 ========================================================== */
 .stats-k3-wrapper { padding: 0 8%; margin-top: -6rem; position: relative; z-index: 20; }
 .stats-k3-container { display: flex; justify-content: space-between; align-items: center; background: rgba(16, 16, 21, 0.7); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 2rem; padding: 3rem 4rem; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
@@ -138,9 +123,8 @@ section { padding: 8rem 8%; }
 .stat-k3-text p { font-size: 1.2rem; color: var(--text-muted); }
 .stat-divider { position: absolute; right: -3rem; top: 50%; transform: translateY(-50%); width: 1px; height: 50px; background: rgba(255,255,255,0.1); }
 
-
 /* ==========================================================
-   5. TATA LETAK "MY JOURNEY" & ABOUT
+   5. ABOUT & MY JOURNEY
 ========================================================== */
 .about { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
 .tech-tags { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 3rem; }
@@ -158,14 +142,12 @@ section { padding: 8rem 8%; }
 .timeline-content-v h3 { font-size: 1.8rem; color: var(--text-light); margin-bottom: 0.3rem; transition: 0.3s; }
 .timeline-content-v a:hover h3 { color: var(--main-color); }
 .timeline-content-v p { font-size: 1.4rem; color: var(--text-muted); }
-
 .stats-grid-about { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; }
 .stat-item-about { display: flex; align-items: center; gap: 1.5rem; background: transparent; }
 .stat-icon-about { width: 55px; height: 55px; display: flex; justify-content: center; align-items: center; border-radius: 1.2rem; font-size: 2.5rem; color: var(--main-color); background: rgba(79, 70, 229, 0.08); border: 1px solid rgba(79, 70, 229, 0.2); }
 
-
 /* ==========================================================
-   6. SERVICES (LAYANAN UTAMA K3)
+   6. SERVICES
 ========================================================== */
 .services-section-k3 { padding-top: 10rem; }
 .services-header-k3 { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 2rem; }
@@ -183,37 +165,27 @@ section { padding: 8rem 8%; }
 .service-card-k3 .read-more { font-size: 1.1rem; font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem; margin-top: auto; transition: 0.3s; }
 .service-card-k3 .read-more:hover { gap: 0.8rem; filter: brightness(1.3); }
 
-
 /* ==========================================================
-   7. PROJECTS (Tampilan Grid 4 Kolom & Fade Overlay)
+   7. PROJECTS, CERTIFICATES, CLIENTS (GRID & FADE OVERLAY)
 ========================================================== */
-.projects-section-k3 { 
-    position: relative; 
-    z-index: 10; /* Pastikan section berada di atas partikel latar belakang */
-}
+.projects-section-k3 { position: relative; z-index: 10; }
 .projects-tabs { display: flex; gap: 1rem; margin-bottom: 4rem; }
 .tab-btn { padding: 1rem 2.5rem; border: 1px solid var(--border-color); background: transparent; color: var(--text-muted); border-radius: 2rem; font-size: 1.4rem; cursor: pointer; transition: 0.3s; }
 .tab-btn.active, .tab-btn:hover { background: var(--main-color); color: white; border-color: var(--main-color); }
 
-.projects-grid-container { 
-    position: relative; 
-    overflow: hidden; 
-    transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1); 
-    width: 100%; 
-}
+/* Kontainer yang bisa Expand/Collapse */
+.projects-grid-container, .certs-grid-container, .clients-grid-container { position: relative; overflow: hidden; transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1); width: 100%; }
 
-/* Kunci tinggi container agar memotong baris kedua secara dramatis */
-.projects-grid-container.is-collapsed { 
-    max-height: 520px; 
-}
+/* Batasan Tinggi Default Desktop */
+.projects-grid-container.is-collapsed { max-height: 450px; } /* 1 baris project */
+.certs-grid-container.is-collapsed { max-height: 400px; }     /* 1 baris cert */
+.clients-grid-container.is-collapsed { max-height: 400px; }   /* ~2 baris client */
 
-.projects-grid { 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 3rem; 
-    width: 100%; 
-    padding-bottom: 2rem;
-}
+/* Grids Setup */
+.projects-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem; width: 100%; padding-bottom: 2rem; }
+.certificates-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; padding-bottom: 2rem;}
+.clients-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 2rem; padding-bottom: 2rem;}
+
 .project-card { background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 1.5rem; overflow: hidden; padding: 2rem; transition: 0.3s;}
 .project-card:hover { border-color: var(--main-color); transform: translateY(-5px); }
 .project-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 1rem; margin-bottom: 2rem; }
@@ -222,36 +194,17 @@ section { padding: 8rem 8%; }
 .view-link { color: var(--main-color); font-size: 1.3rem; font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem; transition: 0.3s;}
 .view-link:hover { color: var(--neon-blue); }
 
-/* EFEK GRADASI KOSMETIK (Sama sekali tidak bisa disentuh kursor) */
-.fade-overlay { 
-    position: absolute; 
-    bottom: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 350px; 
-    background: linear-gradient(to bottom, rgba(8, 8, 11, 0) 0%, rgba(8, 8, 11, 1) 90%); 
-    z-index: 5; 
-    pointer-events: none; /* Kursor mouse akan tembus pandang */
-}
+.client-card { background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 1.5rem; padding: 2.5rem 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; transition: 0.3s; cursor: pointer; min-height: 180px; }
+.client-card:hover { border-color: var(--main-color); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(79, 70, 229, 0.15); }
+.client-card img { width: 80px; height: 80px; object-fit: contain; margin-bottom: 1.5rem; background: #ffffff; border-radius: 1rem; padding: 0.5rem; }
+.client-card p { font-size: 1.2rem; color: var(--text-muted); font-weight: 500; line-height: 1.4; }
 
-/* WADAH TOMBOL SUPER SAKTI */
-.projects-action-bar { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    position: relative; 
-    z-index: 50; /* Z-Index tertinggi memastikan tidak ada yang memblokir klik */
-}
+/* Overlay & Tombol Sakti */
+.fade-overlay { position: absolute; bottom: 0; left: 0; width: 100%; height: 350px; background: linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 1) 90%); z-index: 5; pointer-events: none; }
+.projects-action-bar { display: flex; justify-content: center; align-items: center; position: relative; z-index: 50; }
+.projects-action-bar.floating-btn { margin-top: -6rem; }
+.projects-action-bar.normal-btn { margin-top: 4rem; }
 
-/* Trik ajaib: Menarik tombol ke atas agar seolah-olah berada di dalam kabut */
-.projects-action-bar.floating-btn {
-    margin-top: -6rem; 
-}
-
-/* Saat terbuka, turunkan tombol ke jarak yang wajar */
-.projects-action-bar.normal-btn {
-    margin-top: 4rem; 
-}
 /* ==========================================================
    8. HALAMAN GALERI & LIGHTBOX
 ========================================================== */
@@ -260,7 +213,6 @@ section { padding: 8rem 8%; }
 .btn-back:hover { color: var(--neon-blue); transform: translateX(-5px); }
 .gallery-desc { font-size: 1.5rem; color: var(--text-muted); margin-bottom: 4rem; }
 .gallery-group { animation: fadeIn 0.8s ease-in-out; }
-
 .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
 .gallery-grid img { width: 100%; height: 250px; object-fit: cover; border-radius: 1.2rem; cursor: pointer; transition: 0.3s; border: 1px solid var(--border-color); }
 .gallery-grid img:hover { transform: scale(1.03); border-color: var(--main-color); box-shadow: var(--neon-glow); }
@@ -273,25 +225,17 @@ section { padding: 8rem 8%; }
 .close-lightbox:hover { color: var(--main-color); transform: scale(1.2); }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-
 /* ==========================================================
-   9. SKILLS, CERTIFICATES, CLIENTS, CONTACT, FOOTER
+   9. SKILLS, CONTACT, FOOTER
 ========================================================== */
 .skills-container { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; }
 .skill-bar { margin-bottom: 2.5rem; }
 .skill-info { display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 1.4rem; font-weight: 500; }
 .progress-bg { width: 100%; height: 8px; background: var(--border-color); border-radius: 4px; overflow: hidden; }
 .progress-fill { height: 100%; background: var(--main-color); border-radius: 4px; }
-
 .soft-skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; text-align: center; }
 .soft-card { background: var(--bg-panel); border: 1px solid var(--border-color); padding: 3rem 2rem; border-radius: 1.5rem; }
 .soft-card i { font-size: 3rem; color: var(--main-color); margin-bottom: 1.5rem; }
-
-.certificates-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
-.clients-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 2rem; }
-.client-card { background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 1.5rem; padding: 2.5rem 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; transition: 0.3s; cursor: pointer; min-height: 180px; }
-.client-card:hover { border-color: var(--main-color); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(79, 70, 229, 0.15); }
-.client-card img { width: 80px; height: 80px; object-fit: contain; margin-bottom: 1.5rem; background: #ffffff; border-radius: 1rem; padding: 0.5rem; }
 
 .contact-container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 8rem; }
 .contact-info-item { display: flex; gap: 2rem; margin-bottom: 3rem; align-items: flex-start; }
@@ -304,9 +248,8 @@ textarea.form-input { height: 150px; resize: none; margin-bottom: 2rem; }
 
 .footer { border-top: 1px solid var(--border-color); padding: 4rem 8%; display: flex; justify-content: space-between; align-items: center; }
 
-
 /* ==========================================================
-   10. PUSAT MEDIA QUERIES (RESPONSIVITAS MOBILE & TABLET)
+   10. PUSAT MEDIA QUERIES (SULAP RESPONSIVITAS MOBILE 100%)
 ========================================================== */
 @media (max-width: 1400px) {
     .services-grid-k3, .projects-grid, .certificates-grid { grid-template-columns: repeat(3, 1fr); }
@@ -317,26 +260,73 @@ textarea.form-input { height: 150px; resize: none; margin-bottom: 2rem; }
 }
 
 @media (max-width: 991px) {
-    .hero-k3-container { grid-template-columns: 1fr; text-align: center; gap: 8rem;}
-    .hero-k3-content .hero-desc { margin: 0 auto 3rem; }
-    .hero-btn-group, .hero-socials { justify-content: center; }
+    /* 1. HERO - Teks & Foto Pindah Posisi Seperti Gambar */
+    .hero-k3-container { display: flex; flex-direction: column; gap: 4rem; }
+    .hero-k3-visuals { order: -1; height: auto; margin-bottom: 2rem; } /* Paksa Foto naik ke atas! */
+    .profile-wrapper { width: 260px; height: 260px; }
+    .profile-img { width: 240px; height: 240px; border-width: 3px; }
+    .glowing-ring-1 { width: 280px; height: 280px; }
+    .glowing-ring-2 { width: 250px; height: 250px; }
+    .profile-location { position: relative; bottom: 0; margin-top: 2rem; }
+    
+    .hero-k3-content { text-align: center; }
+    .hero-btn-group { flex-direction: column; width: 100%; gap: 1rem; }
+    .btn-primary-glow, .btn-outline-glow { width: 100%; justify-content: center; }
+    .hero-socials { justify-content: center; }
     .logo-text { display: none; }
-    .card-tl, .card-ml, .card-bl, .card-tr, .card-mr, .card-br { display: none; }
+    .card-tl, .card-ml, .card-bl, .card-tr, .card-mr, .card-br { display: none; } /* Kartu melayang hilang di HP */
     .hero-cityscape-bg { width: 400px; height: 200px; bottom: -100px; }
     .hero-satellite-icon { width: 25px; height: 25px; right: 30px; top: 30px; }
     
+    /* 2. STATS - 2x2 Grid + 1 Centered Seperti Gambar */
     .stats-k3-wrapper { margin-top: 3rem; }
+    .stats-k3-container { display: grid; grid-template-columns: 1fr 1fr; padding: 2.5rem 1.5rem; gap: 2rem; }
+    .stat-k3-item { flex-direction: column; text-align: center; gap: 0.8rem; }
+    .stat-k3-item:nth-child(5) { grid-column: span 2; } /* Item ke-5 nyambung 2 kolom biar ditengah */
+
+    /* 3. MY JOURNEY - Garis disesuaikan */
+    .journey-stats-container { grid-template-columns: 1fr; gap: 5rem; }
+    .timeline-vertical { padding-left: 2rem; }
+    .timeline-dot-v { left: -2.65rem; }
+
+    /* 4. SERVICES - Horizontal Cards Seperti Gambar */
     .services-header-k3 { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-    .services-grid-k3, .projects-grid, .certificates-grid { grid-template-columns: repeat(2, 1fr); }
-    .about, .skills-container, .contact-container, .journey-stats-container { grid-template-columns: 1fr; }
+    .services-grid-k3 { grid-template-columns: 1fr; }
+    .service-card-k3 { display: grid; grid-template-columns: 50px 1fr; gap: 1.5rem; align-items: center; padding: 1.5rem; }
+    .service-icon-k3 { margin-bottom: 0; font-size: 2.5rem; grid-row: span 2; }
+    .service-card-k3 h3 { margin-bottom: 0.2rem; font-size: 1.3rem; }
+    .service-card-k3 p { margin-bottom: 0; font-size: 0.95rem; }
+    .service-card-k3 .read-more { display: none; }
+
+    /* 5. CERTIFICATES - Horizontal Layout Seperti Gambar */
+    .certificates-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .certificates-grid .project-card { display: grid; grid-template-columns: 80px 1fr; grid-template-areas: "img title" "img desc"; gap: 0.5rem 1rem; padding: 1.2rem; align-items: center; }
+    .certificates-grid .project-card img { grid-area: img; width: 70px; height: 70px; margin-bottom: 0; border-radius: 0.8rem; }
+    .cert-text-content { grid-column: span 2; display: contents; }
+    .certificates-grid .project-info { grid-area: title; margin-bottom: 0 !important; }
+    .certificates-grid .project-info h3 { font-size: 1.1rem; }
+    .certificates-grid .project-desc { grid-area: desc; font-size: 0.9rem; margin-bottom: 0; }
+    .certificates-grid .tech-stack { display: none !important; }
+
+    /* Pengaturan Batas Ketinggian Tombol Selengkapnya di HP */
+    .projects-grid-container.is-collapsed { max-height: 1250px; } /* Menampilkan TEPAT 3 kotak Project ke bawah */
+    .certs-grid-container.is-collapsed { max-height: 480px; }     /* Menampilkan TEPAT 4 kotak Certificate ke bawah */
+
+    .about, .skills-container, .contact-container { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
     .header { flex-direction: column; gap: 2rem; }
     .navbar { flex-wrap: wrap; justify-content: center; }
     
-    .services-grid-k3, .projects-grid, .soft-skills-grid, .input-group, .certificates-grid, .stats-grid-about { grid-template-columns: 1fr; }
-    .clients-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-    .client-card { padding: 1.5rem 1rem; min-height: 150px; }
-    .client-card img { width: 60px; height: 60px; }
+    .soft-skills-grid, .input-group, .stats-grid-about { grid-template-columns: 1fr; }
+    
+    /* 6. CLIENTS - 3 Kolom & 4 Baris Seperti Gambar */
+    .clients-grid { grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
+    .client-card { padding: 1rem; min-height: 110px; border-radius: 1rem; }
+    .client-card img { width: 45px; height: 45px; margin-bottom: 0.5rem; }
+    .client-card p { font-size: 0.75rem; line-height: 1.2; }
+
+    .clients-grid-container.is-collapsed { max-height: 520px; } /* Menampilkan TEPAT 12 klien (3 x 4) */
 }

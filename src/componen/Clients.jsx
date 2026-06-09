@@ -1,4 +1,8 @@
-export default function Testimonials() {
+'use client';
+import { useState } from 'react';
+
+export default function Clients() {
+  const [showAll, setShowAll] = useState(false);
   // Daftar lengkap riwayat kolaborasi Bos Daus
   const clients = [
     { name: 'PT. Sinergi Citra Karya', img: '/images/client/SCK.jpg' },
@@ -26,18 +30,32 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="clients">
+    <section id="clients" className="projects-section-k3">
       <h5 className="heading-sm">CLIENTS & PARTNERS</h5>
       <h2 className="heading">Riwayat Kolaborasi</h2>
       
-      <div className="clients-grid">
-        {clients.map((client, index) => (
-          <div className="client-card" key={index}>
-            {/* Atribut loading="lazy" membuat web lebih cepat karena gambar dimuat bergantian */}
-            <img src={client.img} alt={client.name} loading="lazy" decoding="async" />
-            <p>{client.name}</p>
-          </div>
-        ))}
+      <div className={`clients-grid-container ${!showAll ? 'is-collapsed' : ''}`}>
+        <div className="clients-grid">
+          {clients.map((client, index) => (
+            <div className="client-card" key={index}>
+              <img src={client.img} alt={client.name} loading="lazy" decoding="async" />
+              <p>{client.name}</p>
+            </div>
+          ))}
+        </div>
+        {!showAll && <div className="fade-overlay"></div>}
+      </div>
+
+      <div className={`projects-action-bar ${!showAll ? 'floating-btn' : 'normal-btn'}`}>
+        {!showAll ? (
+          <button className="btn btn-primary" onClick={() => setShowAll(true)}>
+            Lihat Selengkapnya <i className='bx bx-chevron-down'></i>
+          </button>
+        ) : (
+          <button className="btn btn-outline" onClick={() => setShowAll(false)}>
+            Sembunyikan <i className='bx bx-chevron-up'></i>
+          </button>
+        )}
       </div>
     </section>
   );

@@ -1,70 +1,62 @@
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
+
 export default function Certificates() {
+  const [showAll, setShowAll] = useState(false);
+
+  // Data Sertifikat
+  const certs = [
+    { img: '/images/certificate/APDI-Logo.png', title: 'Asosiasi Pilot Drone Indonesia', link: '/galeri?proyek=apdi', desc: 'Sertifikat Lisensi Pilot Drone Resmi dari APDI.', tags: ['Drone Pilot', 'Sertifikasi'] },
+    { img: '/images/certificate/DJPU.png', title: 'Direktorat Jenderal Perhubungan Udara', link: '/galeri?proyek=djpu', desc: 'Sertifikasi Registrasi Remote Pilot Resmi Kementerian.', tags: ['Drone Pilot', 'Sertifikasi'] },
+    { img: '/images/certificate/IMC.jpg', title: 'Indonesia Mapping Community', link: '/galeri?proyek=imc', desc: 'Pelatihan pemetaan terestris menggunakan Drone Tingkat Dasar.', tags: ['Pelatihan', 'Pemetaan'] },
+    { img: '/images/certificate/ITS.png', title: 'HMP Planologi ITS Surabaya', link: '/galeri?proyek=its', desc: 'ArcGIS Schooling: Tingkat Lanjut Pemrosesan Spasial Kawasan Kota.', tags: ['Pelatihan', 'ArcGIS'] },
+    { img: '/images/certificate/LAB.jpg', title: 'PT. Laboratorindo Alam Bestari', link: '/galeri?proyek=lab_cert', desc: 'Pelatihan Teknis Pengambilan Sampel Air Limbah & Baku Mutu Udara.', tags: ['Pelatihan', 'Pengambilan Sampel'] },
+    { img: '/images/certificate/PGP.jpg', title: 'PT. Professional Global Persada', link: '/galeri?proyek=pgp', desc: 'Pelatihan Teknik Pengujian Parameter Udara Ambien Sesuai Regulasi SNI.', tags: ['Pelatihan', 'Pengujian SNI'] }
+  ];
+
   return (
-    <section className="certificates section-light" id="certificates">
-      <div className="section-header"> 
-        <h3><i className="fas fa-certificate"></i> SERTIFIKASI</h3>
-        <h2>Pelatihan <span>& Sertifikasi</span></h2>
+    <section id="certificates" className="projects-section-k3">
+      <div className="section-header" style={{ marginBottom: '3rem' }}>
+        <h5 className="heading-sm">SERTIFIKASI</h5>
+        <h2 className="heading">Pelatihan & Sertifikasi</h2>
       </div>
 
-      <div className="certificates-grid"> 
-        <div className="project-card">
-          <img src="/images/certificate/APDI.jpg" alt="Asosiasi Pilot Drone Indonesia" className="project-img" loading="lazy" decoding="async" />
-          <div className="project-info"> <h3>Asosiasi Pilot Drone Indonesia</h3>
-            <a href="galeri.html?proyek=apdi"><i className='bx bx-link-external'></i></a>
-          </div>
-          <p className="project-desc">Sertifikat Lisensi Pilot Drone Resmi dari APDI.</p>
-          <div className="tech-stack"><span>Drone Pilot</span><span>Sertifikasi</span></div>
+      {/* Pembungkus Grid dengan Efek Potong */}
+      <div className={`certs-grid-container ${!showAll ? 'is-collapsed' : ''}`}>
+        <div className="certificates-grid">
+          {certs.map((c, i) => (
+            <div className="project-card" key={i}>
+              <img src={c.img} alt={c.title} loading="lazy" />
+              <div className="cert-text-content">
+                <div className="project-info" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
+                  <h3>{c.title}</h3>
+                  <Link href={c.link}><i className='bx bx-link-external' style={{ color: 'var(--neon-blue)', fontSize: '1.5rem' }}></i></Link>
+                </div>
+                <p className="project-desc">{c.desc}</p>
+                <div className="tech-stack" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  {c.tags.map((t, idx) => <span key={idx} style={{ fontSize: '1rem', color: 'var(--text-light)', fontWeight: '600' }}>{t}</span>)}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
+        
+        {/* Efek Gradasi Transparan */}
+        {!showAll && <div className="fade-overlay"></div>}
+      </div>
 
-        <div className="project-card">
-          <img src="/images/certificate/DJPU.jpg" alt="Direktorat Jenderal Perhubungan Udara" className="project-img" loading="lazy" decoding="async" />
-          <div className="project-info">
-            <h3>Direktorat Jenderal Perhubungan Udara</h3>
-            <a href="galeri.html?proyek=djpu"><i className='bx bx-link-external'></i></a>
-          </div>
-          <p className="project-desc">Sertifikasi Registrasi Remote Pilot Resmi Kenegaraan.</p>
-          <div className="tech-stack"><span>Drone Pilot</span><span>Sertifikasi</span></div>
-        </div>
-
-        <div className="project-card">
-          <img src="/images/certificate/IMC.jpg" alt="Indonesia Mapping Community" className="project-img" loading="lazy" decoding="async" />
-          <div className="project-info">
-            <h3>Indonesia Mapping Community</h3>
-            <a href="galeri.html?proyek=imc"><i className='bx bx-link-external'></i></a>
-          </div>
-          <p className="project-desc">Pelatihan Pemetaan Terestris Menggunakan Drone Tingkat Dasar.</p>
-          <div className="tech-stack"><span>Pelatihan</span><span>Pemetaan</span></div>
-        </div>
-
-        <div className="project-card">
-          <img src="/images/certificate/ITS.jpg" alt="HMP Planologi ITS Surabaya" className="project-img" loading="lazy" decoding="async" />
-          <div className="project-info">
-            <h3>HMP Planologi ITS Surabaya</h3>
-            <a href="galeri.html?proyek=its"><i className='bx bx-link-external'></i></a>
-          </div>
-          <p className="project-desc">ArcGIS Schooling: Tingkat Lanjut Pemrosesan Spasial Kawasan Kota.</p>
-          <div className="tech-stack"><span>Pelatihan</span><span>Arcgis</span></div>
-        </div>
-
-        <div className="project-card">
-          <img src="/images/certificate/LAB.jpg" alt="PT. Laboratorindo Alam Bestari" className="project-img" loading="lazy" decoding="async" />
-          <div className="project-info">
-            <h3>PT. Laboratorindo Alam Bestari</h3>
-            <a href="galeri.html?proyek=lab_cert"><i className='bx bx-link-external'></i></a>
-          </div>
-          <p className="project-desc">Pelatihan Teknis Pengambilan Sampel Air Limbah & Baku Mutu Udara.</p>
-          <div className="tech-stack"><span>Pelatihan</span><span>Pengambilan Sampel</span></div>
-        </div>
-
-        <div className="project-card">
-          <img src="/images/certificate/PGP.jpg" alt="PT. Professional Global Persada" className="project-img" loading="lazy" decoding="async" />
-          <div className="project-info">
-            <h3>PT. Professional Global Persada</h3>
-            <a href="galeri.html?proyek=pgp"><i className='bx bx-link-external'></i></a>
-          </div>
-          <p className="project-desc">Pelatihan Teknik Pengujian Parameter Udara Ambien Sesuai Regulasi SNi.</p>
-          <div className="tech-stack"><span>Pelatihan</span><span>Pengujian SNI</span></div>
-        </div>
+      {/* Tombol Aksi */}
+      <div className={`projects-action-bar ${!showAll ? 'floating-btn' : 'normal-btn'}`}>
+        {!showAll ? (
+          <button className="btn btn-primary" onClick={() => setShowAll(true)}>
+            Lihat Selengkapnya <i className='bx bx-chevron-down'></i>
+          </button>
+        ) : (
+          <button className="btn btn-outline" onClick={() => setShowAll(false)}>
+            Sembunyikan <i className='bx bx-chevron-up'></i>
+          </button>
+        )}
       </div>
     </section>
   );
