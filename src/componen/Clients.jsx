@@ -20,6 +20,8 @@ export default function Clients() {
     { name: 'PT. Alaska Dwipa Perdana', img: '/images/client/ADP.webp' },
     { name: 'PT. Farmel Cipta Mandiri', img: '/images/client/FCM.webp' },
     { name: 'Kabupaten Bulukumba', img: '/images/client/BLK.webp' },
+    { name: 'Kabupaten Morowali', img: '/images/client/MRW.webp' },
+    { name: 'Kabupaten Luwu', img: '/images/client/LUWU.webp' },
     { name: 'BPPW SULSEL', img: '/images/client/PU.webp' },
     { name: 'Disperkimtan Bulukumba', img: '/images/client/PER.webp' },
     { name: 'Benuanta Group', img: '/images/client/BG.webp' },
