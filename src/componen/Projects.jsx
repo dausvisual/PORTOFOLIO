@@ -11,7 +11,7 @@ export default function Projects() {
     { id: 'pam', title: 'PT. PAM Mineral Tbk.', cat: 'Survey Pengambilan Sampel Air dan Udara', img: '/images/projects/pam1.jpg' },
     { id: 'mti', title: 'PT. Merdeka Tsingshan Indonesia', cat: 'Survey Pengambilan Sampel Air', img: '/images/projects/mti3.webp' },
     { id: 'msb', title: 'PT. Mitra Sulawesi Bersama', cat: 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/msb1.webp' },
-    { id: 'awk', title: 'PT. Anindya Wiraputra Konsult', cat: 'Survey Pengambilan Sampel Air dan Udara', img: '/images/projects/awk3.jpg' },
+    { id: 'awk', title: 'PT. Anindya Wiraputra Konsult', cat: 'Survey Pengambilan Sampel Air dan Udara', img: '/images/projects/awk1.jpg' },
     { id: 'imip', title: 'Indonesia Morowali Industrial Park', cat: 'Survey Pengambilaan Sampel Udara', img: '/images/projects/imip1.webp' },
     { id: 'igip', title: 'International Green Industrial Park', cat: 'Survey Pengambilan Sampel Udara', img: '/images/projects/igip2.webp' },
     { id: 'ihip', title: 'Indonesia Huabao Industrial Park', cat: 'Survey Pengambilan Sampel Udara', img: '/images/projects/ihip1.webp' },

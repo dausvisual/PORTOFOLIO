@@ -2,7 +2,7 @@ import Stats from './Stats'; // Memanggil Stats ke dalam sini
 
 export default function Education() {
   return (
-    <section className="journey-section" id="education">
+    <section className="journey-section" id="myjourney">
       <div className="journey-stats-container">
         
         {/* Kolom Kiri: My Journey (Riwayat Pendidikan) */}

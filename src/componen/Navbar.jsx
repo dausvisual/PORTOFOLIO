@@ -27,10 +27,14 @@ const Navbar = ({ onOpenCv }) => {
       <nav className={`navbar ${isActive ? 'active' : ''}`}>
         <a href="#home" className="active" onClick={() => setIsActive(false)}>Home</a>
         <a href="#about" onClick={() => setIsActive(false)}>About</a>
+        <a href="#myjourney" onClick={() => setIsActive(false)}>Journey</a>
+        
         <a href="#services" onClick={() => setIsActive(false)}>Services</a>
-        <a href="#portfolio" onClick={() => setIsActive(false)}>Portfolio</a>
+        <a href="#certificates" onClick={() => setIsActive(false)}>Certifications</a>
+        <a href="#projects" onClick={() => setIsActive(false)}>Projects</a>
+        
+        <a href="#clients" onClick={() => setIsActive(false)}>Clients</a>
         <a href="#contact" onClick={() => setIsActive(false)}>Contact</a>
-        <Link href="/galeri" onClick={() => setIsActive(false)}>Galeri</Link>
         <button className="btn-dropdown-cv" onClick={onOpenCv}>Download CV</button>
       </nav>
 
