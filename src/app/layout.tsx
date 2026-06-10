@@ -4,7 +4,7 @@ import Script from 'next/script';
 import type { ReactNode } from 'react';
 // 1. Impor font langsung dari Next.js
 import { Poppins } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/next"
 
 // 2. Konfigurasi ketebalan font yang dipakai
 const poppins = Poppins({ 
