@@ -18,16 +18,20 @@ const poppins = Poppins({
 export const metadata = {
   title: 'Firdaus Ikram, S.PWK',
   description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
-  
+  icons: {
+    icon: "/logo/logo fi.png",
+    shortcut: "/logo/logo fi.png",
+    apple: "/logo/logo fi.png",
+  },
   // === PENGATURAN THUMBNAIL OPEN GRAPH (WHATSAPP, LINKEDIN, FB) ===
   openGraph: {
     title: 'Firdaus Ikram, S.PWK',
     description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
-    url: 'https://portofolio-firdaus-ikram.vercel.app', // Ganti dengan tautan/domain asli Vercel kamu
+    url: 'https://firdausikram.xyz', // Ganti dengan tautan/domain asli Vercel kamu
     siteName: 'Firdaus Ikram, S.PWK - Portofolio',
     images: [
       {
-        url: '/images/logo/thumbnail.png', // Alamat gambar thumbnail kamu di folder public
+        url: '/logo/thumbnail.png', // Alamat gambar thumbnail kamu di folder public
         width: 1200,
         height: 630,
         alt: 'Preview Portofolio Firdaus Ikram',
@@ -42,7 +46,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Firdaus Ikram, S.PWK - Portofolio',
     description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
-    images: ['/images/logo/thumbnail.png'], // Sama, arahkan ke gambar thumbnail
+    images: ['/logo/thumbnail.png'], // Sama, arahkan ke gambar thumbnail
   },
 }
 
