@@ -2,24 +2,52 @@ import '../css/style.css';
 import './globals.css';
 import Script from 'next/script';
 import type { ReactNode } from 'react';
+
 // 1. Impor font langsung dari Next.js
 import { Poppins } from 'next/font/google';
-import { Analytics } from "@vercel/analytics/next"
 
-// 2. Konfigurasi ketebalan font yang dipakai
+// 2. Impor Vercel Analytics (Gunakan /react sesuai standar Next.js App Router)
+import { Analytics } from '@vercel/analytics/react';
+
+// 3. Konfigurasi ketebalan font yang dipakai
 const poppins = Poppins({ 
   subsets: ['latin'],
-  weight: ['400', '500', '600', '800'], // Sesuaikan dengan font-weight di CSS Bos Daus
+  weight: ['400', '500', '600', '800'], // Sesuaikan dengan font-weight di CSS
 });
 
 export const metadata = {
-  title: 'Firdaus Ikram - Portofolio S.PWK',
-  // ... (metadata lainnya tetap sama)
+  title: 'Firdaus Ikram, S.PWK',
+  description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
+  
+  // === PENGATURAN THUMBNAIL OPEN GRAPH (WHATSAPP, LINKEDIN, FB) ===
+  openGraph: {
+    title: 'Firdaus Ikram, S.PWK',
+    description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
+    url: 'https://portofolio-firdaus-ikram.vercel.app', // Ganti dengan tautan/domain asli Vercel kamu
+    siteName: 'Firdaus Ikram, S.PWK - Portofolio',
+    images: [
+      {
+        url: '/images/logo/thumbnail.png', // Alamat gambar thumbnail kamu di folder public
+        width: 1200,
+        height: 630,
+        alt: 'Preview Portofolio Firdaus Ikram',
+      },
+    ],
+    locale: 'id_ID',
+    type: 'website',
+  },
+
+  // === PENGATURAN THUMBNAIL KHUSUS TWITTER/X ===
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Firdaus Ikram, S.PWK - Portofolio',
+    description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
+    images: ['/images/logo/thumbnail.png'], // Sama, arahkan ke gambar thumbnail
+  },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    // 3. Masukkan variabel font ke dalam tag html/body
     <html lang="en" className={poppins.className}>
       <head>
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
@@ -28,11 +56,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         {children}
         
-        {/* ... (Script lainnya tetap sama) ... */}
-        {/* Pastikan dipanggil di paling bawah sebelum tag penutup </body> */}
-<Script src="/js/particles.min.js" strategy="beforeInteractive" />
-<Script src="/js/app.js" strategy="lazyOnload" />
+        {/* WAJIB: Render komponen Analytics agar pelacakan Vercel aktif */}
+        <Analytics />
+        
+        {/* Script Animasi & Efek UI */}
+        <Script src="/js/scrollreveal.js" strategy="beforeInteractive" />
+        <Script src="/js/particles.min.js" strategy="beforeInteractive" />
+        <Script src="/js/app.js" strategy="afterInteractive" />
       </body>
     </html>
-  )
+  );
 }

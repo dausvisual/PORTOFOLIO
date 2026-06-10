@@ -25,7 +25,7 @@ export default function Hero({ onOpenCv }) {
             <div className="glowing-ring-1"></div>
             <div className="glowing-ring-2"></div>
             {/* Gunakan nama profile.png seperti instruksi sebelumnya */}
-            <img src="/images/profile/profile.png" alt="Firdaus Ikram" className="profile-img" />
+            <img src="/images/profile/profile.webp" alt="Firdaus Ikram" className="profile-img" />
 
             {/* Cluster Tiny Floating Cards - Kebanggaan K3 */}
             <div className="float-card card-tl">
