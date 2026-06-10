@@ -64,7 +64,7 @@ export default function Hero({ onOpenCv }) {
         {/* === BAGIAN 2 (BAWAH MOBILE, KIRI DESKTOP): TEKS K3 === */}
      <div className="hero-k3-content">
           <div className="avail-badge">
-            <span className="avail-dot"></span> On Work
+            <span className="avail-dot"></span> Director Of PT. Sinergi Citra Karya
           </div>
           
           <h1 className="hero-title">
