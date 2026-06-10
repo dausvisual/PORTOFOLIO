@@ -62,19 +62,16 @@ export default function Hero({ onOpenCv }) {
         </div>
 
         {/* === BAGIAN 2 (BAWAH MOBILE, KIRI DESKTOP): TEKS K3 === */}
-        <div className="hero-k3-content">
-          {/* Badge Rata Kiri */}
+     <div className="hero-k3-content">
           <div className="avail-badge">
             <span className="avail-dot"></span> On Work
           </div>
           
-          {/* Title Rata Kiri & Mengecil di HP */}
           <h1 className="hero-title">
-            FIRDAUS <br/>
-            <span>IKRAM</span>
+            {/* Terapkan gradasi nama terinspirasi dari logo baru */}
+            FIRDAUS <span className="name-gradient">IKRAM, S.PWK</span>
           </h1>
           
-          {/* Subtitle - Kapitalisasi Sesuai Gambar Target */}
           <h4 className="hero-subtitle">
             GIS SPECIALIST <span>|</span> URBAN PLANNER <span>|</span> SURVEYOR <span>|</span> DRONE PILOT
           </h4>

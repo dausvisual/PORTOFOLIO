@@ -37,25 +37,107 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 
 
 /* ==========================================================
-   2. APPARATUS NAVBAR & HEADER
+   2. APPARATUS NAVBAR & HEADER (MODIFIKASI LOGO ASLI FINAL)
 ========================================================== */
-.header { position: fixed; top: 0; left: 0; width: 100%; padding: 2rem 10%; display: flex; justify-content: space-between; align-items: center; background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); z-index: 1000; transition: 0.3s; }
-.header.scrolled { padding: 1.5rem 10%; background: rgba(2, 6, 23, 0.95); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.header { 
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; 
+    padding: 1.5rem 10%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background: rgba(2, 6, 23, 0.85); 
+    backdrop-filter: blur(12px); 
+    border-bottom: 1px solid var(--border-color); 
+    z-index: 1000; 
+    transition: 0.3s; 
+}
+
+.logo-k3 { 
+    display: flex; 
+    align-items: center; 
+    gap: 1.5rem; 
+}
+
+/* WADAH UNTUK LOGO GAMBAR ASLI */
+.logo-fi-container {
+    position: relative;
+    width: 55px; 
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.logo-fi-container:hover {
+    transform: translateY(-2px) scale(1.05);
+}
+
+.logo-fi-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Memberikan efek pendaran glow neon luar pada gambar perisai */
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.6)) 
+            drop-shadow(0 0 15px rgba(157, 0, 255, 0.4));
+}
+
+/* === DESAIN TEKS NAMA === */
+.logo-text h2 { 
+    font-size: 2.0rem; 
+    color: #fff; 
+    font-weight: 700; 
+    line-height: 1.1; 
+    margin-bottom: 2px; 
+}
+
+/* 🌟 KUNCI PERBAIKAN GRADASI: Menghapus text-shadow gembong bug browser 🌟 */
+.name-gradient {
+    font-weight: 800;
+    background: linear-gradient(135deg, #00ffff 0%, #9d00ff 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    display: inline-block;
+}
+
+.logo-text p { 
+    font-size: 1.0rem; 
+    color: var(--text-muted); 
+    line-height: 1; 
+}
+
+/* ... Pengaturan Menu Navigasi ... */
 #menu-icon { font-size: 3rem; color: var(--text-light); cursor: pointer; display: none; z-index: 1001; }
 .navbar { display: flex; align-items: center; gap: 2.5rem; }
 .navbar a { color: var(--text-muted); font-size: 1.4rem; font-weight: 500; transition: 0.3s; position: relative; }
 .navbar a:hover, .navbar a.active { color: var(--neon-blue); }
 .btn-dropdown-cv { display: none; } 
-.logo-k3 { display: flex; align-items: center; gap: 1.2rem; }
-.logo-fi { position: relative; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; }
-.logo-fi .f { position: absolute; left: 0; font-size: 2.4rem; font-weight: 800; color: var(--neon-blue); text-shadow: 0 0 10px rgba(0,229,255,0.5); }
-.logo-fi .i { position: absolute; right: 4px; font-size: 2.4rem; font-weight: 800; color: var(--neon-purple); }
-.logo-text h2 { font-size: 1.6rem; color: #fff; font-weight: 700; line-height: 1; margin-bottom: 2px; }
-.logo-text p { font-size: 0.9rem; color: var(--text-muted); line-height: 1; }
 .btn-nav-cv { background: transparent; border: 1px solid rgba(0, 229, 255, 0.4); color: var(--neon-blue); padding: 0.8rem 1.8rem; border-radius: 0.8rem; font-size: 1.3rem; font-weight: 600; display: flex; align-items: center; gap: 0.6rem; transition: 0.3s; }
 .btn-nav-cv:hover { background: var(--neon-blue); color: var(--bg-dark); box-shadow: var(--neon-glow); transform: translateY(-2px); }
 
-
+/* Penyesuaian Responsif Layar HP */
+@media (max-width: 991px) {
+    .header { padding: 1rem 5%; }
+    .logo-k3 { gap: 1rem; }
+    
+    .logo-fi-container { width: 45px; height: 45px; }
+    
+    .logo-text { display: flex !important; flex-direction: column; justify-content: center; }
+    .logo-text h2 { font-size: 1.6rem; margin-bottom: 0; }
+    .name-gradient { font-size: 1.7rem; } 
+    .logo-text p { font-size: 0.75rem; }
+    
+    #menu-icon { display: block; }
+    .navbar { position: fixed; top: -100%; left: 0; width: 100%; background: rgba(2, 6, 23, 0.98); border-bottom: 1px solid var(--border-color); flex-direction: column; padding: 4rem 0; gap: 3rem; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 999; opacity: 0; pointer-events: none; }
+    .navbar.active { top: 6.5rem; opacity: 1; pointer-events: auto; }
+    .navbar a { font-size: 1.6rem; width: 100%; text-align: center; padding: 0.5rem 0; }
+    .btn-dropdown-cv { display: inline-flex; width: 80%; justify-content: center; margin-top: 1rem; border: 1px solid var(--neon-blue); color: var(--neon-blue); padding: 1.2rem; border-radius: 0.8rem; font-size: 1.4rem; font-weight: 600; }
+    .btn-nav-cv { display: none; } 
+}
 /* ==========================================================
    3. HERO REGION & HOLOGRAM PROFIL K3
 ========================================================== */
