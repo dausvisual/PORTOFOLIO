@@ -5,16 +5,16 @@ import Link from 'next/link';
 
 // Data Galeri dipusatkan agar kode sangat rapi
 const galleryData = {
-  vale: { title: "PT. Vale Indonesia Tbk.", desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. VALE Indonesia Tbk.", images: ["/images/projects/vale1.jpg.webp", "/images/projects/vale2.jpg.webp", "/images/projects/vale3.jpg.webp", "/images/projects/vale4.jpg.webp"] },
+  vale: { title: "PT. Vale Indonesia Tbk.", desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. VALE Indonesia Tbk.", images: ["/images/projects/vale1.jpg", "/images/projects/vale2.jpg", "/images/projects/vale3.jpg", "/images/projects/vale4.jpg"] },
   pam: { title: "PT. PAM Mineral Tbk.", desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. PAM Mineral Tbk.", images: ["/images/projects/pam1.webp", "/images/projects/pam3.webp", "/images/projects/pam4.webp", "/images/projects/pam5.webp"] },
   mti: { title: "PT. Merdeka Tsingshan Indonesia", desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. Merdeka Tsingshan Indonesia", images: ["/images/projects/mti1.webp", "/images/projects/mti2.webp", "/images/projects/mti3.webp", "/images/projects/mti4.webp"] },
   msb: { title: "PT. Mitra Sulawesi Bersama", desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. Mitra Sulawesi Bersama", images: ["/images/projects/msb1.webp", "/images/projects/msb2.webp", "/images/projects/msb3.webp"] },
-  imip: { title: "Indonesia Morowali Industrial Park", desc: "Ketua Tim Survei Pengambilan Sampel Udara, Indonesia Morowali Industrial Park", images: ["/images/projects/imip1webp", "/images/projects/imip2.webp"] },
+  imip: { title: "Indonesia Morowali Industrial Park", desc: "Ketua Tim Survei Pengambilan Sampel Udara, Indonesia Morowali Industrial Park", images: ["/images/projects/imip1.webp", "/images/projects/imip2.webp"] },
   awk: { title: "PT. Anindya Wiraputra Konsult", desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. Anindya Wiraputra Konsult", images: ["/images/projects/awk1.webp", "/images/projects/awk2.webp", "/images/projects/awk3.webp", "/images/projects/awk4.webp", "/images/projects/awk5.webp", "/images/projects/awk6.webp", "/images/projects/awk7.webp"] },
   igip: { title: "International Green Industrial Park", desc: "Ketua Tim Survei Pengambilan Sampel Udara, International Green Industrial Park", images: ["/images/projects/igip1.webp", "/images/projects/igip2.webp"] },
   ihip: { title: "Indonesia Huabao Industrial Park", desc: "Ketua Tim Survei Pengambilan Sampel Udara, Indonesia Huabao Industrial Park", images: ["/images/projects/ihip1.webp", "/images/projects/ihip2.webp", "/images/projects/ihip3.webp"] },
-  adp: { title: "PT. Alaska Dwipa Perdana", desc: "Ketua Tim Survei Pengambilan Sampel Udara, PT. Alaska Dwipa Perdana", images: ["/images/projects/adp1.jpg.webp", "/images/projects/adp2.webp", "/images/projects/adp3.webp", "/images/projects/adp4..webp"] },
-  fcm: { title: "PT. Farmel Cipta Mandiri", desc: "Ketua Tim Survei Pengambilan Sampel Udara, PT. Farmel Cipta Mandiri", images: ["/images/projects/fcm1.jpg.webp", "/images/projects/fcm2.webp", "/images/projects/fcm3.webp", "/images/projects/fcm4.webp"] },
+  adp: { title: "PT. Alaska Dwipa Perdana", desc: "Ketua Tim Survei Pengambilan Sampel Udara, PT. Alaska Dwipa Perdana", images: ["/images/projects/adp1.webp", "/images/projects/adp2.webp", "/images/projects/adp3.webp", "/images/projects/adp4.webp"] },
+  fcm: { title: "PT. Farmel Cipta Mandiri", desc: "Ketua Tim Survei Pengambilan Sampel Udara, PT. Farmel Cipta Mandiri", images: ["/images/projects/fcm1.webp", "/images/projects/fcm2.webp", "/images/projects/fcm3.webp", "/images/projects/fcm4.webp"] },
 };
 
 function GalleryContent() {
