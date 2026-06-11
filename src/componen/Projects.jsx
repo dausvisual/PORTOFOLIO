@@ -26,9 +26,9 @@ export default function Projects() {
     { id: 'default', title: 'Benuanta Grup', cat: 'Survei Project RDTR Papua Perbatasan', img: '/images/projects/2.webp' },
     { id: 'default', title: 'BPPW Sulsel', cat: 'Tim Survey Program SPAL-DS Tahap I dan II', img: '/images/projects/4.webp' },
     { id: 'default', title: 'PT. Ruang Meja Kerja', cat: 'Survey Perencanaan Kawasan Pariwisata Pentuanginan', img: '/images/projects/111.png' },
-    { id: 'default', title: 'PT. Ruang Meja Kerja', cat: 'Tim Survei dan Penyusun Profil Desa Mappetajang', img: '/images/projects/DJI_0165.jpg' },
+    { id: 'default', title: 'PT. Ruang Meja Kerja', cat: 'Tim Survei dan Penyusun Profil Desa Mappetajang', img: '/images/projects/DJI_0165.JPG' },
     { id: 'default', title: 'PT. Ruang Meja Kerja', cat: 'Survey Perintisan Jalan Mappetajang', img: '/images/projects/12.webp' },
-    { id: 'default', title: 'DISPERKIMTAN Bulukumba', cat: 'Survey Kawasan Permukiman Kumuh Jalanjang', img: '/images/projects/13.jpg' },
+    { id: 'default', title: 'DISPERKIMTAN Bulukumba', cat: 'Survey Kawasan Permukiman Kumuh Jalanjang', img: '/images/projects/13.JPG' },
     { id: 'default', title: 'Wiha Media Undangan Digital', cat: 'Mapping', img: '/images/projects/UD.webp' },
     { id: 'default', title: 'Freelance Foto & Video Editing', cat: 'Mapping', img: '/images/projects/HITAM.webp' }
   ];
