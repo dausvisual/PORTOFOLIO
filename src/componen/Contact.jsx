@@ -16,7 +16,7 @@ export default function Contact() {
           </div>
           <div className="contact-info-item">
             <i className='bx bx-phone'></i>
-            <div><h4>Phone</h4><p>+62 853 4186 6227</p></div>
+            <div><h4>Phone</h4><p>+62 85770029172</p></div>
           </div>
         </div>
         

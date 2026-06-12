@@ -91,7 +91,7 @@ export default function Hero({ onOpenCv }) {
             <a href="https://www.linkedin.com/in/firdaus-ikram-86405b2a6" target="_blank" rel="noreferrer"><i className='bx bxl-linkedin'></i></a>
             <a href="https://www.instagram.com/firdausikram_17" target="_blank" rel="noreferrer"><i className='bx bxl-instagram'></i></a>
             <a href="#" target="_blank" rel="noreferrer"><i className='bx bxl-github'></i></a>
-            <a href="https://wa.me/6285341866227" target="_blank" rel="noreferrer"><i className='bx bxl-whatsapp'></i></a>
+            <a href="https://wa.me/6285770029172" target="_blank" rel="noreferrer"><i className='bx bxl-whatsapp'></i></a>
           </div>
 
           {/* Description - Rata Kiri di HP */}
