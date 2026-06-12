@@ -11,6 +11,8 @@ export default function Certificates() {
     { img: '/images/certificate/DJPU.webp', title: 'Direktorat Jenderal Perhubungan Udara', link: '/galeri?proyek=djpu', desc: 'Sertifikasi Registrasi Remote Pilot Resmi Kementerian.', tags: ['Drone Pilot', 'Sertifikasi'] },
     { img: '/images/certificate/LAB.webp', title: 'PT. Laboratorindo Alam Bestari', link: '/galeri?proyek=lab_cert', desc: 'Pelatihan Teknis Pengambilan Sampel Air Limbah & Baku Mutu Udara.', tags: ['Pelatihan', 'Pengambilan Sampel'] },
     { img: '/images/certificate/PGP.webp', title: 'PT. Professional Global Persada', link: '/galeri?proyek=pgp', desc: 'Pelatihan Teknik Pengujian Parameter Udara Ambien Sesuai Regulasi SNI.', tags: ['Pelatihan', 'Pengujian SNI'] },
+    { img: '/images/certificate/bnsp.webp', title: 'Badan Nasional Sertifikasi Profesi', link: '/galeri?proyek=bnsp', desc: 'Sertifikasi Kompetensi Profesi Teknisi Pelaksana Pemasangan Perlengkapan Jalan.', tags: ['Sertifikasi', 'Kompetensi'] },
+    { img: '/images/certificate/dicoding.webp', title: 'Dicoding Indonesia', link: '/galeri?proyek=dicoding', desc: 'Pelatihan Dasar Pemrograman Web.', tags: ['Sertifikasi', 'Pengembangan Software'] },
     { img: '/images/certificate/IMC.webp', title: 'Indonesia Mapping Community', link: '/galeri?proyek=imc', desc: 'Pelatihan pemetaan terestris menggunakan Drone Tingkat Dasar.', tags: ['Pelatihan', 'Pemetaan'] },
     { img: '/images/certificate/ITS.webp', title: 'HMP Planologi ITS Surabaya', link: '/galeri?proyek=its', desc: 'ArcGIS Schooling: Tingkat Lanjut Pemrosesan Spasial Kawasan Kota.', tags: ['Pelatihan', 'ArcGIS'] },
   ];
