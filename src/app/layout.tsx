@@ -28,10 +28,10 @@ export const metadata = {
     title: 'Firdaus Ikram, S.PWK',
     description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
     url: 'https://firdausikram.xyz', // Ganti dengan tautan/domain asli Vercel kamu
-    siteName: 'Firdaus Ikram, S.PWK - Portofolio',
+    siteName: 'Firdaus Ikram, S.PWK',
     images: [
       {
-        url: '/logo/thumbnail.png', // Alamat gambar thumbnail kamu di folder public
+        url: 'https://firdausikram.xyz/logo/thumbnail.webp', // Alamat gambar thumbnail kamu di folder public
         width: 1200,
         height: 630,
         alt: 'Preview Portofolio Firdaus Ikram',
@@ -44,9 +44,9 @@ export const metadata = {
   // === PENGATURAN THUMBNAIL KHUSUS TWITTER/X ===
   twitter: {
     card: 'summary_large_image',
-    title: 'Firdaus Ikram, S.PWK - Portofolio',
+    title: 'Firdaus Ikram, S.PWK',
     description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
-    images: ['/logo/thumbnail.png'], // Sama, arahkan ke gambar thumbnail
+    images: ['https://firdausikram.xyz/logo/thumbnail.webp'], // Sama, arahkan ke gambar thumbnail
   },
 }
 
