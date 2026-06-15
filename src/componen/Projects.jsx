@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -50,7 +51,7 @@ export default function Projects() {
         <div className="projects-grid">
           {projects.map((p, i) => (
             <div className="project-card" key={i}>
-              <img src={p.img} alt={p.title} loading="lazy" />
+              <Image src={p.img} alt={p.title} width={600} height={400} />
               <h3>{p.title}</h3>
               <p>{p.cat}</p>
               <Link href={`/galeri?proyek=${p.id}`} className="view-link">

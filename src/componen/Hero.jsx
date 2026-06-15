@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Hero({ onOpenCv }) {
   return (
     <section className="hero-k3" id="home">
@@ -25,7 +27,7 @@ export default function Hero({ onOpenCv }) {
             <div className="glowing-ring-1"></div>
             <div className="glowing-ring-2"></div>
             {/* Gunakan nama profile.png seperti instruksi sebelumnya */}
-            <img src="/images/profile/profile.webp" alt="Firdaus Ikram" className="profile-img" />
+            <Image src="/images/profile/profile.webp" alt="Firdaus Ikram" className="profile-img" width={300} height={300} priority={true} />
 
             {/* Cluster Tiny Floating Cards - Kebanggaan K3 */}
             <div className="float-card card-tl">

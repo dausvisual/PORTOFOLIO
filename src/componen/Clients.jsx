@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Clients() {
   // Daftar lengkap riwayat kolaborasi Bos Daus
   const clients = [
@@ -37,7 +39,7 @@ export default function Clients() {
         <div className="clients-grid">
           {clients.map((client, index) => (
             <div className="client-card" key={index}>
-              <img src={client.img} alt={client.name} loading="lazy" decoding="async" />
+              <Image src={client.img} alt={client.name} width={75} height={75} />
               <p>{client.name}</p>
             </div>
           ))}

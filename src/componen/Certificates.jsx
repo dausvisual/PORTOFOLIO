@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Certificates() {
   const [showAll, setShowAll] = useState(false);
@@ -29,7 +30,7 @@ export default function Certificates() {
         <div className="certificates-grid">
           {certs.map((c, i) => (
             <div className="project-card" key={i}>
-              <img src={c.img} alt={c.title} loading="lazy" />
+              <Image src={c.img} alt={c.title} width={600} height={400} />
               <div className="cert-text-content">
                 <div className="project-info" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
                   <h3>{c.title}</h3>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Navbar = ({ onOpenCv }) => {
   const [isActive, setIsActive] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = ({ onOpenCv }) => {
       <Link href="/" className="logo-k3">
         {/* === REVOLUSI LOGO: Memanggil file webp hasil konversi otomatis === */}
         <div className="logo-fi-container">
-          <img src="/logo/logo fi.png" alt="Logo Firdaus Ikram" />
+          <Image src="/logo/logo fi.png" alt="Logo Firdaus Ikram" width={55} height={55} priority={true} />
         </div>
 
         <div className="logo-text">

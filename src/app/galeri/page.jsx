@@ -2,6 +2,7 @@
 import { useSearchParams } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Data Galeri dipusatkan agar kode sangat rapi
 const galleryData = {
@@ -43,7 +44,7 @@ function GalleryContent() {
           <div className="gallery-grid">
             {currentGallery.images.map((src, index) => (
               <div className="gallery-card" key={index} onClick={() => setActiveImg(src)}>
-                <img src={src} alt={`${currentGallery.title} ${index + 1}`} loading="lazy" />
+                <Image src={src} alt={`${currentGallery.title} ${index + 1}`} width={600} height={400} />
                 <div className="gallery-card-overlay">
                   <i className='bx bx-zoom-in'></i>
                 </div>
@@ -62,7 +63,7 @@ function GalleryContent() {
       <div className={`lightbox ${activeImg ? 'show' : ''}`} onClick={() => setActiveImg(null)}>
         <span className="close-lightbox" onClick={() => setActiveImg(null)}>&times;</span>
         <div className="lightbox-container" onClick={(e) => e.stopPropagation()}>
-          <img className="lightbox-content" src={activeImg || ''} alt="Preview Hasil Potret Spasial" />
+          {activeImg && <Image className="lightbox-content" src={activeImg} alt="Preview Hasil Potret Spasial" width={1200} height={800} />}
         </div>
       </div>
     </section>

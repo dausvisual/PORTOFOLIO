@@ -67,9 +67,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Analytics />
         
         {/* Script Animasi & Efek UI */}
-        <Script src="/js/scrollreveal.js" strategy="beforeInteractive" />
-        <Script src="/js/particles.min.js" strategy="beforeInteractive" />
-        <Script src="/js/app.js" strategy="afterInteractive" />
+        <Script src="/js/scrollreveal.js" strategy="lazyOnload" />
+        <Script src="/js/particles.min.js" strategy="lazyOnload" />
+        <Script src="/js/app.js" strategy="lazyOnload" />
       </body>
     </html>
   );
