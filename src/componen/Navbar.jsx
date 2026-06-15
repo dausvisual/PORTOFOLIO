@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 
 const Navbar = ({ onOpenCv }) => {
@@ -11,16 +11,16 @@ const Navbar = ({ onOpenCv }) => {
   return (
     <header className="header">
       <Link href="/" className="logo-k3">
-  {/* === REVOLUSI LOGO: Memanggil file webp hasil konversi otomatis === */}
-      <div className="logo-fi-container">
-      <img src="/logo/logo fi.png" alt="Logo Firdaus Ikram" />
-      </div>
-  
-      <div className="logo-text">
-      <h2>FIRDAUS IKRAM</h2>
-      <p>GIS Specialist | Urban Planner</p>
-      </div>
-</Link>
+        {/* === REVOLUSI LOGO: Memanggil file webp hasil konversi otomatis === */}
+        <div className="logo-fi-container">
+          <img src="/logo/logo fi.png" alt="Logo Firdaus Ikram" />
+        </div>
+
+        <div className="logo-text">
+          <h2>FIRDAUS IKRAM</h2>
+          <p>GIS Specialist | Urban Planner</p>
+        </div>
+      </Link>
 
       <i className={`bx bx-menu ${isActive ? 'bx-x' : ''}`} id="menu-icon" onClick={toggleMenu}></i>
 

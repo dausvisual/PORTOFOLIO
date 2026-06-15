@@ -57,7 +57,7 @@ export default function Hero({ onOpenCv }) {
           {/* Location Tag - Clustered tighter below Rings */}
           <div className="profile-location">
             <p><i className='bx bx-map'></i> Morowali, Indonesia</p>
-            <span>5° 8' 6" S • 119° 24' 37" E</span>
+            <span>5&deg; 8&apos; 6&quot; S &bull; 119&deg; 24&apos; 37&quot; E</span>
           </div>
         </div>
 

@@ -1,5 +1,4 @@
 'use client';
-import { useState } from 'react';
 
 // Mengimpor Komponen Utama dengan kepastian direktori relatif src
 import Navbar from '../componen/Navbar';
@@ -8,7 +7,6 @@ import About from '../componen/About';
 import MyJourney from '../componen/MyJourney';
 import Services from '../componen/Services';
 import Certificates from '../componen/Certificates';
-import Skills from '../componen/Skills';
 import Projects from '../componen/Projects';
 import Clients from '../componen/Clients';
 import Contact from '../componen/Contact';
@@ -58,8 +56,6 @@ export default function Home() {
 
       {/* Tombol melayang kembali ke atas */}
       <a href="#home" aria-label="ScrollTop" className="fas fa-angle-up" id="scroll-top"></a>
-
-    
     </>
   );
 }

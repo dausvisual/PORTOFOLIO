@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 export default function AdminProjects() {
   // Simulasi data dari Database
-  const [projects, setProjects] = useState([
+  const [projects] = useState([
     { id: 1, title: 'Pemetaan Topografi Morowali', desc: 'Analisis spasial untuk area pertambangan.', tech: 'ArcGIS, Drone Mapping' }
   ]);
 

@@ -1,8 +1,4 @@
-'use client';
-import { useState } from 'react';
-
 export default function Clients() {
-  const [showAll, setShowAll] = useState(false);
   // Daftar lengkap riwayat kolaborasi Bos Daus
   const clients = [
     { name: 'PT. Sinergi Citra Karya', img: '/images/client/SCK.webp' },
@@ -33,7 +29,7 @@ export default function Clients() {
 
   return (
     <section id="clients" className="projects-section-k3">
-      <h5 className="heading-sm">CLIENTS & PARTNERS</h5>
+      <h5 className="heading-sm">CLIENTS &amp; PARTNERS</h5>
       <h2 className="heading">Riwayat Kolaborasi</h2>
       
       {/* Container dibersihkan dari efek 'is-collapsed' dan 'fade-overlay' */}

@@ -1,23 +1,20 @@
 // Lokasi File: src/app/admin/layout.jsx
 "use client"; // Menandakan komponen ini berjalan di browser pengunjung karena menggunakan state
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function AdminLayout({ children }) {
   // === 1. STATE MANAGEMENT (Penyimpanan Data Sementara) ===
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // Status apakah sudah login?
+  // Lazy initializer: membaca sessionStorage saat pertama kali render, tanpa useEffect
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('isAdminLoggedIn') === 'true';
+    }
+    return false;
+  });
   const [passwordInput, setPasswordInput] = useState('');        // Menyimpan teks yang diketik di input
   const [errorMessage, setErrorMessage] = useState('');          // Menyimpan pesan jika password salah
-
-  // === 2. CEK STATUS LOGIN SAAT HALAMAN DIBUKA ===
-  useEffect(() => {
-    // Mengecek apakah sebelumnya sudah berhasil login di sesi browser ini
-    const authStatus = sessionStorage.getItem('isAdminLoggedIn');
-    if (authStatus === 'true') {
-      setIsAuthenticated(true);
-    }
-  }, []);
 
   // === 3. FUNGSI UNTUK MEMPROSES LOGIN ===
   const handleLogin = (e) => {

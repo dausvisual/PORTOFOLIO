@@ -13,6 +13,7 @@ import { Analytics } from '@vercel/analytics/react';
 const poppins = Poppins({ 
   subsets: ['latin'],
   weight: ['400', '500', '600', '800'], // Sesuaikan dengan font-weight di CSS
+  display: 'swap', // Teks langsung tampil tanpa menunggu font selesai download
 });
 
 export const metadata = {
@@ -52,8 +53,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={poppins.className}>
+    <html lang="id" className={poppins.className}>
       <head>
+        <link rel="preconnect" href="https://unpkg.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
       </head>

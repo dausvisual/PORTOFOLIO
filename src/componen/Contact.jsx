@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <section id="contact">
       <h5 className="heading-sm">CONTACT</h5>
-      <h2 className="heading">Let's Work Together</h2>
+      <h2 className="heading">Let&apos;s Work Together</h2>
       <div className="contact-container">
         <div>
           <p style={{fontSize: '1.5rem', color: 'var(--text-muted)', marginBottom: '4rem'}}>Punya proyek atau ingin berdiskusi? Saya siap membantu Anda.</p>
