@@ -36,7 +36,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="projects-section-k3">
-      <h5 className="heading-sm">PROJECTS</h5>
+      <span className="heading-sm" style={{display: 'block'}}>PROJECTS</span>
       <h2 className="heading">Selected Works</h2>
       
       <div className="projects-tabs">
@@ -51,10 +51,10 @@ export default function Projects() {
         <div className="projects-grid">
           {projects.map((p, i) => (
             <div className="project-card" key={i}>
-              <Image src={p.img} alt={p.title} width={600} height={400} />
+              <Image src={p.img} alt={p.title} width={600} height={400} sizes="(max-width: 768px) 100vw, 33vw" />
               <h3>{p.title}</h3>
               <p>{p.cat}</p>
-              <Link href={`/galeri?proyek=${p.id}`} className="view-link">
+              <Link href={`/galeri?proyek=${p.id}`} className="view-link" aria-label={`Lihat detail proyek: ${p.title}`}>
                 View Project <i className='bx bx-right-arrow-alt'></i>
               </Link>
             </div>

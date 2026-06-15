@@ -31,7 +31,7 @@ export default function Clients() {
 
   return (
     <section id="clients" className="projects-section-k3">
-      <h5 className="heading-sm">CLIENTS &amp; PARTNERS</h5>
+      <span className="heading-sm" style={{display: 'block'}}>CLIENTS &amp; PARTNERS</span>
       <h2 className="heading">Riwayat Kolaborasi</h2>
       
       {/* Container dibersihkan dari efek 'is-collapsed' dan 'fade-overlay' */}

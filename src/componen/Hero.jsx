@@ -32,27 +32,27 @@ export default function Hero({ onOpenCv }) {
             {/* Cluster Tiny Floating Cards - Kebanggaan K3 */}
             <div className="float-card card-tl">
               <div className="icon-box"><i className='bx bx-layer'></i></div>
-              <div className="text-box"><h4>GIS Analysis</h4><p>Spatial Insight</p></div>
+              <div className="text-box"><span className="float-title">GIS Analysis</span><p>Spatial Insight</p></div>
             </div>
             <div className="float-card card-ml">
               <div className="icon-box"><i className='bx bx-target-lock'></i></div>
-              <div className="text-box"><h4>Surveyor</h4><p>High Accuracy</p></div>
+              <div className="text-box"><span className="float-title">Surveyor</span><p>High Accuracy</p></div>
             </div>
             <div className="float-card card-bl">
               <div className="icon-box"><i className='bx bx-paper-plane'></i></div>
-              <div className="text-box"><h4>Drone Mapping</h4><p>Aerial Intelligence</p></div>
+              <div className="text-box"><span className="float-title">Drone Mapping</span><p>Aerial Intelligence</p></div>
             </div>
             <div className="float-card card-tr">
               <div className="icon-box"><i className='bx bx-buildings'></i></div>
-              <div className="text-box"><h4>Urban Planner</h4><p>Better Future</p></div>
+              <div className="text-box"><span className="float-title">Urban Planner</span><p>Better Future</p></div>
             </div>
             <div className="float-card card-mr">
               <div className="icon-box" style={{color: '#22c55e'}}><i className='bx bx-leaf'></i></div>
-              <div className="text-box"><h4>Environmental</h4><p>Sustainable Solution</p></div>
+              <div className="text-box"><span className="float-title">Environmental</span><p>Sustainable Solution</p></div>
             </div>
             <div className="float-card card-br">
               <div className="icon-box"><i className='bx bxs-city'></i></div>
-              <div className="text-box"><h4>3D Modeler</h4><p>Precise Design</p></div>
+              <div className="text-box"><span className="float-title">3D Modeler</span><p>Precise Design</p></div>
             </div>
           </div>
 
@@ -74,9 +74,9 @@ export default function Hero({ onOpenCv }) {
             FIRDAUS <span className="name-gradient">IKRAM, S.PWK</span>
           </h1>
           
-          <h4 className="hero-subtitle">
+          <p className="hero-subtitle">
             GIS SPECIALIST <span>|</span> URBAN PLANNER <span>|</span> SURVEYOR <span>|</span> DRONE PILOT
-          </h4>
+          </p>
           
           {/* Buttons - Row layout HP (Baris) */}
           <div className="hero-btn-group">
@@ -90,10 +90,10 @@ export default function Hero({ onOpenCv }) {
 
           {/* Socials - Row layout Rata Kiri */}
           <div className="hero-socials">
-            <a href="https://www.linkedin.com/in/firdaus-ikram-86405b2a6" target="_blank" rel="noreferrer"><i className='bx bxl-linkedin'></i></a>
-            <a href="https://www.instagram.com/firdausikram_17" target="_blank" rel="noreferrer"><i className='bx bxl-instagram'></i></a>
-            <a href="#" target="_blank" rel="noreferrer"><i className='bx bxl-github'></i></a>
-            <a href="https://wa.me/6285770029172" target="_blank" rel="noreferrer"><i className='bx bxl-whatsapp'></i></a>
+            <a href="https://www.linkedin.com/in/firdaus-ikram-86405b2a6" target="_blank" rel="noreferrer" aria-label="LinkedIn Profile"><i className='bx bxl-linkedin'></i></a>
+            <a href="https://www.instagram.com/firdausikram_17" target="_blank" rel="noreferrer" aria-label="Instagram Profile"><i className='bx bxl-instagram'></i></a>
+            <a href="#" target="_blank" rel="noreferrer" aria-label="GitHub Profile"><i className='bx bxl-github'></i></a>
+            <a href="https://wa.me/6285770029172" target="_blank" rel="noreferrer" aria-label="WhatsApp Contact"><i className='bx bxl-whatsapp'></i></a>
           </div>
 
           {/* Description - Rata Kiri di HP */}

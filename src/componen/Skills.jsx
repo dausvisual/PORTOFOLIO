@@ -12,7 +12,7 @@ export default function Skills() {
 
   return (
     <section id="skills">
-      <h5 className="heading-sm">SKILLS</h5>
+      <span className="heading-sm" style={{display: 'block'}}>SKILLS</span>
       <h2 className="heading">My Expertise & Skills</h2>
       <div className="skills-container">
         <div>

@@ -31,7 +31,7 @@ export default function Services() {
       {/* Header Layanan K3 (Kiri Teks, Kanan Link) */}
       <div className="services-header-k3">
         <div className="services-title-box">
-          <h5 className="subtitle">Layanan Utama</h5>
+          <span className="subtitle" style={{display: 'block'}}>Layanan Utama</span>
           <h2>Solusi Profesional Untuk Kebutuhan Spasial</h2>
         </div>
         <a href="#projects" className="services-link">

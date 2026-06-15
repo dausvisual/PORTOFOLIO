@@ -57,8 +57,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <link rel="preconnect" href="https://unpkg.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
       </head>
       <body>
         {children}
@@ -66,6 +64,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* WAJIB: Render komponen Analytics agar pelacakan Vercel aktif */}
         <Analytics />
         
+        {/* CSS Ikon dipindah ke bawah agar tidak Render-Blocking */}
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
         {/* Script Animasi & Efek UI */}
         <Script src="/js/scrollreveal.js" strategy="lazyOnload" />
         <Script src="/js/particles.min.js" strategy="lazyOnload" />

@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section className="about" id="about">
       <div className="about-left">
-        <h5 className="heading-sm">ABOUT ME</h5>
+        <span className="heading-sm" style={{display: 'block'}}>ABOUT ME</span>
         {/* Class about-title ditambahkan agar mudah dikontrol lewat CSS */}
         <h2 className="heading about-title">Transforming Spatial Data Into Impactful Solutions</h2>
         <p className="about-desc">Sebagai seorang Urban Planner & GIS Specialist, saya mengintegrasikan analisis spasial tingkat lanjut dengan perencanaan wilayah yang strategis. Melalui pemetaan akurat, survei drone, dan pengolahan data berbasis teknologi terkini.</p>
@@ -16,10 +16,10 @@ export default function About() {
         </div>
       </div>
       <div className="about-right-grid">
-        <div className="about-img-box"><Image src="/images/projects/fcm1.webp" alt="Field 1" width={600} height={400} /></div>
-        <div className="about-img-box"><Image src="/images/projects/awk1.webp" alt="Field 2" width={600} height={400} /></div>
-        <div className="about-img-box"><Image src="/images/projects/awk4.JPG" alt="Field 3" width={600} height={400} /></div>
-        <div className="about-img-box"><Image src="/images/projects/awk3.JPG" alt="Field 4" width={600} height={400} style={{gridColumn: 'span 2'}} /></div>
+        <div className="about-img-box"><Image src="/images/projects/fcm1.webp" alt="Field 1" width={600} height={400} sizes="(max-width: 768px) 100vw, 50vw" /></div>
+        <div className="about-img-box"><Image src="/images/projects/awk1.webp" alt="Field 2" width={600} height={400} sizes="(max-width: 768px) 100vw, 50vw" /></div>
+        <div className="about-img-box"><Image src="/images/projects/awk4.JPG" alt="Field 3" width={600} height={400} sizes="(max-width: 768px) 100vw, 50vw" /></div>
+        <div className="about-img-box"><Image src="/images/projects/awk3.JPG" alt="Field 4" width={600} height={400} sizes="(max-width: 768px) 100vw, 50vw" style={{gridColumn: 'span 2'}} /></div>
       </div>
     </section>
   );

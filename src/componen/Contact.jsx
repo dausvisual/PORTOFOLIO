@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <section id="contact">
-      <h5 className="heading-sm">CONTACT</h5>
+      <span className="heading-sm" style={{display: 'block'}}>CONTACT</span>
       <h2 className="heading">Let&apos;s Work Together</h2>
       <div className="contact-container">
         <div>

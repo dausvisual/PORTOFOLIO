@@ -44,7 +44,7 @@ function GalleryContent() {
           <div className="gallery-grid">
             {currentGallery.images.map((src, index) => (
               <div className="gallery-card" key={index} onClick={() => setActiveImg(src)}>
-                <Image src={src} alt={`${currentGallery.title} ${index + 1}`} width={600} height={400} />
+                <Image src={src} alt={`${currentGallery.title} ${index + 1}`} width={600} height={400} sizes="(max-width: 768px) 100vw, 33vw" />
                 <div className="gallery-card-overlay">
                   <i className='bx bx-zoom-in'></i>
                 </div>
