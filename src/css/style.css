@@ -46,9 +46,9 @@ html, body {
 
 section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 
-.heading { font-size: 3.5rem; font-weight: 700; margin-bottom: 4rem; color: var(--text-light); }
+.heading { font-size: 1.5rem; font-weight: 500; margin-bottom: 4rem; color: var(--text-light); }
 .heading span { color: var(--neon-blue); }
-.heading-sm { color: var(--neon-blue); font-size: 1.3rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; display: block; }
+.heading-sm { color: var(--neon-blue); font-size: 3.2rem; font-weight: 700; text-transform: capitalize; letter-spacing: 0px; margin-bottom: 0.5rem; display: block; line-height: 1.2; }
 
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.8rem; padding: 1.2rem 2.5rem; border-radius: 0.8rem; font-size: 1.4rem; font-weight: 600; cursor: pointer; transition: 0.3s ease; }
 .btn-primary, .btn-primary-glow { background: linear-gradient(135deg, var(--neon-purple), var(--main-hover)); color: white; box-shadow: 0 4px 20px rgba(79, 70, 229, 0.3); }
@@ -135,7 +135,7 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 .stat-k3-text p { font-size: 1.1rem; color: var(--text-muted); margin-top: 0.4rem; }
 
 .about { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-.about-title { font-size: 3.8rem; margin-bottom: 2rem; line-height: 1.2; color: #fff; }
+.about-title { font-size: 1.5rem; font-weight: 500; margin-bottom: 2rem; line-height: 1.2; color: #fff; }
 .about-desc { font-size: 1.4rem; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.8; text-align: justify; }
 .tech-tags { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 3rem; }
 .tech-tags span { padding: 0.8rem 1.8rem; background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 0.8rem; font-size: 1.2rem; color: var(--text-muted); transition: 0.3s; }
@@ -154,8 +154,8 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 
 
 .services-header-k3 { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 2.5rem; }
-.services-title-box .subtitle { color: var(--neon-blue); font-size: 1.3rem; font-weight: 600; margin-bottom: 0.6rem; text-transform: uppercase; }
-.services-title-box h2 { font-size: 3rem; font-weight: 700; color: #fff; }
+.services-title-box .subtitle { color: var(--neon-blue); font-size: 3.2rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: capitalize; line-height: 1.2; display: block; }
+.services-title-box h2 { font-size: 1.5rem; font-weight: 500; line-height: 1.2; color: #fff; }
 .services-link { color: var(--neon-blue); font-size: 1.4rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 500; transition: 0.3s; }
 .services-grid-k3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
 .service-card-k3 { background: var(--bg-panel); border: 1px solid var(--border-color); border-top: 4px solid var(--main-color); border-radius: 1.4rem; padding: 3.5rem 2.5rem; display: flex; flex-direction: column; }
@@ -308,8 +308,8 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
     html { font-size: 80%; }
     section { padding: 6rem 5% 4rem; overflow: visible; }
     
-    .heading { font-size: 2.2rem; text-align: left; margin-bottom: 2rem; }
-    .heading-sm { text-align: left; font-size: 1.1rem; }
+    .heading { font-size: 1.2rem; text-align: left; margin-bottom: 2rem; font-weight: 500; }
+    .heading-sm { text-align: left; font-size: 2.5rem; margin-bottom: 0.5rem; line-height: 1.2; }
     
     /* Navbar Mobile */
     #menu-icon { display: block; }

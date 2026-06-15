@@ -1,9 +1,33 @@
-import { useState } from 'react';
+'use client';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const Navbar = ({ onOpenCv }) => {
   const [isActive, setIsActive] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      let current = '';
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        // Subtract a bit so it triggers slightly before hitting the top
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+          current = section.getAttribute('id');
+        }
+      });
+      if (current) {
+        setActiveSection(current);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsActive(!isActive);
@@ -26,16 +50,16 @@ const Navbar = ({ onOpenCv }) => {
       <i className={`bx bx-menu ${isActive ? 'bx-x' : ''}`} id="menu-icon" onClick={toggleMenu}></i>
 
       <nav className={`navbar ${isActive ? 'active' : ''}`}>
-        <a href="#home" className="active" onClick={() => setIsActive(false)}>Home</a>
-        <a href="#about" onClick={() => setIsActive(false)}>About</a>
-        <a href="#myjourney" onClick={() => setIsActive(false)}>Journey</a>
+        <a href="#home" className={activeSection === 'home' ? 'active' : ''} onClick={() => setIsActive(false)}>Home</a>
+        <a href="#about" className={activeSection === 'about' ? 'active' : ''} onClick={() => setIsActive(false)}>About</a>
+        <a href="#myjourney" className={activeSection === 'myjourney' ? 'active' : ''} onClick={() => setIsActive(false)}>Journey</a>
         
-        <a href="#services" onClick={() => setIsActive(false)}>Services</a>
-        <a href="#certificates" onClick={() => setIsActive(false)}>Certifications</a>
-        <a href="#projects" onClick={() => setIsActive(false)}>Projects</a>
+        <a href="#services" className={activeSection === 'services' ? 'active' : ''} onClick={() => setIsActive(false)}>Services</a>
+        <a href="#certificates" className={activeSection === 'certificates' ? 'active' : ''} onClick={() => setIsActive(false)}>Certifications</a>
+        <a href="#projects" className={activeSection === 'projects' ? 'active' : ''} onClick={() => setIsActive(false)}>Projects</a>
         
-        <a href="#clients" onClick={() => setIsActive(false)}>Clients</a>
-        <a href="#contact" onClick={() => setIsActive(false)}>Contact</a>
+        <a href="#clients" className={activeSection === 'clients' ? 'active' : ''} onClick={() => setIsActive(false)}>Clients</a>
+        <a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={() => setIsActive(false)}>Contact</a>
         <button className="btn-dropdown-cv" onClick={onOpenCv}>Download CV</button>
       </nav>
 
