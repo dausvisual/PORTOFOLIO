@@ -9,6 +9,9 @@ import { Poppins } from 'next/font/google';
 // 2. Impor Vercel Analytics (Gunakan /react sesuai standar Next.js App Router)
 import { Analytics } from '@vercel/analytics/react';
 
+// 3. Impor pemuat CSS Ikon asinkron
+import IconCSS from '../componen/IconCSS';
+
 // 3. Konfigurasi ketebalan font yang dipakai
 const poppins = Poppins({ 
   subsets: ['latin'],
@@ -64,9 +67,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* WAJIB: Render komponen Analytics agar pelacakan Vercel aktif */}
         <Analytics />
         
-        {/* CSS Ikon dipindah ke bawah agar tidak Render-Blocking */}
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        {/* CSS Ikon asinkron (Bebas Render Blocking) */}
+        <IconCSS />
 
         {/* Script Animasi & Efek UI */}
         <Script src="/js/scrollreveal.js" strategy="lazyOnload" />
