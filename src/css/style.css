@@ -196,7 +196,43 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 .projects-action-bar.floating-btn { margin-top: -3.5rem; }
 .projects-action-bar.normal-btn { margin-top: 4rem; }
 
-.clients-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; width: 100%; }
+/* ==========================================================
+   MODIFIKASI HORIZONTAL SCROLL UNTUK CLIENTS
+========================================================== */
+.clients-grid { 
+    display: flex; /* Mengubah dari grid ke flex untuk baris horizontal */
+    flex-wrap: nowrap; /* Mencegah item turun ke bawah */
+    overflow-x: auto; /* Memunculkan scroll ke samping */
+    gap: 2rem; 
+    width: 100%; 
+    padding-bottom: 1.5rem; /* Ruang bernapas untuk scrollbar */
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; /* Efek magnet saat digeser */
+    -webkit-overflow-scrolling: touch; /* Kelancaran ekstra di HP */
+}
+
+/* Mempercantik tampilan Scrollbar di Desktop */
+.clients-grid::-webkit-scrollbar { height: 8px; }
+.clients-grid::-webkit-scrollbar-track { background: var(--bg-dark); border-radius: 10px; }
+.clients-grid::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 10px; }
+.clients-grid::-webkit-scrollbar-thumb:hover { background: var(--neon-blue); }
+
+.client-card { 
+    flex: 0 0 auto; /* PENTING: Mencegah kartu mengecil/tergencet */
+    width: 220px; /* Lebar kartu diatur tetap */
+    scroll-snap-align: start; /* Magnet berhenti sejajar di awal kartu */
+    
+    /* --- Sisa kode bawaan aslimu tetap dipertahankan --- */
+    background: var(--bg-panel); 
+    border: 1px solid var(--border-color); 
+    border-radius: 1.4rem; 
+    padding: 2.5rem 1.5rem; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    min-height: 170px; 
+}
 .client-card { background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 1.4rem; padding: 2.5rem 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center; min-height: 170px; }
 .client-card img { width: 75px; height: 75px; object-fit: contain; margin-bottom: 1.5rem; background: #ffffff; border-radius: 0.8rem; padding: 0.5rem; }
 .client-card p { font-size: 1.1rem; color: var(--text-muted); font-weight: 500; line-height: 1.4; }
@@ -268,6 +304,7 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
     .projects-grid { grid-template-columns: repeat(3, 1fr); }
     .certificates-grid { grid-template-columns: repeat(2, 1fr); }
     .clients-grid { grid-template-columns: repeat(4, 1fr); }
+    .clients-grid { gap: 1.5rem; }
 }
 
 @media (max-width: 991px) {
@@ -356,9 +393,22 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
     html { font-size: 75%; }
     .soft-skills-grid, .input-group, .stats-grid-about { grid-template-columns: 1fr; }
     
-    .clients-grid { grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
-    .client-card { padding: 1rem 0.5rem; min-height: 100px; }
-    .client-card img { width: 35px; height: 35px; }
+    /* Tampilan Scroll Horizontal HP */
+    .clients-grid { 
+        gap: 1rem; 
+        padding-bottom: 1rem; /* Mengurangi padding bawah di HP */
+    }
+    
+    .client-card { 
+        width: 140px; /* Lebar kartu dikecilkan agar pas di layar HP */
+        padding: 1.5rem 0.5rem; 
+        min-height: 120px; 
+    }
+    
+    .client-card img { 
+        width: 45px; /* Sedikit dibesarkan dari kode aslimu agar logo klien jelas */
+        height: 45px; 
+    }
     .clients-grid-container.is-collapsed { max-height: 420px; } 
 
     .footer { padding-top: 4rem; }

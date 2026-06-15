@@ -36,7 +36,8 @@ export default function Clients() {
       <h5 className="heading-sm">CLIENTS & PARTNERS</h5>
       <h2 className="heading">Riwayat Kolaborasi</h2>
       
-      <div className={`clients-grid-container ${!showAll ? 'is-collapsed' : ''}`}>
+      {/* Container dibersihkan dari efek 'is-collapsed' dan 'fade-overlay' */}
+      <div className="clients-grid-container">
         <div className="clients-grid">
           {clients.map((client, index) => (
             <div className="client-card" key={index}>
@@ -45,19 +46,6 @@ export default function Clients() {
             </div>
           ))}
         </div>
-        {!showAll && <div className="fade-overlay"></div>}
-      </div>
-
-      <div className={`projects-action-bar ${!showAll ? 'floating-btn' : 'normal-btn'}`}>
-        {!showAll ? (
-          <button className="btn btn-primary" onClick={() => setShowAll(true)}>
-            Lihat Selengkapnya <i className='bx bx-chevron-down'></i>
-          </button>
-        ) : (
-          <button className="btn btn-outline" onClick={() => setShowAll(false)}>
-            Sembunyikan <i className='bx bx-chevron-up'></i>
-          </button>
-        )}
       </div>
     </section>
   );
