@@ -20,9 +20,9 @@ export default function Certificates() {
 
   return (
     <section id="certificates" className="projects-section-k3">
-      <div className="section-header" style={{ marginBottom: '3rem' }}>
-        <span className="heading-sm" style={{display: 'block'}}>SERTIFIKASI</span>
-        <h2 className="heading">Pelatihan & Sertifikasi</h2>
+      <div className="section-header section-header-spacing">
+        <span className="heading-sm display-block">SERTIFIKASI</span>
+        <h2 className="heading">Pelatihan &amp; Sertifikasi</h2>
       </div>
 
       {/* Pembungkus Grid dengan Efek Potong */}
@@ -32,13 +32,15 @@ export default function Certificates() {
             <div className="project-card" key={i}>
               <Image src={c.img} alt={c.title} width={600} height={400} sizes="(max-width: 768px) 100vw, 50vw" />
               <div className="cert-text-content">
-                <div className="project-info" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
+                <div className="project-info cert-info-header">
                   <h3>{c.title}</h3>
-                  <Link href={c.link}><i className='bx bx-link-external' style={{ color: 'var(--neon-blue)', fontSize: '1.5rem' }}></i></Link>
+                  <Link href={c.link} aria-label={`Lihat sertifikat: ${c.title}`}>
+                    <i className='bx bx-link-external cert-link-icon'></i>
+                  </Link>
                 </div>
                 <p className="project-desc">{c.desc}</p>
-                <div className="tech-stack" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                  {c.tags.map((t, idx) => <span key={idx} style={{ fontSize: '1rem', color: 'var(--text-light)', fontWeight: '600' }}>{t}</span>)}
+                <div className="tech-stack">
+                  {c.tags.map((t, idx) => <span key={idx}>{t}</span>)}
                 </div>
               </div>
             </div>

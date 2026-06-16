@@ -1,37 +1,73 @@
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
-const chokidar = require('chokidar');
 
-// Tentukan target folder yang ingin diawasi (folder gambar portofolio kamu)
+// Target folder yang diawasi
 const targetDir = path.join(__dirname, 'public', 'images');
+
+// Ekstensi yang didukung (case-insensitive)
+const SUPPORTED_EXTENSIONS = ['.jpg', '.jpeg', '.png'];
+
+// Cek apakah dijalankan sebagai watcher (dev) atau one-shot (build)
+const isWatchMode = process.argv.includes('--watch');
 
 function convertToWebp(filePath) {
     const ext = path.extname(filePath).toLowerCase();
-    if (ext === '.jpg' || ext === '.jpeg' || ext === '.png') {
-        const outputName = filePath.replace(ext, '.webp');
 
-        // Cek apakah file webp sudah ada agar tidak kerja dua kali
-        if (!fs.existsSync(outputName)) {
-            sharp(filePath)
-                .webp({ quality: 80 }) // Set kualitas kompresi WebP (0-100)
-                .toFile(outputName)
-                .then(() => console.log(`⚡ Berhasil konversi otomatis: ${path.basename(filePath)} -> WebP`))
-                .catch(err => console.error(`❌ Gagal konversi ${path.basename(filePath)}:`, err));
+    // Hanya proses ekstensi yang didukung
+    if (!SUPPORTED_EXTENSIONS.includes(ext)) return Promise.resolve();
+
+    // Cegah konversi file yang sudah merupakan hasil konversi WebP
+    const baseName = path.basename(filePath, ext);
+    if (baseName.endsWith('.webp')) return Promise.resolve();
+
+    const outputName = filePath.slice(0, -ext.length) + '.webp';
+
+    // Cek apakah file WebP sudah ada
+    if (fs.existsSync(outputName)) return Promise.resolve();
+
+    return sharp(filePath)
+        .rotate() // Auto-rotate based on EXIF before converting
+        .withMetadata() // Preserve other metadata (optional, but good)
+        .webp({ quality: 75 })
+        .toFile(outputName)
+        .then(() => console.log(`⚡ Berhasil konversi: ${path.basename(filePath)} → WebP`))
+        .catch(err => console.error(`❌ Gagal konversi ${path.basename(filePath)}:`, err));
+}
+
+// Scan semua file di folder secara rekursif
+function scanDirectory(dir) {
+    const promises = [];
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    
+    for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+            promises.push(...scanDirectory(fullPath));
+        } else {
+            promises.push(convertToWebp(fullPath));
         }
     }
+    return promises;
 }
 
-// Jalankan pengawasan folder secara real-time
-console.log(`🔍 Skrip Spasial: Mengawasi folder gambar di ${targetDir}...`);
-const watcher = chokidar.watch(targetDir, { persistent: true });
+console.log(`🔍 Memindai folder gambar di ${targetDir}...`);
 
-watcher.on('add', filePath => convertToWebp(filePath));
-
-// Jika dijalankan saat build, skrip akan menutup otomatis setelah memindai sekali
-if (process.env.NODE_ENV === 'production') {
-    setTimeout(() => {
-        watcher.close();
+// Jalankan scan sekali
+Promise.all(scanDirectory(targetDir)).then(() => {
+    console.log('✅ Pemindaian selesai.');
+    
+    if (isWatchMode) {
+        // Mode dev: gunakan chokidar untuk watch real-time
+        const chokidar = require('chokidar');
+        console.log('👀 Mode watch aktif — mengawasi perubahan file...');
+        const watcher = chokidar.watch(targetDir, { 
+            persistent: true,
+            ignoreInitial: true,
+        });
+        watcher.on('add', filePath => convertToWebp(filePath));
+    } else {
+        // Mode build: keluar setelah scan selesai
         process.exit(0);
-    }, 5000);
-}
+    }
+});

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 export default function Clients() {
-  // Daftar lengkap riwayat kolaborasi Bos Daus
+  // Daftar lengkap riwayat kolaborasi
   const clients = [
     { name: 'PT. Sinergi Citra Karya', img: '/images/client/SCK.webp' },
     { name: 'PT. AFA Tombuku Pratama', img: '/images/client/AFA.webp' },
@@ -26,15 +26,14 @@ export default function Clients() {
     { name: 'PT. Pandit Eka Nusa Agrata', img: '/images/client/PND.webp' },
     { name: 'PT. Ruang Meja Kerja', img: '/images/client/RMK.webp' },
     { name: 'GEOPLAN Spatial', img: '/images/client/GPS.webp' },
-    { name: 'PT. Arya Graha Putratama', img: '/images/client/AGP.webp' }
+    { name: 'PT. Arya Graha Putratama', img: '/images/client/AGP.webp' },
   ];
 
   return (
     <section id="clients" className="projects-section-k3">
-      <span className="heading-sm" style={{display: 'block'}}>CLIENTS &amp; PARTNERS</span>
+      <span className="heading-sm display-block">CLIENTS &amp; PARTNERS</span>
       <h2 className="heading">Riwayat Kolaborasi</h2>
       
-      {/* Container dibersihkan dari efek 'is-collapsed' dan 'fade-overlay' */}
       <div className="clients-grid-container">
         <div className="clients-grid">
           {clients.map((client, index) => (

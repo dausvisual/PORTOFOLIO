@@ -1,11 +1,11 @@
 export default function Contact() {
   return (
     <section id="contact">
-      <span className="heading-sm" style={{display: 'block'}}>CONTACT</span>
+      <span className="heading-sm display-block">CONTACT</span>
       <h2 className="heading">Let&apos;s Work Together</h2>
       <div className="contact-container">
         <div>
-          <p style={{fontSize: '1.5rem', color: 'var(--text-muted)', marginBottom: '4rem'}}>Punya proyek atau ingin berdiskusi? Saya siap membantu Anda.</p>
+          <p className="contact-intro">Punya proyek atau ingin berdiskusi? Saya siap membantu Anda.</p>
           <div className="contact-info-item">
             <i className='bx bx-map'></i>
             <div><h4>Location</h4><p>Indonesia</p></div>
@@ -25,9 +25,9 @@ export default function Contact() {
             <input type="text" className="form-input" placeholder="Your Name" />
             <input type="email" className="form-input" placeholder="Your Email" />
           </div>
-          <input type="text" className="form-input" placeholder="Subject" style={{marginBottom: '2rem', width: '100%'}}/>
-          <textarea className="form-input" placeholder="Your Message" style={{width: '100%'}}></textarea>
-          <button className="btn btn-primary" style={{width: '100%', justifyContent: 'center'}}>Send Message <i className='bx bx-send'></i></button>
+          <input type="text" className="form-input form-input-subject" placeholder="Subject" />
+          <textarea className="form-input" placeholder="Your Message"></textarea>
+          <button className="btn btn-primary form-submit-btn">Send Message <i className='bx bx-send'></i></button>
         </form>
       </div>
     </section>

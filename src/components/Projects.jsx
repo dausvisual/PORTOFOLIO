@@ -8,11 +8,11 @@ export default function Projects() {
 
   // DATA PROYEK LENGKAP
   const projects = [
-    { id: 'vale', title: 'PT. Vale Indonesia Tbk.', cat: 'Survey Pengambilan Sampel Air', img: '/images/projects/vale1.webp.webp' },
-    { id: 'pam', title: 'PT. PAM Mineral Tbk.', cat: 'Survey Pengambilan Sampel Air dan Udara', img: '/images/projects/pam1.jpg' },
+    { id: 'vale', title: 'PT. Vale Indonesia Tbk.', cat: 'Survey Pengambilan Sampel Air', img: '/images/projects/vale1.webp' },
+    { id: 'pam', title: 'PT. PAM Mineral Tbk.', cat: 'Survey Pengambilan Sampel Air dan Udara', img: '/images/projects/pam1.WEBP' },
     { id: 'mti', title: 'PT. Merdeka Tsingshan Indonesia', cat: 'Survey Pengambilan Sampel Air', img: '/images/projects/mti3.webp' },
     { id: 'msb', title: 'PT. Mitra Sulawesi Bersama', cat: 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/msb1.webp' },
-    { id: 'awk', title: 'PT. Anindya Wiraputra Konsult', cat: 'Survey Pengambilan Sampel Air dan Udara', img: '/images/projects/awk1.jpg' },
+    { id: 'awk', title: 'PT. Anindya Wiraputra Konsult', cat: 'Survey Pengambilan Sampel Air dan Udara', img: '/images/projects/awk1.webp' },
     { id: 'imip', title: 'Indonesia Morowali Industrial Park', cat: 'Survey Pengambilaan Sampel Udara', img: '/images/projects/imip1.webp' },
     { id: 'igip', title: 'International Green Industrial Park', cat: 'Survey Pengambilan Sampel Udara', img: '/images/projects/igip2.webp' },
     { id: 'ihip', title: 'Indonesia Huabao Industrial Park', cat: 'Survey Pengambilan Sampel Udara', img: '/images/projects/ihip1.webp' },
@@ -26,19 +26,19 @@ export default function Projects() {
     { id: 'default', title: 'Pemetaan Pariwisata Bulukumba', cat: 'GIS', img: '/images/projects/11.webp' },
     { id: 'default', title: 'Benuanta Grup', cat: 'Survei Project RDTR Papua Perbatasan', img: '/images/projects/2.webp' },
     { id: 'default', title: 'BPPW Sulsel', cat: 'Tim Survey Program SPAL-DS Tahap I dan II', img: '/images/projects/4.webp' },
-    { id: 'default', title: 'PT. Ruang Meja Kerja', cat: 'Survey Perencanaan Kawasan Pariwisata Pentuanginan', img: '/images/projects/111.png' },
-    { id: 'default', title: 'PT. Ruang Meja Kerja', cat: 'Tim Survei dan Penyusun Profil Desa Mappetajang', img: '/images/projects/DJI_0165.JPG' },
+    { id: 'default', title: 'PT. Ruang Meja Kerja', cat: 'Survey Perencanaan Kawasan Pariwisata Pentuanginan', img: '/images/projects/111.webp' },
+    { id: 'default', title: 'PT. Ruang Meja Kerja', cat: 'Tim Survei dan Penyusun Profil Desa Mappetajang', img: '/images/projects/DJI_0165.WEBP' },
     { id: 'default', title: 'PT. Ruang Meja Kerja', cat: 'Survey Perintisan Jalan Mappetajang', img: '/images/projects/12.webp' },
-    { id: 'default', title: 'DISPERKIMTAN Bulukumba', cat: 'Survey Kawasan Permukiman Kumuh Jalanjang', img: '/images/projects/13.JPG' },
+    { id: 'default', title: 'DISPERKIMTAN Bulukumba', cat: 'Survey Kawasan Permukiman Kumuh Jalanjang', img: '/images/projects/13.webp' },
     { id: 'default', title: 'Wiha Media Undangan Digital', cat: 'Mapping', img: '/images/projects/UD.webp' },
-    { id: 'default', title: 'Freelance Foto & Video Editing', cat: 'Mapping', img: '/images/projects/HITAM.webp' }
+    { id: 'default', title: 'Freelance Foto & Video Editing', cat: 'Mapping', img: '/images/projects/HITAM.webp' },
   ];
 
   return (
     <section id="projects" className="projects-section-k3">
-      <span className="heading-sm" style={{display: 'block'}}>PROJECTS</span>
+      <span className="heading-sm display-block">PROJECTS</span>
       <h2 className="heading">Selected Works</h2>
-      
+
       <div className="projects-tabs">
         <button className="tab-btn active">All</button>
         <button className="tab-btn">GIS</button>
@@ -46,7 +46,7 @@ export default function Projects() {
         <button className="tab-btn">Survey</button>
       </div>
 
-      {/* 1. KOTAK PEMBUNGKUS (Hanya berisi grid dan efek visual kabut) */}
+      {/* Kotak pembungkus grid dengan efek potong */}
       <div className={`projects-grid-container ${!showAll ? 'is-collapsed' : ''}`}>
         <div className="projects-grid">
           {projects.map((p, i) => (
@@ -61,11 +61,11 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Efek Gradasi Transparan murni kosmetik */}
+        {/* Efek gradasi transparan */}
         {!showAll && <div className="fade-overlay"></div>}
       </div>
 
-      {/* 2. TOMBOL AKSI (Dikeluarkan sepenuhnya dari kotak pembungkus di atas) */}
+      {/* Tombol aksi */}
       <div className={`projects-action-bar ${!showAll ? 'floating-btn' : 'normal-btn'}`}>
         {!showAll ? (
           <button className="btn btn-primary" onClick={() => setShowAll(true)}>

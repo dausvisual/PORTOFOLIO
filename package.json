@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
  "scripts": {
-    "dev": "start /b node convert-webp.js && next dev",
+    "dev": "start /b node convert-webp.js --watch && next dev",
     "build": "node convert-webp.js && next build",
     "start": "next start",
     "lint": "next lint"

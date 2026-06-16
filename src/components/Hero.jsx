@@ -5,7 +5,7 @@ export default function Hero({ onOpenCv }) {
     <section className="hero-k3" id="home">
       <div className="hero-bg-glow"></div>
       <div id="particles-js" className="particles-k3"></div>
-      {/* Latar Belakang Garis Kontur Topografi (Elegan, Halus, Anti-Numpuk Teks) */}
+      {/* Latar Belakang Garis Kontur Topografi */}
       <div className="topography-bg">
         <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <path fill="none" stroke="rgba(0, 229, 255, 0.15)" strokeWidth="2" d="M0,160 C320,300 420,0 720,160 C1020,320 1120,50 1440,160"></path>
@@ -16,20 +16,27 @@ export default function Hero({ onOpenCv }) {
 
       <div className="hero-k3-container">
         
-        {/* === BAGIAN 1 (ATAS MOBILE, KANAN DESKTOP): FOTO & CINCIN RAPI === */}
+        {/* === BAGIAN 1: FOTO & CINCIN RAPI === */}
         <div className="hero-k3-visuals">
 
-          {/* Ikon Satelit / Drone Kecil Melayang */}
+          {/* Ikon Satelit Melayang */}
           <div className="hero-satellite-icon">
             <i className='bx bx-navigation'></i>
           </div>
           <div className="profile-wrapper">
             <div className="glowing-ring-1"></div>
             <div className="glowing-ring-2"></div>
-            {/* Gunakan nama profile.png seperti instruksi sebelumnya */}
-            <Image src="/images/profile/profile.webp" alt="Firdaus Ikram" className="profile-img" width={300} height={300} priority={true} />
+            <Image
+              src="/images/profile/profile.webp"
+              alt="Firdaus Ikram"
+              className="profile-img"
+              width={300}
+              height={300}
+              sizes="(max-width: 768px) 150px, 300px"
+              priority
+            />
 
-            {/* Cluster Tiny Floating Cards - Kebanggaan K3 */}
+            {/* Floating Cards */}
             <div className="float-card card-tl">
               <div className="icon-box"><i className='bx bx-layer'></i></div>
               <div className="text-box"><span className="float-title">GIS Analysis</span><p>Spatial Insight</p></div>
@@ -56,21 +63,20 @@ export default function Hero({ onOpenCv }) {
             </div>
           </div>
 
-          {/* Location Tag - Clustered tighter below Rings */}
+          {/* Location Tag */}
           <div className="profile-location">
             <p><i className='bx bx-map'></i> Morowali, Indonesia</p>
             <span>5&deg; 8&apos; 6&quot; S &bull; 119&deg; 24&apos; 37&quot; E</span>
           </div>
         </div>
 
-        {/* === BAGIAN 2 (BAWAH MOBILE, KIRI DESKTOP): TEKS K3 === */}
-     <div className="hero-k3-content">
+        {/* === BAGIAN 2: TEKS === */}
+        <div className="hero-k3-content">
           <div className="avail-badge">
             <span className="avail-dot"></span> Director Of PT. Sinergi Citra Karya
           </div>
           
           <h1 className="hero-title">
-            {/* Terapkan gradasi nama terinspirasi dari logo baru */}
             FIRDAUS <span className="name-gradient">IKRAM, S.PWK</span>
           </h1>
           
@@ -78,7 +84,7 @@ export default function Hero({ onOpenCv }) {
             GIS SPECIALIST <span>|</span> URBAN PLANNER <span>|</span> SURVEYOR <span>|</span> DRONE PILOT
           </p>
           
-          {/* Buttons - Row layout HP (Baris) */}
+          {/* Buttons */}
           <div className="hero-btn-group">
             <button className="btn btn-primary-glow" onClick={onOpenCv}>
               <i className='bx bx-download'></i> DOWNLOAD CV
@@ -88,15 +94,14 @@ export default function Hero({ onOpenCv }) {
             </a>
           </div>
 
-          {/* Socials - Row layout Rata Kiri */}
+          {/* Socials */}
           <div className="hero-socials">
             <a href="https://www.linkedin.com/in/firdaus-ikram-86405b2a6" target="_blank" rel="noreferrer" aria-label="LinkedIn Profile"><i className='bx bxl-linkedin'></i></a>
             <a href="https://www.instagram.com/firdausikram_17" target="_blank" rel="noreferrer" aria-label="Instagram Profile"><i className='bx bxl-instagram'></i></a>
-            <a href="#" target="_blank" rel="noreferrer" aria-label="GitHub Profile"><i className='bx bxl-github'></i></a>
             <a href="https://wa.me/6285770029172" target="_blank" rel="noreferrer" aria-label="WhatsApp Contact"><i className='bx bxl-whatsapp'></i></a>
           </div>
 
-          {/* Description - Rata Kiri di HP */}
+          {/* Description */}
           <p className="hero-desc">
              Experienced professional in mapping and geospatial analysis. Helping to transform complex spatial data into better decisions through GIS solutions, high-accuracy surveying, drone mapping, and urban planning.
           </p>

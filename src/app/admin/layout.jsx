@@ -1,7 +1,7 @@
 // Lokasi File: src/app/admin/layout.jsx
-"use client"; // Menandakan komponen ini berjalan di browser pengunjung karena menggunakan state
+"use client";
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 
 export default function AdminLayout({ children }) {

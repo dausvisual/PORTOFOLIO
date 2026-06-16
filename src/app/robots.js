@@ -1,9 +1,12 @@
 export default function robots() {
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-    },
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: '/admin',
+      },
+    ],
     sitemap: 'https://firdausikram.xyz/sitemap.xml',
   };
 }

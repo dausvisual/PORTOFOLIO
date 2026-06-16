@@ -15,7 +15,6 @@ const Navbar = ({ onOpenCv }) => {
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        // Subtract a bit so it triggers slightly before hitting the top
         if (window.scrollY >= sectionTop - sectionHeight / 3) {
           current = section.getAttribute('id');
         }
@@ -36,9 +35,8 @@ const Navbar = ({ onOpenCv }) => {
   return (
     <header className="header">
       <Link href="/" className="logo-k3">
-        {/* === REVOLUSI LOGO: Memanggil file webp hasil konversi otomatis === */}
         <div className="logo-fi-container">
-          <Image src="/logo/logo fi.png" alt="Logo Firdaus Ikram" width={55} height={55} priority={true} />
+          <Image src="/logo/logo fi.png" alt="Logo Firdaus Ikram" width={55} height={55} priority />
         </div>
 
         <div className="logo-text">
@@ -53,11 +51,9 @@ const Navbar = ({ onOpenCv }) => {
         <a href="#home" className={activeSection === 'home' ? 'active' : ''} onClick={() => setIsActive(false)}>Home</a>
         <a href="#about" className={activeSection === 'about' ? 'active' : ''} onClick={() => setIsActive(false)}>About</a>
         <a href="#myjourney" className={activeSection === 'myjourney' ? 'active' : ''} onClick={() => setIsActive(false)}>Journey</a>
-        
         <a href="#services" className={activeSection === 'services' ? 'active' : ''} onClick={() => setIsActive(false)}>Services</a>
         <a href="#certificates" className={activeSection === 'certificates' ? 'active' : ''} onClick={() => setIsActive(false)}>Certifications</a>
         <a href="#projects" className={activeSection === 'projects' ? 'active' : ''} onClick={() => setIsActive(false)}>Projects</a>
-        
         <a href="#clients" className={activeSection === 'clients' ? 'active' : ''} onClick={() => setIsActive(false)}>Clients</a>
         <a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={() => setIsActive(false)}>Contact</a>
         <button className="btn-dropdown-cv" onClick={onOpenCv}>Download CV</button>

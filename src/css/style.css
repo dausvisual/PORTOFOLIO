@@ -56,6 +56,28 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 .btn-outline, .btn-outline-glow { background: transparent; color: var(--text-light); border: 1px solid var(--border-color); }
 .btn-outline:hover, .btn-outline-glow:hover { border-color: var(--neon-blue); color: var(--neon-blue); box-shadow: var(--neon-glow); }
 
+/* Utility Classes — menggantikan inline styles dari komponen React */
+.display-block { display: block; }
+.section-header-spacing { margin-bottom: 3rem; }
+.journey-heading { margin-bottom: 3rem; font-size: 2.5rem; }
+.about-img-wide { grid-column: span 2; }
+.about-img-tall { grid-row: span 2; }
+.about-img-tall img { height: 100% !important; }
+.contact-intro { font-size: 1.5rem; color: var(--text-muted); margin-bottom: 4rem; }
+.form-input-subject { margin-bottom: 2rem; width: 100%; }
+.form-submit-btn { width: 100%; justify-content: center; }
+.cert-info-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
+.cert-link-icon { color: var(--neon-blue); font-size: 1.5rem; }
+
+/* Scroll-to-top button (dipindahkan dari dependency Font Awesome ke Boxicons) */
+#scroll-top { position: fixed; bottom: 3rem; right: 3rem; width: 50px; height: 50px; background: var(--main-color); color: white; display: flex; justify-content: center; align-items: center; border-radius: 50%; font-size: 2.4rem; z-index: 999; opacity: 0; pointer-events: none; transition: 0.3s ease; box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4); }
+#scroll-top.active { opacity: 1; pointer-events: auto; }
+#scroll-top:hover { transform: translateY(-5px); box-shadow: 0 6px 25px rgba(0, 229, 255, 0.4); }
+
+/* Gallery back button */
+.btn-back { display: inline-flex; align-items: center; gap: 0.8rem; color: var(--neon-blue); font-size: 1.4rem; font-weight: 600; margin-bottom: 3rem; transition: 0.3s; }
+.btn-back:hover { color: var(--text-light); }
+
 /* ==========================================================
    2. NAVBAR & HEADER
 ========================================================== */

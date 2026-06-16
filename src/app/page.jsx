@@ -1,19 +1,19 @@
 'use client';
 
-// Mengimpor Komponen Utama dengan kepastian direktori relatif src
-import Navbar from '../componen/Navbar';
-import Hero from '../componen/Hero';
-import About from '../componen/About';
-import MyJourney from '../componen/MyJourney';
-import Services from '../componen/Services';
-import Certificates from '../componen/Certificates';
-import Projects from '../componen/Projects';
-import Clients from '../componen/Clients';
-import Contact from '../componen/Contact';
-import Footer from '../componen/Footer';
+// Mengimpor Komponen Utama
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import MyJourney from '../components/MyJourney';
+import Services from '../components/Services';
+import Certificates from '../components/Certificates';
+import Projects from '../components/Projects';
+import Clients from '../components/Clients';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 export default function Home() {
-  // Kontrol Jembatan Interaksi Klik Popup CV
+  // Download CV secara langsung
   const handleDownloadCv = () => {
     const link = document.createElement('a');
     link.href = '/cv/CV FIRDAUS IKRAM.pdf';
@@ -22,6 +22,7 @@ export default function Home() {
     link.click();
     document.body.removeChild(link);
   };
+
   return (
     <>
       {/* 1. Header & Navigasi Utama */}
@@ -30,32 +31,32 @@ export default function Home() {
       {/* 2. Beranda Profil Utama */}
       <Hero onOpenCv={handleDownloadCv} />
 
-      {/* 4. Tentang Saya & Kartu Melayang */}
+      {/* 3. Tentang Saya & Kartu Melayang */}
       <About />
 
-      {/* 5. Alur Riwayat Pendidikan */}
+      {/* 4. Alur Riwayat Pendidikan */}
       <MyJourney />
 
-      {/* 6. Grid Kemampuan Teknis Spasial */}
+      {/* 5. Grid Kemampuan Teknis Spasial */}
       <Services />
 
-      {/* 7. Galeri Pelatihan & Sertifikasi */}
+      {/* 6. Galeri Pelatihan & Sertifikasi */}
       <Certificates />
 
-      {/* 8. Portofolio Pengalaman Proyek */}
+      {/* 7. Portofolio Pengalaman Proyek */}
       <Projects />
 
-      {/* 9. Jajaran Partner / Riwayat Kolaborasi Klien */}
+      {/* 8. Jajaran Partner / Riwayat Kolaborasi Klien */}
       <Clients />
 
-      {/* 10. Area Formulir Hubungi Saya */}
+      {/* 9. Area Formulir Hubungi Saya */}
       <Contact />
 
-      {/* 11. Kaki Halaman & Hak Cipta */}
+      {/* 10. Kaki Halaman & Hak Cipta */}
       <Footer />
 
-      {/* Tombol melayang kembali ke atas */}
-      <a href="#home" aria-label="ScrollTop" className="fas fa-angle-up" id="scroll-top"></a>
+      {/* Tombol melayang kembali ke atas — menggunakan Boxicons (Font Awesome dihapus) */}
+      <a href="#home" aria-label="Kembali ke atas" className="bx bx-chevron-up" id="scroll-top"></a>
     </>
   );
 }
