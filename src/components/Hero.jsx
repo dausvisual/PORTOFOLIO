@@ -17,7 +17,7 @@ export default function Hero({ onOpenCv }) {
       <div className="hero-k3-container">
         
         {/* === BAGIAN 1: FOTO & CINCIN RAPI === */}
-        <div className="hero-k3-visuals">
+        <div className="hero-k3-visuals" data-aos="fade-right">
 
           {/* Ikon Satelit Melayang */}
           <div className="hero-satellite-icon">
@@ -71,7 +71,7 @@ export default function Hero({ onOpenCv }) {
         </div>
 
         {/* === BAGIAN 2: TEKS === */}
-        <div className="hero-k3-content">
+        <div className="hero-k3-content" data-aos="fade-left">
           <div className="avail-badge">
             <span className="avail-dot"></span> Director Of PT. Sinergi Citra Karya
           </div>

@@ -29,7 +29,7 @@ export default function Services() {
   return (
     <section id="services" className="services-section-k3">
       {/* Header Layanan */}
-      <div className="services-header-k3">
+      <div className="services-header-k3" data-aos="fade-up">
         <div className="services-title-box">
           <span className="subtitle display-block">Layanan Utama</span>
           <h2>Solusi Profesional Untuk Kebutuhan Spasial</h2>
@@ -42,7 +42,7 @@ export default function Services() {
       {/* Grid 6 Kolom Kartu Layanan */}
       <div className="services-grid-k3">
         {services.map((s, i) => (
-          <div className="service-card-k3" key={i} style={{ borderTopColor: s.color }}>
+          <div className="service-card-k3" key={i} style={{ borderTopColor: s.color }} data-aos="fade-up" data-aos-delay={i * 100}>
             <i className={`bx ${s.icon} service-icon-k3`} style={{ color: s.color, textShadow: `0 0 15px ${s.color}60` }}></i>
             <h3>{s.title}</h3>
             <p>{s.desc}</p>

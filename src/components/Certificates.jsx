@@ -20,7 +20,7 @@ export default function Certificates() {
 
   return (
     <section id="certificates" className="projects-section-k3">
-      <div className="section-header section-header-spacing">
+      <div className="section-header section-header-spacing" data-aos="fade-up">
         <span className="heading-sm display-block">SERTIFIKASI</span>
         <h2 className="heading">Pelatihan &amp; Sertifikasi</h2>
       </div>
@@ -29,7 +29,7 @@ export default function Certificates() {
       <div className={`certs-grid-container ${!showAll ? 'is-collapsed' : ''}`}>
         <div className="certificates-grid">
           {certs.map((c, i) => (
-            <div className="project-card" key={i}>
+            <div className="project-card" key={i} data-aos="fade-up" data-aos-delay={(i % 3) * 100}>
               <Image src={c.img} alt={c.title} width={600} height={400} sizes="(max-width: 768px) 100vw, 50vw" />
               <div className="cert-text-content">
                 <div className="project-info cert-info-header">

@@ -1,4 +1,7 @@
 'use client';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Mengimpor Komponen Utama
 import Navbar from '../components/Navbar';
@@ -13,6 +16,15 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 export default function Home() {
+  // Inisialisasi AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false, // apakah animasi harus dijalankan hanya sekali?
+      offset: 50,  // offset (dalam px) dari trigger point awal
+    });
+  }, []);
+
   // Download CV secara langsung
   const handleDownloadCv = () => {
     const link = document.createElement('a');

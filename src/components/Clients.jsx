@@ -31,13 +31,13 @@ export default function Clients() {
 
   return (
     <section id="clients" className="projects-section-k3">
-      <span className="heading-sm display-block">CLIENTS &amp; PARTNERS</span>
-      <h2 className="heading">Riwayat Kolaborasi</h2>
+      <span className="heading-sm display-block" data-aos="fade-up">CLIENTS &amp; PARTNERS</span>
+      <h2 className="heading" data-aos="fade-up" data-aos-delay="100">Riwayat Kolaborasi</h2>
       
       <div className="clients-grid-container">
         <div className="clients-grid">
           {clients.map((client, index) => (
-            <div className="client-card" key={index}>
+            <div className="client-card" key={index} data-aos="zoom-in" data-aos-delay={(index % 4) * 50}>
               <Image src={client.img} alt={client.name} width={75} height={75} />
               <p>{client.name}</p>
             </div>

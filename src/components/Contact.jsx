@@ -1,10 +1,10 @@
 export default function Contact() {
   return (
     <section id="contact">
-      <span className="heading-sm display-block">CONTACT</span>
-      <h2 className="heading">Let&apos;s Work Together</h2>
+      <span className="heading-sm display-block" data-aos="fade-up">CONTACT</span>
+      <h2 className="heading" data-aos="fade-up" data-aos-delay="100">Let&apos;s Work Together</h2>
       <div className="contact-container">
-        <div>
+        <div data-aos="fade-right">
           <p className="contact-intro">Punya proyek atau ingin berdiskusi? Saya siap membantu Anda.</p>
           <div className="contact-info-item">
             <i className='bx bx-map'></i>
@@ -20,7 +20,7 @@ export default function Contact() {
           </div>
         </div>
         
-        <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+        <form className="contact-form" onSubmit={(e) => e.preventDefault()} data-aos="fade-left">
           <div className="input-group">
             <input type="text" className="form-input" placeholder="Your Name" />
             <input type="email" className="form-input" placeholder="Your Email" />

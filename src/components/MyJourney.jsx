@@ -6,7 +6,7 @@ export default function Education() {
       <div className="journey-stats-container">
 
         {/* Kolom Kiri: My Journey (Riwayat Pendidikan) */}
-        <div className="journey-box">
+        <div className="journey-box" data-aos="fade-right">
           <h2 className="heading journey-heading">My Journey</h2>
 
           <div className="timeline-vertical">
@@ -71,7 +71,7 @@ export default function Education() {
         </div>
 
         {/* Kolom Kanan: Stats */}
-        <div className="stats-box-wrapper">
+        <div className="stats-box-wrapper" data-aos="fade-left">
           <Stats />
         </div>
 

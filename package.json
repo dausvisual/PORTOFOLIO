@@ -2,7 +2,7 @@
   "name": "portofolio-firdaus-ikram",
   "version": "0.1.0",
   "private": true,
- "scripts": {
+  "scripts": {
     "dev": "start /b node convert-webp.js --watch && next dev",
     "build": "node convert-webp.js && next build",
     "start": "next start",
@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@types/aos": "^3.0.8",
     "@vercel/analytics": "^2.0.1",
+    "aos": "^2.3.4",
     "next": "16.2.7",
     "react": "19.2.4",
     "react-dom": "19.2.4"

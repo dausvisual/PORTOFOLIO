@@ -27,7 +27,7 @@ export default function Projects() {
     { id: 'default', title: 'Benuanta Grup', cat: 'Survei Project RDTR Papua Perbatasan', img: '/images/projects/2.webp' },
     { id: 'default', title: 'BPPW Sulsel', cat: 'Tim Survey Program SPAL-DS Tahap I dan II', img: '/images/projects/4.webp' },
     { id: 'default', title: 'PT. Ruang Meja Kerja', cat: 'Survey Perencanaan Kawasan Pariwisata Pentuanginan', img: '/images/projects/111.webp' },
-    { id: 'default', title: 'PT. Ruang Meja Kerja', cat: 'Tim Survei dan Penyusun Profil Desa Mappetajang', img: '/images/projects/DJI_0165.WEBP' },
+    { id: 'default', title: 'PT. Ruang Meja Kerja', cat: 'Tim Survei dan Penyusun Profil Desa Mappetajang', img: '/images/projects/DJI_0165.webp' },
     { id: 'default', title: 'PT. Ruang Meja Kerja', cat: 'Survey Perintisan Jalan Mappetajang', img: '/images/projects/12.webp' },
     { id: 'default', title: 'DISPERKIMTAN Bulukumba', cat: 'Survey Kawasan Permukiman Kumuh Jalanjang', img: '/images/projects/13.webp' },
     { id: 'default', title: 'Wiha Media Undangan Digital', cat: 'Mapping', img: '/images/projects/UD.webp' },
@@ -36,10 +36,10 @@ export default function Projects() {
 
   return (
     <section id="projects" className="projects-section-k3">
-      <span className="heading-sm display-block">PROJECTS</span>
-      <h2 className="heading">Selected Works</h2>
+      <span className="heading-sm display-block" data-aos="fade-up">PROJECTS</span>
+      <h2 className="heading" data-aos="fade-up" data-aos-delay="100">Selected Works</h2>
 
-      <div className="projects-tabs">
+      <div className="projects-tabs" data-aos="fade-up" data-aos-delay="200">
         <button className="tab-btn active">All</button>
         <button className="tab-btn">GIS</button>
         <button className="tab-btn">Mapping</button>
@@ -50,7 +50,7 @@ export default function Projects() {
       <div className={`projects-grid-container ${!showAll ? 'is-collapsed' : ''}`}>
         <div className="projects-grid">
           {projects.map((p, i) => (
-            <div className="project-card" key={i}>
+            <div className="project-card" key={i} data-aos="fade-up" data-aos-delay={(i % 3) * 100}>
               <Image src={p.img} alt={p.title} width={600} height={400} sizes="(max-width: 768px) 100vw, 33vw" />
               <h3>{p.title}</h3>
               <p>{p.cat}</p>
