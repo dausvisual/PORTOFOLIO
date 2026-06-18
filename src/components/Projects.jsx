@@ -9,7 +9,7 @@ export default function Projects() {
   // DATA PROYEK LENGKAP
   const projects = [
     { id: 'vale', title: 'PT. Vale Indonesia Tbk.', cat: 'Survey Pengambilan Sampel Air', img: '/images/projects/vale1.webp' },
-    { id: 'pam', title: 'PT. PAM Mineral Tbk.', cat: 'Survey Pengambilan Sampel Air dan Udara', img: '/images/projects/pam1.WEBP' },
+    { id: 'pam', title: 'PT. PAM Mineral Tbk.', cat: 'Survey Pengambilan Sampel Air dan Udara', img: '/images/projects/pam1.webp' },
     { id: 'mti', title: 'PT. Merdeka Tsingshan Indonesia', cat: 'Survey Pengambilan Sampel Air', img: '/images/projects/mti3.webp' },
     { id: 'msb', title: 'PT. Mitra Sulawesi Bersama', cat: 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/msb1.webp' },
     { id: 'awk', title: 'PT. Anindya Wiraputra Konsult', cat: 'Survey Pengambilan Sampel Air dan Udara', img: '/images/projects/awk1.webp' },
