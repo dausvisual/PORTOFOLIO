@@ -10,7 +10,7 @@ import { Poppins } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 
 // 3. Konfigurasi ketebalan font yang dipakai
-const poppins = Poppins({ 
+const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '600', '800'],
   display: 'swap',
@@ -19,6 +19,24 @@ const poppins = Poppins({
 export const metadata = {
   title: 'Firdaus Ikram, S.PWK',
   description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
+  applicationName: 'FIRDAUS IKRAM, S.PWK',
+  keywords: [
+    'Firdaus Ikram',
+    'Firdaus Ikram S.PWK',
+    'Portofolio Firdaus Ikram',
+    'GIS Specialist',
+    'Urban Planner',
+    'Surveyor',
+    'Perencanaan Wilayah dan Kota',
+    'Analisis Spasial',
+    'idda',
+    'daus',
+    'PT. Sinergi Citra Karya',
+    'Sinergi Citra Karya',
+    'FIN Bina Nusantara',
+    'daus visual',
+    'Pemetaan'
+  ],
   icons: {
     icon: "/logo/logo fi.png",
     shortcut: "/logo/logo fi.png",
@@ -29,10 +47,10 @@ export const metadata = {
     title: 'Firdaus Ikram, S.PWK',
     description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
     url: 'https://firdausikram.xyz',
-    siteName: 'Firdaus Ikram, S.PWK',
+    siteName: 'FIRDAUS IKRAM, S.PWK',
     images: [
       {
-        url: 'https://firdausikram.xyz/logo/thumbnail.webp',
+        url: 'https://firdausikram.xyz/logo/thumbnail2.png',
         width: 1200,
         height: 630,
         alt: 'Preview Portofolio Firdaus Ikram',
@@ -47,7 +65,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Firdaus Ikram, S.PWK',
     description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
-    images: ['https://firdausikram.xyz/logo/thumbnail.webp'],
+    images: ['https://firdausikram.xyz/logo/thumbnail2.png'],
   },
 }
 
@@ -63,7 +81,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         {children}
-        
+
         {/* Vercel Analytics */}
         <Analytics />
 
