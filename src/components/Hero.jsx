@@ -20,8 +20,14 @@ export default function Hero({ onOpenCv }) {
         <div className="hero-k3-visuals" data-aos="fade-right">
 
           {/* Ikon Satelit Melayang */}
-          <div className="hero-satellite-icon">
-            <i className='bx bx-navigation'></i>
+          <div className="hero-satellite-icon" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '45px', height: '45px', background: 'rgba(0, 229, 255, 0.1)', borderRadius: '50%', color: '#00e5ff', border: '1px solid rgba(0, 229, 255, 0.2)', boxShadow: '0 0 15px rgba(0, 229, 255, 0.3)' }}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: 'rotate(45deg)' }}>
+              <path d="M13 7 9 3 5 7l4 4" />
+              <path d="m17 11 4 4-4 4-4-4" />
+              <path d="m8 12 4 4 6-6-4-4Z" />
+              <path d="m16 8 3-3" />
+              <path d="M9 21a6 6 0 0 0-6-6" />
+            </svg>
           </div>
           <div className="profile-wrapper">
             <div className="glowing-ring-1"></div>
