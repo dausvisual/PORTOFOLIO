@@ -1,24 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>Riwayat Perjalanan Dummy</name>
-    <description>Masukkan lintasan KML atau titik Anda di sini</description>
-    <Style id="redLine">
-      <LineStyle>
-        <color>ff0000ff</color>
-        <width>4</width>
-      </LineStyle>
-    </Style>
+    <name>Riwayat Perjalanan Kabupaten/Kota</name>
+    <description>Lokasi kabupaten dan kota yang pernah dikunjungi di Sulawesi</description>
+
+    <!-- Sulawesi Selatan -->
     <Placemark>
-      <name>Jalur Makassar - Palu</name>
-      <styleUrl>#redLine</styleUrl>
-      <LineString>
-        <tessellate>1</tessellate>
-        <coordinates>
-          119.432731,-5.147665,0
-          119.863118,-0.902646,0
-        </coordinates>
-      </LineString>
+      <name>Kabupaten Bantaeng</name>
+      <Point><coordinates>119.9599,-5.5492,0</coordinates></Point>
     </Placemark>
+    <Placemark>
+      <name>Kabupaten Barru</name>
+      <Point><coordinates>119.6200,-4.4005,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Bone</name>
+      <Point><coordinates>120.3275,-4.5398,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Bulukumba</name>
+      <Point><coordinates>120.1916,-5.4528,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Enrekang</name>
+      <Point><coordinates>119.9248,-3.4862,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Gowa</name>
+      <Point><coordinates>119.5332,-5.2017,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Jeneponto</name>
+      <Point><coordinates>119.7423,-5.6796,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Kepulauan Selayar</name>
+      <Point><coordinates>120.4578,-6.1265,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Luwu</name>
+      <Point><coordinates>120.2458,-3.1118,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Luwu Timur</name>
+      <Point><coordinates>121.1717,-2.5317,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Luwu Utara</name>
+      <Point><coordinates>120.2520,-2.6022,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Maros</name>
+      <Point><coordinates>119.5746,-5.0118,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Pangkajene dan Kepulauan (Pangkep)</name>
+      <Point><coordinates>119.5362,-4.7573,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Pinrang</name>
+      <Point><coordinates>119.6436,-3.7844,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Sidenreng Rappang (Sidrap)</name>
+      <Point><coordinates>119.8055,-3.9351,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Sinjai</name>
+      <Point><coordinates>120.1130,-5.2285,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Soppeng</name>
+      <Point><coordinates>119.8781,-4.3418,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Takalar</name>
+      <Point><coordinates>119.4503,-5.4190,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kabupaten Wajo</name>
+      <Point><coordinates>120.1471,-3.9922,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kota Makassar</name>
+      <Point><coordinates>119.4327,-5.1476,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kota Pare-pare</name>
+      <Point><coordinates>119.6277,-4.0152,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kota Palopo</name>
+      <Point><coordinates>120.1947,-3.0039,0</coordinates></Point>
+    </Placemark>
+
+    <!-- Sulawesi Tengah -->
+    <Placemark>
+      <name>Poso</name>
+      <Point><coordinates>120.7513,-1.3965,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Palu</name>
+      <Point><coordinates>119.8778,-0.9004,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Morowali</name>
+      <Point><coordinates>121.9360,-2.6738,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Morowali Utara</name>
+      <Point><coordinates>121.3410,-1.9363,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kolonodale</name>
+      <Point><coordinates>121.3323,-1.9705,0</coordinates></Point>
+    </Placemark>
+
+    <!-- Sulawesi Tenggara -->
+    <Placemark>
+      <name>Konawe</name>
+      <Point><coordinates>122.1154,-3.8340,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kendari</name>
+      <Point><coordinates>122.5129,-3.9984,0</coordinates></Point>
+    </Placemark>
+
+    <!-- Gorontalo -->
+    <Placemark>
+      <name>Gorontalo</name>
+      <Point><coordinates>123.0595,0.5387,0</coordinates></Point>
+    </Placemark>
+
+    <!-- Kalimantan Timur -->
+    <Placemark>
+      <name>Samarinda</name>
+      <Point><coordinates>117.1533,-0.5022,0</coordinates></Point>
+    </Placemark>
+
+    <!-- DKI Jakarta -->
+    <Placemark>
+      <name>Jakarta</name>
+      <Point><coordinates>106.8229,-6.1944,0</coordinates></Point>
+    </Placemark>
+
+    <!-- Papua & Sekitarnya -->
+    <Placemark>
+      <name>Jayapura</name>
+      <Point><coordinates>140.7046,-2.5337,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Perbatasan Papua Nugini dan Papua (Skouw)</name>
+      <Point><coordinates>141.0028,-2.5855,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Wamena</name>
+      <Point><coordinates>138.9483,-4.0970,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Timika</name>
+      <Point><coordinates>136.8856,-4.5300,0</coordinates></Point>
+    </Placemark>
+
+    <!-- Arab Saudi -->
+    <Placemark>
+      <name>Mekkah</name>
+      <Point><coordinates>39.8262,21.4225,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Madinah</name>
+      <Point><coordinates>39.6111,24.4686,0</coordinates></Point>
+    </Placemark>
+
   </Document>
 </kml>

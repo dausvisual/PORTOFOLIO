@@ -1,6 +1,8 @@
 /* ==========================================================
    1. CORE RESET, VARIABLES, & GLOBAL STYLE
 ========================================================== */
+@import 'leaflet/dist/leaflet.css';
+
 /* Catatan: @import Google Font dihapus karena Next.js sudah mengaturnya via layout.tsx agar loading lebih cepat */
 
 * { 
@@ -164,9 +166,9 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 .about-right-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 .about-img-box img { width: 100%; border-radius: 1.2rem; height: 400px; object-fit: cover; border: 1px solid var(--border-color); }
 
-.journey-section { padding-top: 6rem; }
-.stats-horizontal-wrapper { margin-bottom: 5rem; width: 100%; }
-.journey-content-container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: flex-start; width: 100%; }
+.journey-section { padding-top: 6rem; position: relative; }
+.stats-horizontal-wrapper { margin-bottom: 5rem; width: 100%; position: relative; z-index: 10; pointer-events: auto; }
+.journey-content-container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: flex-start; width: 100%; position: relative; z-index: 10; pointer-events: auto; }
 
 /* MAP STYLES */
 .journey-map-wrapper { background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 1.4rem; padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem; height: 100%; min-height: 600px; }
@@ -176,7 +178,8 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 .map-upload-label { background: rgba(0, 229, 255, 0.1); border: 1px solid rgba(0, 229, 255, 0.3); color: var(--neon-blue); padding: 0.8rem 1.5rem; border-radius: 0.8rem; font-size: 1.2rem; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 0.6rem; }
 .map-upload-label:hover { background: var(--neon-blue); color: var(--bg-dark); }
 .map-upload-input { display: none; }
-.map-frame { flex: 1; border-radius: 1rem; overflow: hidden; border: 1px solid var(--border-color); z-index: 1; min-height: 400px; }
+.map-frame { border-radius: 1rem; overflow: hidden; border: 1px solid rgba(0, 229, 255, 0.3); z-index: 1; box-shadow: 0 0 15px rgba(0, 229, 255, 0.1), inset 0 0 10px rgba(0, 229, 255, 0.05); }
+.my-leaflet-map { height: 500px; width: 100%; z-index: 1; }
 .map-loading-msg { color: var(--neon-blue); font-size: 1.2rem; }
 .map-error-msg { color: #ff4d4d; font-size: 1.2rem; }
 .map-loading-placeholder { min-height: 500px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--text-muted); background: var(--bg-panel); border-radius: 1.4rem; border: 1px solid var(--border-color); }
@@ -186,6 +189,11 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 .timeline-date-v { font-size: 1.2rem; color: var(--neon-blue); font-weight: 600; margin-bottom: 0.6rem; letter-spacing: 1px; }
 .timeline-content-v h3 { font-size: 1.8rem; color: var(--text-light); font-weight: 600; }
 .timeline-content-v p { font-size: 1.3rem; color: var(--text-muted); margin-top: 4px; }
+
+.locked-item { opacity: 0.55; filter: grayscale(0.8); pointer-events: none; }
+.locked-item .timeline-dot-v { background: #555; border-color: #888; box-shadow: none; }
+.locked-item h3 { color: #aaa; }
+.locked-icon { color: #ffcc00; margin-left: 10px; font-size: 1.3rem; vertical-align: middle; }
 
 
 
@@ -399,6 +407,9 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
     .about { grid-template-columns: 1fr; gap: 3rem; }
     .about-img-box img { height: 250px; }
     .journey-content-container { grid-template-columns: 1fr; gap: 3rem; }
+    .journey-map-wrapper { min-height: auto; padding: 1.5rem; }
+    .map-frame { min-height: auto; }
+    .my-leaflet-map { height: 300px; }
     
     .services-header-k3 { flex-direction: column; align-items: flex-start; gap: 1rem; }
     .services-grid-k3 { grid-template-columns: 1fr; }
@@ -443,6 +454,8 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
         height: 45px; 
     }
     .clients-grid-container.is-collapsed { max-height: 420px; } 
+
+    .my-leaflet-map { height: 250px; }
 
     .footer { padding-top: 4rem; }
 }

@@ -22,7 +22,7 @@ export default function Education() {
               <div className="timeline-content-v">
                 <div className="timeline-date-v">2014 - 2017</div>
                 <a href="https://smpn5bulukumba.sch.id/index.php/home.html" target="_blank" rel="noreferrer">
-                  <h3>SMP NEGERI 5 BULUKUMBA</h3>
+                  <h3><i className='bx bxs-book' style={{ marginRight: '8px', color: 'var(--neon-blue)' }}></i>SMP NEGERI 5 BULUKUMBA</h3>
                 </a>
               </div>
             </div>
@@ -32,7 +32,7 @@ export default function Education() {
               <div className="timeline-content-v">
                 <div className="timeline-date-v">2017 - 2020</div>
                 <a href="https://www.instagram.com/smanegeri8bulukumba/?hl=en" target="_blank" rel="noreferrer">
-                  <h3>SMA NEGERI 8 BULUKUMBA</h3>
+                  <h3><i className='bx bxs-book' style={{ marginRight: '8px', color: 'var(--neon-blue)' }}></i>SMA NEGERI 8 BULUKUMBA</h3>
                 </a>
               </div>
             </div>
@@ -42,35 +42,35 @@ export default function Education() {
               <div className="timeline-content-v">
                 <div className="timeline-date-v">2020 - 2024</div>
                 <a href="https://www.instagram.com/umbulukumba_official/" target="_blank" rel="noreferrer">
-                  <h3>UNIVERSITAS MUHAMMADIYAH BULUKUMBA</h3>
+                  <h3><i className='bx bxs-graduation' style={{ marginRight: '8px', color: 'var(--neon-blue)' }}></i>UNIVERSITAS MUHAMMADIYAH BULUKUMBA</h3>
                   <p>Teknik Perencanaan Wilayah dan Kota</p>
                 </a>
               </div>
             </div>
 
-            <div className="timeline-item-v">
+            <div className="timeline-item-v locked-item">
               <div className="timeline-dot-v"></div>
               <div className="timeline-content-v">
                 <div className="timeline-date-v">Dalam Perencanaan</div>
-                <h3>Studi Magister (S2)</h3>
+                <h3><i className='bx bxs-graduation' style={{ marginRight: '8px' }}></i>Studi Magister (S2) <i className='bx bxs-lock-alt locked-icon'></i></h3>
                 <p>Sedang dalam tahap persiapan akademik.</p>
               </div>
             </div>
 
-            <div className="timeline-item-v">
+            <div className="timeline-item-v locked-item">
               <div className="timeline-dot-v"></div>
               <div className="timeline-content-v">
                 <div className="timeline-date-v">Dalam Perencanaan</div>
-                <h3>Pendidikan Profesi Insinyur</h3>
+                <h3><i className='bx bxs-graduation' style={{ marginRight: '8px' }}></i>Pendidikan Profesi Insinyur <i className='bx bxs-lock-alt locked-icon'></i></h3>
                 <p>Sedang dalam tahap persiapan akademik.</p>
               </div>
             </div>
 
-            <div className="timeline-item-v">
+            <div className="timeline-item-v locked-item">
               <div className="timeline-dot-v"></div>
               <div className="timeline-content-v">
                 <div className="timeline-date-v">Target Studi</div>
-                <h3>Studi Doktoral (S3)</h3>
+                <h3><i className='bx bxs-graduation' style={{ marginRight: '8px' }}></i>Studi Doktoral (S3) <i className='bx bxs-lock-alt locked-icon'></i></h3>
                 <p>Target pencapaian di masa mendatang.</p>
               </div>
             </div>

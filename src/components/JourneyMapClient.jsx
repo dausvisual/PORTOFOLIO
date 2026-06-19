@@ -31,6 +31,17 @@ function MapBoundsUpdater({ geoJsonData }) {
   return null;
 }
 
+// Fix missing tiles by invalidating size on mount
+function MapResizer() {
+  const map = useMap();
+  useEffect(() => {
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 400);
+  }, [map]);
+  return null;
+}
+
 export default function JourneyMapClient() {
   const [geoJsonData, setGeoJsonData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -81,9 +92,13 @@ export default function JourneyMapClient() {
         <MapContainer 
           center={defaultCenter} 
           zoom={defaultZoom} 
-          style={{ height: '100%', width: '100%', zIndex: 1 }}
-          scrollWheelZoom={false}
+          className="my-leaflet-map"
+          style={{ width: '100%', zIndex: 1 }}
+          scrollWheelZoom={true}
+          dragging={true}
         >
+          <MapResizer />
+          
           {/* ArcGIS World Imagery Basemap */}
           {/* Citra Satelit Esri / ArcGIS Pro */}
           <TileLayer
