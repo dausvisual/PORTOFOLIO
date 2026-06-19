@@ -19,8 +19,6 @@ export default function Stats() {
               <h2>{s.num}</h2>
               <p>{s.label}</p>
             </div>
-            {/* Garis pembatas, tidak ditampilkan di item paling akhir */}
-            {i !== stats.length - 1 && <div className="stat-divider"></div>}
           </div>
         ))}
       </div>

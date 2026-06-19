@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Riwayat Perjalanan Dummy</name>
+    <description>Masukkan lintasan KML atau titik Anda di sini</description>
+    <Style id="redLine">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Placemark>
+      <name>Jalur Makassar - Palu</name>
+      <styleUrl>#redLine</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          119.432731,-5.147665,0
+          119.863118,-0.902646,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Document>
+</kml>

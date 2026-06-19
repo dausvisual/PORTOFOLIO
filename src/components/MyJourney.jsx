@@ -1,9 +1,16 @@
 import Stats from './Stats';
+import JourneyMap from './JourneyMap';
 
 export default function Education() {
   return (
     <section className="journey-section" id="myjourney">
-      <div className="journey-stats-container">
+      
+      {/* Bagian Atas: Stats (Horizontal) */}
+      <div className="stats-horizontal-wrapper" data-aos="fade-down">
+        <Stats />
+      </div>
+
+      <div className="journey-content-container">
 
         {/* Kolom Kiri: My Journey (Riwayat Pendidikan) */}
         <div className="journey-box" data-aos="fade-right">
@@ -70,9 +77,9 @@ export default function Education() {
           </div>
         </div>
 
-        {/* Kolom Kanan: Stats */}
-        <div className="stats-box-wrapper" data-aos="fade-left">
-          <Stats />
+        {/* Kolom Kanan: Peta Riwayat Perjalanan */}
+        <div className="map-box-wrapper" data-aos="fade-left">
+          <JourneyMap />
         </div>
 
       </div>
