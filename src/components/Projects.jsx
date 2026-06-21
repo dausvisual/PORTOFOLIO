@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
+  const [activeTab, setActiveTab] = useState('All');
 
   // DATA PROYEK LENGKAP
   const projects = [
@@ -40,16 +41,23 @@ export default function Projects() {
       <h2 className="heading" data-aos="fade-up" data-aos-delay="100">Selected Works</h2>
 
       <div className="projects-tabs" data-aos="fade-up" data-aos-delay="200">
-        <button className="tab-btn active">All</button>
-        <button className="tab-btn">GIS</button>
-        <button className="tab-btn">Mapping</button>
-        <button className="tab-btn">Survey</button>
+        <button className={`tab-btn ${activeTab === 'All' ? 'active' : ''}`} onClick={() => setActiveTab('All')}>All</button>
+        <button className={`tab-btn ${activeTab === 'GIS' ? 'active' : ''}`} onClick={() => setActiveTab('GIS')}>GIS</button>
+        <button className={`tab-btn ${activeTab === 'Mapping' ? 'active' : ''}`} onClick={() => setActiveTab('Mapping')}>Mapping</button>
+        <button className={`tab-btn ${activeTab === 'Survey' ? 'active' : ''}`} onClick={() => setActiveTab('Survey')}>Survey</button>
       </div>
 
       {/* Kotak pembungkus grid dengan efek potong */}
       <div className={`projects-grid-container ${!showAll ? 'is-collapsed' : ''}`}>
         <div className="projects-grid">
-          {projects.map((p, i) => (
+          {projects.filter(p => {
+            if (activeTab === 'All') return true;
+            const cat = p.cat.toLowerCase();
+            if (activeTab === 'GIS') return cat.includes('gis');
+            if (activeTab === 'Mapping') return cat.includes('mapping') || cat.includes('pemetaan');
+            if (activeTab === 'Survey') return cat.includes('survey') || cat.includes('survei');
+            return true;
+          }).map((p, i) => (
             <div className="project-card" key={i} data-aos="fade-up" data-aos-delay={(i % 3) * 100}>
               <Image src={p.img} alt={p.title} width={600} height={400} sizes="(max-width: 768px) 100vw, 33vw" />
               <h3>{p.title}</h3>

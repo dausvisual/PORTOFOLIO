@@ -36,7 +36,7 @@ const Navbar = ({ onOpenCv }) => {
     <header className="header">
       <Link href="/" className="logo-k3">
         <div className="logo-fi-container">
-          <Image src="/logo/logo fi.png" alt="Logo Firdaus Ikram" width={55} height={55} priority />
+          <Image src="/logo/logo-fi.webp" alt="Logo Firdaus Ikram" width={55} height={55} priority />
         </div>
 
         <div className="logo-text">

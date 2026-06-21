@@ -1,11 +1,9 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import * as toGeoJSON from '@tmcw/togeojson';
-import JSZip from 'jszip';
-import shp from 'shpjs';
 import L from 'leaflet';
 
 // Fix Leaflet icon issue

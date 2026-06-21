@@ -15,7 +15,7 @@ if (document.getElementById('particles-js')) {
           "density": { "enable": true, "value_area": 800 }
         },
         "color": {
-          "value": ["#00e5ff", "#4f46e5"]
+          "value": "#00e5ff"
         },
         "shape": { "type": "circle" },
         "opacity": {
@@ -69,7 +69,7 @@ if (document.getElementById('particles-js-education')) {
     particlesJS("particles-js-education", {
       "particles": {
         "number": { "value": 50, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": ["#00e5ff", "#4f46e5"] },
+        "color": { "value": "#00e5ff" },
         "shape": { "type": "circle" },
         "opacity": { "value": 0.4, "random": true, "anim": { "enable": true, "speed": 1.5, "opacity_min": 0.1, "sync": false } },
         "size": { "value": 3, "random": true, "anim": { "enable": true, "speed": 2, "size_min": 0.1, "sync": false } },

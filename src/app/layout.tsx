@@ -38,9 +38,9 @@ export const metadata = {
     'Pemetaan'
   ],
   icons: {
-    icon: "/logo/logo fi.png",
-    shortcut: "/logo/logo fi.png",
-    apple: "/logo/logo fi.png",
+    icon: "/logo/logo-fi.webp",
+    shortcut: "/logo/logo-fi.webp",
+    apple: "/logo/logo-fi.webp",
   },
   // === PENGATURAN THUMBNAIL OPEN GRAPH (WHATSAPP, LINKEDIN, FB) ===
   openGraph: {
@@ -50,7 +50,7 @@ export const metadata = {
     siteName: 'FIRDAUS IKRAM, S.PWK',
     images: [
       {
-        url: 'https://firdausikram.xyz/logo/thumbnail2.png',
+        url: 'https://firdausikram.xyz/logo/thumbnail2.webp',
         width: 1200,
         height: 630,
         alt: 'Preview Portofolio Firdaus Ikram',
@@ -65,7 +65,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Firdaus Ikram, S.PWK',
     description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
-    images: ['https://firdausikram.xyz/logo/thumbnail2.png'],
+    images: ['https://firdausikram.xyz/logo/thumbnail2.webp'],
   },
 }
 
