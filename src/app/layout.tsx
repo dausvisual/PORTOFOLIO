@@ -82,7 +82,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         {/* Particles.js — efek partikel di Hero & Education section */}
         <Script src="/js/particles.min.js" strategy="lazyOnload" />
-        <Script src="/js/app.js?v=2" strategy="lazyOnload" />
+        <Script src="/js/particles-config.js" strategy="lazyOnload" />
       </body>
     </html>
   );
