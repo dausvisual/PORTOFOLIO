@@ -87,7 +87,7 @@ export default function Hero({ onOpenCv }) {
           </h1>
           
           <p className="hero-subtitle">
-            GIS SPECIALIST <span>|</span> URBAN PLANNER <span>|</span> SURVEYOR <span>|</span> DRONE PILOT
+            GIS SPECIALIST <span>|</span> URBAN PLANNER <span>|</span> WEB GIS DEVELOPER <span>|</span> DRONE PILOT
           </p>
           
           {/* Buttons */}

@@ -56,6 +56,51 @@ const galleryData = {
     desc: "Ketua Tim Survei Pengambilan Sampel Udara, PT. Farmel Cipta Mandiri",
     images: ["/images/projects/fcm1.webp", "/images/projects/fcm2.webp", "/images/projects/fcm3.webp", "/images/projects/fcm4.webp"],
   },
+  benuanta: {
+    title: "Benuanta Grup",
+    desc: "Gabungan proyek survei pemetaan RDTR, Masterplan Jalan, dan kajian kawasan bersama Benuanta Grup.",
+    images: ["/images/projects/benuanta1.webp", "/images/projects/benuanta2.webp", "/images/projects/benuanta3.webp", "/images/projects/benuanta4.webp"],
+  },
+  rmk: {
+    title: "PT. Ruang Meja Kerja",
+    desc: "Survei perencanaan kawasan pariwisata, profil desa, dan perintisan jalan di bawah PT. Ruang Meja Kerja.",
+    images: ["/images/projects/rmk1.webp", "/images/projects/rmk2.webp", "/images/projects/rmk3.webp"],
+  },
+  pandit: {
+    title: "PT. Pandit Eka Nusa Agrata",
+    desc: "Survei Andalalin.",
+    images: ["/images/projects/pandit1.webp"],
+  },
+  bira: {
+    title: "Pemerintah Desa Bira",
+    desc: "Tim Survei dan Pemetaan Desa.",
+    images: ["/images/projects/bira1.webp"],
+  },
+  dispar: {
+    title: "Pemetaan Pariwisata Bulukumba",
+    desc: "Sistem Informasi Geografis Pariwisata.",
+    images: ["/images/projects/dispar1.webp"],
+  },
+  bppwsulsel: {
+    title: "BPPW Sulsel",
+    desc: "Tim Survey Program SPAL-DS Tahap I dan II.",
+    images: ["/images/projects/bppwsulsel1.webp"],
+  },
+  disperkimtan: {
+    title: "DISPERKIMTAN Bulukumba",
+    desc: "Survey Kawasan Permukiman Kumuh Jalanjang.",
+    images: ["/images/projects/disperkimtan1.webp"],
+  },
+  wihamedia: {
+    title: "Wiha Media Undangan Digital",
+    desc: "Mapping dan Desain Digital.",
+    images: ["/images/projects/wihamedia1.webp"],
+  },
+  freelance: {
+    title: "Freelance Foto & Video Editing",
+    desc: "Layanan Editing Visual dan Mapping.",
+    images: ["/images/projects/freelance1.webp"],
+  },
 };
 
 

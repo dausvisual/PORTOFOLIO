@@ -17,25 +17,20 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'Firdaus Ikram, S.PWK',
-  description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
+  title: 'Firdaus Ikram, S.PWK | GIS Specialist',
+  description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, Web GIS Developer, & Drone Mapping profesional.',
   applicationName: 'FIRDAUS IKRAM, S.PWK',
   keywords: [
     'Firdaus Ikram',
-    'Firdaus Ikram S.PWK',
-    'Portofolio Firdaus Ikram',
     'GIS Specialist',
+    'Drone Mapping',
+    'Konsultan GIS',
     'Urban Planner',
-    'Surveyor',
-    'Perencanaan Wilayah dan Kota',
+    'Pemetaan Drone',
+    'Web GIS Developer',
     'Analisis Spasial',
-    'idda',
-    'daus',
-    'PT. Sinergi Citra Karya',
-    'Sinergi Citra Karya',
-    'FIN Bina Nusantara',
-    'daus visual',
-    'Pemetaan'
+    'Surveyor',
+    'PT. Sinergi Citra Karya'
   ],
   icons: {
     icon: "/logo/logo-fi.webp",
@@ -87,7 +82,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         {/* Particles.js — efek partikel di Hero & Education section */}
         <Script src="/js/particles.min.js" strategy="lazyOnload" />
-        <Script src="/js/app.js" strategy="lazyOnload" />
+        <Script src="/js/app.js?v=2" strategy="lazyOnload" />
       </body>
     </html>
   );

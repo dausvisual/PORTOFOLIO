@@ -162,7 +162,7 @@ export default function MyJourney() {
         </div>
 
         {/* KOLOM KANAN: STATISTIK & QUOTE */}
-        <div className="journey-right-col" data-aos="fade-left">
+        <div className={`journey-right-col ${!showAllTimeline ? 'hide-on-mobile' : ''}`} data-aos="fade-left">
 
           {/* Box Profesional */}
           <div className="stats-vertical-box">

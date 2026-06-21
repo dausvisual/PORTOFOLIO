@@ -6,8 +6,8 @@ export default function About() {
       <div className="about-left" data-aos="fade-up">
         <span className="heading-sm display-block">ABOUT ME</span>
         <h2 className="heading about-title">Transforming Spatial Data Into Impactful Solutions</h2>
-        <p className="about-desc">Sebagai seorang Urban Planner &amp; GIS Specialist, saya mengintegrasikan analisis spasial tingkat lanjut dengan perencanaan wilayah yang strategis. Melalui pemetaan akurat, survei drone, dan pengolahan data berbasis teknologi terkini.</p>
-        <p className="about-desc">Saya membantu instansi pemerintah dan sektor swasta merancang keputusan yang presisi demi pembangunan yang berkelanjutan.</p>
+        <p className="about-desc">Berperan aktif sebagai <strong>Konsultan GIS</strong> dan <strong>Urban Planner</strong>, saya mengintegrasikan analisis spasial tingkat lanjut dengan perencanaan wilayah yang strategis. Melalui penyediaan <strong>Drone Mapping</strong>, pemetaan akurat, dan pengolahan data berbasis teknologi terkini.</p>
+        <p className="about-desc">Sebagai seorang <strong>GIS Specialist</strong>, saya membantu instansi pemerintah dan sektor swasta merancang keputusan yang presisi demi pembangunan yang berkelanjutan.</p>
         
         <div className="tech-tags">
           <span>ArcGIS</span><span>QGIS</span><span>Adobe Creative</span><span>Drone Mapping</span>

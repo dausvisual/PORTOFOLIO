@@ -6,7 +6,7 @@ export default function Services() {
     },
     { 
       icon: 'bx-paper-plane', title: 'Drone Mapping', color: '#3b82f6',
-      desc: 'Pemotretan udara, orthomosaic, DSM, DTM, dan analisis volumetrik dengan teknologi drone.' 
+      desc: 'Penyedia pemetaan drone untuk pemotretan udara, orthomosaic, DSM, DTM, dan analisis volumetrik.' 
     },
     { 
       icon: 'bx-target-lock', title: 'Survey & Measurement', color: '#10b981',
@@ -21,8 +21,8 @@ export default function Services() {
       desc: 'AMDAL, UKL-UPL, pemantauan lingkungan dan konsultasi keberlanjutan.' 
     },
     { 
-      icon: 'bx-map-alt', title: 'Web GIS Development', color: '#00e5ff',
-      desc: 'Pengembangan Web GIS, dashboard interaktif, dan sistem informasi berbasis peta.' 
+      icon: 'bx-map-alt', title: 'Web GIS Developer', color: '#00e5ff',
+      desc: 'Pengembangan Web GIS, dashboard interaktif, dan sistem informasi spasial oleh profesional Web GIS Developer.' 
     },
   ];
 
