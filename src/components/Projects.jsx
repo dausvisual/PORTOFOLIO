@@ -1,11 +1,32 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
   const [activeTab, setActiveTab] = useState('All');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const navEntries = performance.getEntriesByType('navigation');
+      if (navEntries.length > 0 && navEntries[0].type === 'reload') {
+        sessionStorage.removeItem('showAllProjects');
+      } else {
+        const stored = sessionStorage.getItem('showAllProjects');
+        if (stored === 'true') {
+          setShowAll(true);
+        }
+      }
+    }
+  }, []);
+
+  const handleToggleShowAll = (state) => {
+    setShowAll(state);
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('showAllProjects', state);
+    }
+  };
 
   // DATA PROYEK LENGKAP
   const projects = [
@@ -20,8 +41,8 @@ export default function Projects() {
     { id: 'adp', title: 'PT. Alaska Dwipa Perdana', cat: 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/adp1.webp' },
     { id: 'fcm', title: 'PT. Farmel Cipta Mandiri', cat: 'Survey Pengambilan Sampel Air', img: '/images/projects/fcm1.webp' },
     { id: 'khubsurat', title: 'PT. Khubsurat Meherban Ilahi', cat: 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/kmh1.webp' },
-    { id: 'pandit', title: 'PT. Pandit Eka Nusa Agrata', cat: 'Survey Andalalin', img: '/images/projects/pandit1.webp' },
     { id: 'benuanta', title: 'Benuanta Grup', cat: 'Survey & Pemetaan RDTR', img: '/images/projects/benuanta1.webp' },
+    { id: 'pandit', title: 'PT. Pandit Eka Nusa Agrata', cat: 'Survey Andalalin', img: '/images/projects/pandit1.webp' },
     { id: 'bira', title: 'Pemerintah Desa Bira', cat: 'Tim Survei dan Pemetaan', img: '/images/projects/bira1.webp' },
     { id: 'dispar', title: 'Pemetaan Pariwisata Bulukumba', cat: 'GIS', img: '/images/projects/dispar1.webp' },
     { id: 'bppwsulsel', title: 'BPPW Sulsel', cat: 'Tim Survey Program SPAL-DS Tahap I dan II', img: '/images/projects/bppwsulsel1.webp' },
@@ -78,11 +99,11 @@ export default function Projects() {
       {/* Tombol aksi */}
       <div className={`projects-action-bar ${!showAll ? 'floating-btn' : 'normal-btn'}`}>
         {!showAll ? (
-          <button className="btn btn-primary" onClick={() => setShowAll(true)}>
+          <button className="btn btn-primary" onClick={() => handleToggleShowAll(true)}>
             Lihat Selengkapnya <i className='bx bx-chevron-down'></i>
           </button>
         ) : (
-          <button className="btn btn-outline" onClick={() => setShowAll(false)}>
+          <button className="btn btn-outline" onClick={() => handleToggleShowAll(false)}>
             Sembunyikan <i className='bx bx-chevron-up'></i>
           </button>
         )}
