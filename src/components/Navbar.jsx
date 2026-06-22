@@ -40,7 +40,7 @@ const Navbar = ({ onOpenCv }) => {
         </div>
 
         <div className="logo-text">
-          <h2>FIRDAUS IKRAM</h2>
+          <span className="logo-title">FIRDAUS IKRAM</span>
           <p>GIS Specialist | Urban Planner</p>
         </div>
       </Link>

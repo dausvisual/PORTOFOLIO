@@ -20,6 +20,10 @@ export const metadata = {
   title: 'Firdaus Ikram, S.PWK | GIS Specialist',
   description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, Web GIS Developer, & Drone Mapping profesional.',
   applicationName: 'FIRDAUS IKRAM, S.PWK',
+  metadataBase: new URL('https://firdausikram.xyz'),
+  alternates: {
+    canonical: '/',
+  },
   keywords: [
     'Firdaus Ikram',
     'GIS Specialist',
@@ -52,7 +56,7 @@ export const metadata = {
       },
     ],
     locale: 'id_ID',
-    type: 'website',
+    type: 'profile',
   },
 
   // === PENGATURAN THUMBNAIL KHUSUS TWITTER/X ===
@@ -76,6 +80,34 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         {children}
+
+        {/* JSON-LD Schema Markup untuk SEO */}
+        <Script
+          id="json-ld-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Firdaus Ikram",
+              "jobTitle": "GIS Specialist & Urban Planner",
+              "url": "https://firdausikram.xyz",
+              "image": "https://firdausikram.xyz/logo/logo-fi.webp",
+              "sameAs": [
+                "https://www.linkedin.com/in/firdaus-ikram-86405b2a6",
+                "https://www.instagram.com/firdausikram_17"
+              ],
+              "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Universitas Islam Negeri Alauddin Makassar"
+              },
+              "worksFor": {
+                "@type": "Organization",
+                "name": "PT. Sinergi Citra Karya"
+              }
+            })
+          }}
+        />
 
         {/* Vercel Analytics */}
         <Analytics />

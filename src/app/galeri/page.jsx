@@ -9,7 +9,7 @@ const galleryData = {
   vale: {
     title: "PT. Vale Indonesia Tbk.",
     desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. VALE Indonesia Tbk.",
-    images: ["/images/projects/vale1.webp", "/images/projects/vale2.webp", "/images/projects/vale3.webp", "/images/projects/vale4.webp"],
+    images: ["/images/projects/vale1.webp", "/images/projects/vale2.webp", "/images/projects/vale3.webp", "/images/projects/vale4.webp", "/images/projects/vale5.webp", "/images/projects/vale6.webp", "/images/projects/vale7.webp", "/images/projects/vale8.webp", "/images/projects/vale9.webp", "/images/projects/vale10.webp", "/images/projects/vale11.webp", "/images/projects/vale12.webp"],
   },
   pam: {
     title: "PT. PAM Mineral Tbk.",
@@ -34,7 +34,7 @@ const galleryData = {
   awk: {
     title: "PT. Anindya Wiraputra Konsult",
     desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. Anindya Wiraputra Konsult",
-    images: ["/images/projects/awk1.webp", "/images/projects/awk5.webp", "/images/projects/awk6.webp", "/images/projects/awk7.webp"],
+    images: ["/images/projects/awk1.webp", "/images/projects/awk5.webp", "/images/projects/awk6.webp", "/images/projects/awk7.webp", "/images/projects/awk8.webp", "/images/projects/awk9.webp", "/images/projects/awk10.webp"],
   },
   igip: {
     title: "International Green Industrial Park",
@@ -54,12 +54,17 @@ const galleryData = {
   fcm: {
     title: "PT. Farmel Cipta Mandiri",
     desc: "Ketua Tim Survei Pengambilan Sampel Udara, PT. Farmel Cipta Mandiri",
-    images: ["/images/projects/fcm1.webp", "/images/projects/fcm2.webp", "/images/projects/fcm3.webp", "/images/projects/fcm4.webp"],
+    images: ["/images/projects/fcm1.webp", "/images/projects/fcm2.webp", "/images/projects/fcm3.webp", "/images/projects/fcm4.webp", "/images/projects/fcm5.webp", "/images/projects/fcm6.webp", "/images/projects/fcm7.webp"],
+  },
+  khubsurat: {
+    title: "PT. Khubsurat Meherban Ilahi",
+    desc: "Proyek PT. Khubsurat Meherban Ilahi",
+    images: ["/images/projects/kmh1.webp", "/images/projects/kmh2.webp", "/images/projects/kmh3.webp", "/images/projects/kmh4.webp", "/images/projects/kmh5.webp", "/images/projects/kmh6.webp", "/images/projects/kmh7.webp", "/images/projects/kmh8.webp"],
   },
   benuanta: {
     title: "Benuanta Grup",
     desc: "Gabungan proyek survei pemetaan RDTR, Masterplan Jalan, dan kajian kawasan bersama Benuanta Grup.",
-    images: ["/images/projects/benuanta1.webp", "/images/projects/benuanta2.webp", "/images/projects/benuanta3.webp", "/images/projects/benuanta4.webp"],
+    images: ["/images/projects/benuanta1.webp", "/images/projects/benuanta2.webp", "/images/projects/benuanta3.webp", "/images/projects/benuanta4.webp", "/images/projects/benuanta5.webp", "/images/projects/benuanta6.webp", "/images/projects/benuanta7.webp", "/images/projects/benuanta8.webp", "/images/projects/benuanta9.webp", "/images/projects/benuanta10.webp"],
   },
   rmk: {
     title: "PT. Ruang Meja Kerja",

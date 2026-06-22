@@ -3,17 +3,21 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// Mengimpor Komponen Utama
+import dynamic from 'next/dynamic';
+
+// Komponen Navbar dan Hero dimuat statis karena berada di area atas (above-the-fold)
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import About from '../components/About';
-import MyJourney from '../components/MyJourney';
-import Services from '../components/Services';
-import Certificates from '../components/Certificates';
-import Projects from '../components/Projects';
-import Clients from '../components/Clients';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
+
+// Komponen di bawah area lipatan dimuat secara dinamis (Lazy Loading) untuk mempercepat First Load
+const About = dynamic(() => import('../components/About'));
+const MyJourney = dynamic(() => import('../components/MyJourney'));
+const Services = dynamic(() => import('../components/Services'));
+const Certificates = dynamic(() => import('../components/Certificates'));
+const Projects = dynamic(() => import('../components/Projects'));
+const Clients = dynamic(() => import('../components/Clients'));
+const Contact = dynamic(() => import('../components/Contact'));
+const Footer = dynamic(() => import('../components/Footer'));
 
 export default function Home() {
   // Inisialisasi AOS
