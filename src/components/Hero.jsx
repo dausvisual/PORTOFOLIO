@@ -17,7 +17,7 @@ export default function Hero({ onOpenCv }) {
       <div className="hero-k3-container">
         
         {/* === BAGIAN 1: FOTO & CINCIN RAPI === */}
-        <div className="hero-k3-visuals" data-aos="fade-right">
+        <div className="hero-k3-visuals hero-fade-in-right">
 
           {/* Ikon Satelit Melayang */}
           <div className="hero-satellite-icon" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '45px', height: '45px', background: 'rgba(0, 229, 255, 0.1)', borderRadius: '50%', color: '#00e5ff', border: '1px solid rgba(0, 229, 255, 0.2)', boxShadow: '0 0 15px rgba(0, 229, 255, 0.3)' }}>
@@ -77,7 +77,7 @@ export default function Hero({ onOpenCv }) {
         </div>
 
         {/* === BAGIAN 2: TEKS === */}
-        <div className="hero-k3-content" data-aos="fade-left">
+        <div className="hero-k3-content hero-fade-in-left">
           <div className="avail-badge">
             <span className="avail-dot"></span> Director Of PT. Sinergi Citra Karya
           </div>
