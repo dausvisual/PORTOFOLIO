@@ -15,7 +15,7 @@ export default function Hero({ onOpenCv }) {
       </div>
 
       <div className="hero-k3-container">
-        
+
         {/* === BAGIAN 1: FOTO & CINCIN RAPI === */}
         <div className="hero-k3-visuals hero-fade-in-right">
 
@@ -60,7 +60,7 @@ export default function Hero({ onOpenCv }) {
               <div className="text-box"><span className="float-title">Urban Planner</span><p>Better Future</p></div>
             </div>
             <div className="float-card card-mr">
-              <div className="icon-box" style={{color: '#22c55e'}}><i className='bx bx-leaf'></i></div>
+              <div className="icon-box" style={{ color: '#22c55e' }}><i className='bx bx-leaf'></i></div>
               <div className="text-box"><span className="float-title">Environmental</span><p>Sustainable Solution</p></div>
             </div>
             <div className="float-card card-br">
@@ -79,17 +79,17 @@ export default function Hero({ onOpenCv }) {
         {/* === BAGIAN 2: TEKS === */}
         <div className="hero-k3-content hero-fade-in-left">
           <div className="avail-badge">
-            <span className="avail-dot"></span> Director Of PT. Sinergi Citra Karya
+            <span className="avail-dot"></span> Works at PT. AFA Tombuku Pratama
           </div>
-          
+
           <h1 className="hero-title">
             FIRDAUS <span className="name-gradient">IKRAM, S.PWK</span>
           </h1>
-          
+
           <p className="hero-subtitle">
             GIS SPECIALIST <span>|</span> URBAN PLANNER <span>|</span> WEB GIS DEVELOPER <span>|</span> DRONE PILOT
           </p>
-          
+
           {/* Buttons */}
           <div className="hero-btn-group">
             <button className="btn btn-primary-glow" onClick={onOpenCv}>
@@ -109,7 +109,7 @@ export default function Hero({ onOpenCv }) {
 
           {/* Description */}
           <p className="hero-desc">
-             Experienced professional in mapping and geospatial analysis. Helping to transform complex spatial data into better decisions through GIS solutions, high-accuracy surveying, drone mapping, and urban planning.
+            Experienced professional in mapping and geospatial analysis. Helping to transform complex spatial data into better decisions through GIS solutions, high-accuracy surveying, drone mapping, and urban planning.
           </p>
         </div>
       </div>
