@@ -18,12 +18,12 @@ const galleryData = {
   },
   mti: {
     title: "PT. Merdeka Tsingshan Indonesia",
-    desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. Merdeka Tsingshan Indonesia",
+    desc: "Ketua Tim Survei Pengambilan Sampel Air, Udara dan Kebisingan, PT. Merdeka Tsingshan Indonesia",
     images: ["/images/projects/mti1.webp", "/images/projects/mti2.webp", "/images/projects/mti3.webp", "/images/projects/mti4.webp"],
   },
   msb: {
     title: "PT. Mitra Sulawesi Bersama",
-    desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. Mitra Sulawesi Bersama",
+    desc: "Ketua Tim Survei Pengambilan Sampel Air, Udara dan Kebisingan, PT. Mitra Sulawesi Bersama",
     images: ["/images/projects/msb1.webp", "/images/projects/msb2.webp", "/images/projects/msb3.webp"],
   },
   imip: {
@@ -33,7 +33,7 @@ const galleryData = {
   },
   awk: {
     title: "PT. Anindya Wiraputra Konsult",
-    desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. Anindya Wiraputra Konsult",
+    desc: "Ketua Tim Survei Pengambilan Sampel Air, Udara dan Kebisingan, PT. Anindya Wiraputra Konsult",
     images: ["/images/projects/awk1.webp", "/images/projects/awk5.webp", "/images/projects/awk6.webp", "/images/projects/awk7.webp", "/images/projects/awk8.webp", "/images/projects/awk9.webp", "/images/projects/awk10.webp"],
   },
   igip: {
@@ -48,17 +48,22 @@ const galleryData = {
   },
   adp: {
     title: "PT. Alaska Dwipa Perdana",
-    desc: "Ketua Tim Survei Pengambilan Sampel Udara, PT. Alaska Dwipa Perdana",
+    desc: "Ketua Tim Survei Pengambilan Sampel Air, Udara dan Kebisingan, PT. Alaska Dwipa Perdana",
     images: ["/images/projects/adp1.webp", "/images/projects/adp2.webp", "/images/projects/adp3.webp", "/images/projects/adp4.webp"],
   },
   fcm: {
     title: "PT. Farmel Cipta Mandiri",
-    desc: "Ketua Tim Survei Pengambilan Sampel Udara, PT. Farmel Cipta Mandiri",
+    desc: "Ketua Tim Survei Pengambilan Sampel Air, Udara dan Kebisingan, PT. Farmel Cipta Mandiri",
     images: ["/images/projects/fcm1.webp", "/images/projects/fcm2.webp", "/images/projects/fcm3.webp", "/images/projects/fcm4.webp", "/images/projects/fcm5.webp", "/images/projects/fcm6.webp", "/images/projects/fcm7.webp"],
+  },
+  mss: {
+    title: "PT. Metal Smeltindo Selaras",
+    desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. Metal Smeltindo Selaras",
+    images: ["/images/projects/mss1.webp", "/images/projects/mss2.webp", "/images/projects/mss3.webp", "/images/projects/mss4.webp", "/images/projects/mss5.webp", "/images/projects/mss6.webp", "/images/projects/mss7.webp", "/images/projects/mss8.webp"],
   },
   khubsurat: {
     title: "PT. Khubsurat Meherban Ilahi",
-    desc: "Proyek PT. Khubsurat Meherban Ilahi",
+    desc: "Ketua Tim Survei Pengambilan Sampel Air, Udara dan Kebisingan, PT. Khubsurat Meherban Ilahi",
     images: ["/images/projects/kmh1.webp", "/images/projects/kmh2.webp", "/images/projects/kmh3.webp", "/images/projects/kmh4.webp", "/images/projects/kmh5.webp", "/images/projects/kmh6.webp", "/images/projects/kmh7.webp", "/images/projects/kmh8.webp"],
   },
   benuanta: {
@@ -132,7 +137,7 @@ function GalleryContent() {
         <div className="gallery-group active">
           <h2 className="heading">Galeri Proyek: <span>{currentGallery.title}</span></h2>
           <p className="gallery-desc">{currentGallery.desc}</p>
-          
+
           <div className="gallery-grid">
             {currentGallery.images.map((src, index) => (
               <div className="gallery-card" key={index} onClick={() => setActiveImg(src)}>
