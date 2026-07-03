@@ -1,4 +1,21 @@
+'use client';
+
 export default function Contact() {
+  const handleWhatsAppSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const subject = formData.get('subject');
+    const message = formData.get('message');
+    
+    const text = `Halo Firdaus, saya ${name} (${email}).\n\nSubjek: ${subject}\n\nPesan:\n${message}`;
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/6285770029172?text=${encodedText}`;
+    
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section id="contact">
       <span className="heading-sm display-block" data-aos="fade-up">CONTACT</span>
@@ -47,7 +64,7 @@ export default function Contact() {
               <div className="contact-stat">
                 <i className='bx bx-briefcase'></i>
                 <div>
-                  <h4>5+</h4>
+                  <h4>3+</h4>
                   <p>Years Experience</p>
                 </div>
               </div>
@@ -61,7 +78,7 @@ export default function Contact() {
               <div className="contact-stat">
                 <i className='bx bx-group'></i>
                 <div>
-                  <h4>20+</h4>
+                  <h4>50+</h4>
                   <p>Happy Clients</p>
                 </div>
               </div>
@@ -70,16 +87,18 @@ export default function Contact() {
         </div>
         
         <div data-aos="fade-left">
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+          <form className="contact-form" onSubmit={handleWhatsAppSubmit}>
             <div className="input-group">
-              <input type="text" className="form-input" placeholder="Your Name" />
-              <input type="email" className="form-input" placeholder="Your Email" />
+              <input type="text" name="name" className="form-input" placeholder="Your Name" required />
+              <input type="email" name="email" className="form-input" placeholder="Your Email" required />
             </div>
-            <input type="text" className="form-input" placeholder="Subject" style={{ marginBottom: '2.5rem', width: '100%' }} />
-            <textarea className="form-input" placeholder="Your Message"></textarea>
-            <button className="btn btn-primary form-submit-btn" style={{ width: '100%', justifyContent: 'center' }}>Send Message <i className='bx bx-send'></i></button>
+            <input type="text" name="subject" className="form-input" placeholder="Subject" style={{ marginBottom: '2.5rem', width: '100%' }} required />
+            <textarea name="message" className="form-input" placeholder="Your Message" required></textarea>
+            <button type="submit" className="btn btn-primary form-submit-btn" style={{ width: '100%', justifyContent: 'center' }}>
+              Send Message (WhatsApp) <i className='bx bxl-whatsapp'></i>
+            </button>
             <div className="contact-privacy">
-              <i className='bx bx-check-shield'></i> Your information is safe with me. I will get back to you as soon as possible.
+              <i className='bx bx-check-shield'></i> Pesan Anda akan langsung dikirim melalui WhatsApp pribadi saya.
             </div>
           </form>
         </div>

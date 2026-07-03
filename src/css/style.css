@@ -454,6 +454,12 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
     
     .skills-container, .contact-container { grid-template-columns: 1fr; gap: 3rem; }
     .contact-form { padding: 2rem 1.5rem; }
+    
+    .contact-stats-grid { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem; }
+    .available-grid { grid-template-columns: 1fr; }
+    .contact-social-icons { flex-wrap: wrap; justify-content: flex-start; }
+    .contact-info-item { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .contact-info-item i { width: 40px; height: 40px; font-size: 2rem; }
 
     /* Gallery Mobile Fix */
     .gallery-section { padding: 10rem 6% 4rem; }

@@ -40,7 +40,7 @@ export default function Projects() {
     { id: 'ihip', title: 'Indonesia Huabao Industrial Park (IHIP)', cat: 'Survey Pengambilan Sampel Udara', img: '/images/projects/ihip1.webp' },
     { id: 'adp', title: 'PT. Alaska Dwipa Perdana', cat: 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/adp1.webp' },
     { id: 'fcm', title: 'PT. Farmel Cipta Mandiri', cat: 'Survey Pengambilan Sampel Air', img: '/images/projects/fcm1.webp' },
-    { id: 'mss', title: 'PT. Metal Smeltindo Selaras', cat: 'Survey Pengambilan Sampel Udara', img: '/images/projects/mss1.webp' },
+    { id: 'mss', title: 'PT. Metal Smeltindo Selaras', cat: 'Survey Pengambilan Sampel Air', img: '/images/projects/mss1.webp' },
     { id: 'khubsurat', title: 'PT. Khubsurat Meherban Ilahi', cat: 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/kmh1.webp' },
     { id: 'benuanta', title: 'Benuanta Grup', cat: 'Survey & Pemetaan RDTR', img: '/images/projects/benuanta1.webp' },
     { id: 'pandit', title: 'PT. Pandit Eka Nusa Agrata', cat: 'Survey Andalalin', img: '/images/projects/pandit1.webp' },
@@ -77,7 +77,7 @@ export default function Projects() {
             return true;
           }).map((p, i) => (
             <div className="project-card" key={i} data-aos="fade-up" data-aos-delay={(i % 3) * 100}>
-              <Image src={p.img} alt={p.title} width={600} height={400} sizes="(max-width: 768px) 100vw, 33vw" />
+              <Image src={p.img} alt={p.title} width={600} height={400} sizes="(max-width: 768px) 100vw, 33vw" unoptimized />
               <h3>{p.title}</h3>
               <p>{p.cat}</p>
               {p.href ? (

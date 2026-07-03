@@ -1,9 +1,5 @@
-'use client';
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 import dynamic from 'next/dynamic';
+import AosInit from '../components/AosInit';
 
 // Komponen Navbar dan Hero dimuat statis karena berada di area atas (above-the-fold)
 import Navbar from '../components/Navbar';
@@ -20,32 +16,14 @@ const Contact = dynamic(() => import('../components/Contact'));
 const Footer = dynamic(() => import('../components/Footer'));
 
 export default function Home() {
-  // Inisialisasi AOS
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: false, // apakah animasi harus dijalankan hanya sekali?
-      offset: 50,  // offset (dalam px) dari trigger point awal
-    });
-  }, []);
-
-  // Download CV secara langsung
-  const handleDownloadCv = () => {
-    const link = document.createElement('a');
-    link.href = '/cv/CV FIRDAUS IKRAM.pdf';
-    link.download = 'CV_Firdaus_Ikram.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <>
+      <AosInit />
       {/* 1. Header & Navigasi Utama */}
-      <Navbar onOpenCv={handleDownloadCv} />
+      <Navbar />
 
       {/* 2. Beranda Profil Utama */}
-      <Hero onOpenCv={handleDownloadCv} />
+      <Hero />
 
       {/* 3. Tentang Saya & Kartu Melayang */}
       <About />

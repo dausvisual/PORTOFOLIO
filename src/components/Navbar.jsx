@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Navbar = ({ onOpenCv }) => {
+const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -56,12 +56,12 @@ const Navbar = ({ onOpenCv }) => {
         <a href="#projects" className={activeSection === 'projects' ? 'active' : ''} onClick={() => setIsActive(false)}>Projects</a>
         <a href="#clients" className={activeSection === 'clients' ? 'active' : ''} onClick={() => setIsActive(false)}>Clients</a>
         <a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={() => setIsActive(false)}>Contact</a>
-        <button className="btn-dropdown-cv" onClick={onOpenCv}>Download CV</button>
+        <a href="/cv/CV FIRDAUS IKRAM.pdf" download="CV_Firdaus_Ikram.pdf" className="btn-dropdown-cv">Download CV</a>
       </nav>
 
-      <button className="btn-nav-cv" onClick={onOpenCv}>
+      <a href="/cv/CV FIRDAUS IKRAM.pdf" download="CV_Firdaus_Ikram.pdf" className="btn-nav-cv">
         <i className='bx bx-download'></i> Download CV
-      </button>
+      </a>
     </header>
   );
 };

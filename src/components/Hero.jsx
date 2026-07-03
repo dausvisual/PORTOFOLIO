@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Hero({ onOpenCv }) {
+export default function Hero() {
   return (
     <section className="hero-k3" id="home">
       <div className="hero-bg-glow"></div>
@@ -92,9 +92,9 @@ export default function Hero({ onOpenCv }) {
 
           {/* Buttons */}
           <div className="hero-btn-group">
-            <button className="btn btn-primary-glow" onClick={onOpenCv}>
+            <a href="/cv/CV FIRDAUS IKRAM.pdf" download="CV_Firdaus_Ikram.pdf" className="btn btn-primary-glow">
               <i className='bx bx-download'></i> DOWNLOAD CV
-            </button>
+            </a>
             <a href="#contact" className="btn btn-outline-glow">
               <i className='bx bx-send'></i> CONTACT ME
             </a>

@@ -131,7 +131,7 @@ export default function MyJourney() {
             <div className="timeline-card">
               <div className="timeline-card-content">
                 <h3>Survey Leader & Konsultan Lingkungan</h3>
-                <p>Ketua Tim Survei pengambilan sampel air dan udara di berbagai perusahaan industri & pertambangan serta penyusunan dokumen lingkungan (UKL-UPL).</p>
+                <p>Ketua Tim Survei pengambilan sampel air dan udara di berbagai perusahaan industri & pertambangan serta penyusunan dokumen lingkungan. </p>
               </div>
               <div className="timeline-card-icon"><i className='bx bx-user-pin'></i></div>
             </div>
