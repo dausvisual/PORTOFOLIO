@@ -69,6 +69,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="id" className={poppins.className}>
       <head>
+        <link rel="preconnect" href="https://unpkg.com" />
+        <link rel="dns-prefetch" href="https://unpkg.com" />
         {/* Boxicons CSS — dimuat langsung di head untuk menghindari FOUC */}
         <link
           rel="stylesheet"

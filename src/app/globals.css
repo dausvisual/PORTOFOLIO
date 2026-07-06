@@ -6,3 +6,14 @@
    menghindari duplikasi CSS (sebelumnya berisi salinan 100%
    identik dari style.css, menyebabkan semua CSS dimuat 2x).
 ========================================================== */
+
+/* Override Boxicons font-face to use font-display: swap for Lighthouse SEO score */
+@font-face {
+  font-family: 'boxicons';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://unpkg.com/boxicons@2.1.4/fonts/boxicons.woff2') format('woff2'),
+       url('https://unpkg.com/boxicons@2.1.4/fonts/boxicons.woff') format('woff'),
+       url('https://unpkg.com/boxicons@2.1.4/fonts/boxicons.ttf') format('truetype');
+  font-display: swap;
+}
