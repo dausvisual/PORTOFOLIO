@@ -54,12 +54,17 @@ const galleryData = {
   fcm: {
     title: "PT. Farmel Cipta Mandiri",
     desc: "Ketua Tim Survei Pengambilan Sampel Air, Udara dan Kebisingan, PT. Farmel Cipta Mandiri",
-    images: ["/images/projects/fcm1.webp", "/images/projects/fcm2.webp", "/images/projects/fcm3.webp", "/images/projects/fcm4.webp", "/images/projects/fcm5.webp", "/images/projects/fcm6.webp", "/images/projects/fcm7.webp"],
+    images: ["/images/projects/fcm1.webp", "/images/projects/fcm2.webp", "/images/projects/fcm3.webp", "/images/projects/fcm4.webp", "/images/projects/fcm5.webp", "/images/projects/fcm6.webp", "/images/projects/fcm7.webp", "/images/projects/fcm8.webp", "/images/projects/fcm9.webp", "/images/projects/fcm10.webp"],
   },
   mss: {
     title: "PT. Metal Smeltindo Selaras",
     desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. Metal Smeltindo Selaras",
     images: ["/images/projects/mss1.webp", "/images/projects/mss2.webp", "/images/projects/mss3.webp", "/images/projects/mss4.webp", "/images/projects/mss5.webp", "/images/projects/mss6.webp", "/images/projects/mss7.webp", "/images/projects/mss8.webp"],
+  },
+  bma: {
+    title: "PT. Bumi Morowali Abadi",
+    desc: "Survei Pemetaan, PT. Bumi Morowali Abadi",
+    images: ["/images/projects/bma1.webp", "/images/projects/bma2.webp", "/images/projects/bma3.webp", "/images/projects/bma4.webp"],
   },
   khubsurat: {
     title: "PT. Khubsurat Meherban Ilahi",

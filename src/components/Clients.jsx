@@ -17,6 +17,8 @@ export default function Clients() {
     { name: 'International Green Industrial Park', img: '/images/client/IGP.webp' },
     { name: 'PT. Alaska Dwipa Perdana', img: '/images/client/ADP.webp' },
     { name: 'PT. Farmel Cipta Mandiri', img: '/images/client/FCM.webp' },
+    { name: 'PT. Metal Smeltindo Selaras', img: '/images/client/MSS.webp' },
+    { name: 'PT. Khubsurat Meherban Ilahi', img: '/images/client/KHUBSURAT.webp' },
     { name: 'Kabupaten Bulukumba', img: '/images/client/BLK.webp' },
     { name: 'Kabupaten Morowali', img: '/images/client/MRW.webp' },
     { name: 'Kabupaten Luwu', img: '/images/client/LUWU.webp' },
