@@ -1,6 +1,12 @@
 import dynamic from 'next/dynamic';
 import AosInit from '../components/AosInit';
 
+export const metadata = {
+  alternates: {
+    canonical: '/',
+  },
+};
+
 // Komponen Navbar dan Hero dimuat statis karena berada di area atas (above-the-fold)
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';

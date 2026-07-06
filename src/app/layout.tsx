@@ -21,9 +21,6 @@ export const metadata = {
   description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, Web GIS Developer, & Drone Mapping profesional.',
   applicationName: 'FIRDAUS IKRAM, S.PWK',
   metadataBase: new URL('https://firdausikram.xyz'),
-  alternates: {
-    canonical: '/',
-  },
   keywords: [
     'Firdaus Ikram',
     'GIS Specialist',
