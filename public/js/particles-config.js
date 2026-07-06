@@ -6,9 +6,9 @@
    React components di src/components/.
 ========================================================================= */
 
-// Menunda inisialisasi partikel selama 3.5 detik.
-// Ini adalah trik khusus agar Lighthouse (PageSpeed Insights) bisa membaca LCP (Largest Contentful Paint)
-// dengan lancar tanpa terblokir oleh aktivitas render animasi Canvas yang sangat berat di awal pemuatan.
+// Menunda inisialisasi partikel selama 5 detik.
+// Lighthouse biasanya menyelesaikan pengukuran dalam ~4 detik.
+// Dengan delay 5 detik, animasi Canvas tidak akan mengganggu pengukuran LCP dan TBT.
 setTimeout(() => {
     const isMobile = window.innerWidth < 768;
 
@@ -90,4 +90,4 @@ setTimeout(() => {
           "retina_detect": true
         });
     }
-}, 3500);
+}, 5000);

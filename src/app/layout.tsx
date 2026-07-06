@@ -69,10 +69,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="id" className={poppins.className}>
       <head>
-        <link rel="preload" href="/images/bg/city.webp" as="image" type="image/webp" />
-        <link rel="preconnect" href="https://unpkg.com" />
+        <link rel="preconnect" href="https://unpkg.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://unpkg.com" />
-        {/* Boxicons CSS — dimuat langsung di head untuk menghindari FOUC */}
+        {/* Boxicons CSS — preload + async apply agar tidak render-blocking */}
+        <link
+          rel="preload"
+          href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+          as="style"
+        />
         <link
           rel="stylesheet"
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
