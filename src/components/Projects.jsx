@@ -78,7 +78,7 @@ export default function Projects() {
             return true;
           }).map((p, i) => (
             <div className="project-card" key={i} data-aos="fade-up" data-aos-delay={(i % 3) * 100}>
-              <Image src={p.img} alt={p.title} width={600} height={400} sizes="(max-width: 768px) 100vw, 33vw" quality={60} />
+              <Image src={p.img} alt={p.title} width={600} height={400} sizes="(max-width: 768px) 100vw, 33vw" />
               <h3>{p.title}</h3>
               <p>{p.cat}</p>
               {p.href ? (

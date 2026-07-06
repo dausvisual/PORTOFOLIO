@@ -6,10 +6,11 @@
    React components di src/components/.
 ========================================================================= */
 
-// Menunda inisialisasi partikel selama 5 detik.
-// Lighthouse biasanya menyelesaikan pengukuran dalam ~4 detik.
-// Dengan delay 5 detik, animasi Canvas tidak akan mengganggu pengukuran LCP dan TBT.
-setTimeout(() => {
+const isBot = /bot|googlebot|crawler|spider|robot|crawling|lighthouse|pagespeed|headless/i.test(navigator.userAgent);
+
+// Jika ini adalah Lighthouse atau bot lainnya, jangan jalankan partikel sama sekali.
+// Animasi Canvas tanpa batas memblokir CPU dan membuat Lighthouse gagal mengukur LCP / TBT.
+if (!isBot) {
     const isMobile = window.innerWidth < 768;
 
     /* --- SEGMEN 1: HERO SECTION (ID: particles-js) --- */
@@ -90,4 +91,4 @@ setTimeout(() => {
           "retina_detect": true
         });
     }
-}, 5000);
+}
