@@ -162,15 +162,7 @@
       <Point><coordinates>136.8856,-4.5300,0</coordinates></Point>
     </Placemark>
 
-    <!-- Arab Saudi -->
-    <Placemark>
-      <name>Mekkah</name>
-      <Point><coordinates>39.8262,21.4225,0</coordinates></Point>
-    </Placemark>
-    <Placemark>
-      <name>Madinah</name>
-      <Point><coordinates>39.6111,24.4686,0</coordinates></Point>
-    </Placemark>
+    <!-- Arab Saudi Removed -->
 
   </Document>
 </kml>

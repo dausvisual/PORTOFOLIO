@@ -31,7 +31,11 @@ export const metadata = {
     'Web GIS Developer',
     'Analisis Spasial',
     'Surveyor',
-    'PT. Sinergi Citra Karya'
+    'PT. Sinergi Citra Karya',
+    'Direktur PT. Sinergi Citra Karya',
+    'Founder Dausvisual',
+    'Dausvisual',
+    'dausvisual.site'
   ],
   icons: {
     icon: "/logo/logo-fi.webp",
@@ -94,21 +98,29 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Firdaus Ikram",
-              "jobTitle": "GIS Specialist & Urban Planner",
+              "jobTitle": "GIS Specialist, Urban Planner, Direktur PT. Sinergi Citra Karya, Founder Dausvisual",
               "url": "https://firdausikram.xyz",
               "image": "https://firdausikram.xyz/logo/logo-fi.webp",
               "sameAs": [
                 "https://www.linkedin.com/in/firdaus-ikram-86405b2a6",
-                "https://www.instagram.com/firdausikram_17"
+                "https://www.instagram.com/firdausikram_17",
+                "https://dausvisual.site"
               ],
               "alumniOf": {
                 "@type": "CollegeOrUniversity",
                 "name": "Universitas Islam Negeri Alauddin Makassar"
               },
-              "worksFor": {
-                "@type": "Organization",
-                "name": "PT. Sinergi Citra Karya"
-              }
+              "worksFor": [
+                {
+                  "@type": "Organization",
+                  "name": "PT. Sinergi Citra Karya"
+                },
+                {
+                  "@type": "Organization",
+                  "name": "Dausvisual",
+                  "url": "https://dausvisual.site"
+                }
+              ]
             })
           }}
         />

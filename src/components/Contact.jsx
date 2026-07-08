@@ -1,20 +1,7 @@
 'use client';
 
 export default function Contact() {
-  const handleWhatsAppSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const subject = formData.get('subject');
-    const message = formData.get('message');
-    
-    const text = `Halo Firdaus, saya ${name} (${email}).\n\nSubjek: ${subject}\n\nPesan:\n${message}`;
-    const encodedText = encodeURIComponent(text);
-    const whatsappUrl = `https://wa.me/6285770029172?text=${encodedText}`;
-    
-    window.open(whatsappUrl, '_blank');
-  };
+
 
   return (
     <section id="contact">
@@ -87,20 +74,21 @@ export default function Contact() {
         </div>
         
         <div data-aos="fade-left">
-          <form className="contact-form" onSubmit={handleWhatsAppSubmit}>
-            <div className="input-group">
-              <input type="text" name="name" className="form-input" placeholder="Your Name" required />
-              <input type="email" name="email" className="form-input" placeholder="Your Email" required />
+          <div className="contact-form" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', minHeight: '350px' }}>
+            <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'rgba(0, 229, 255, 0.1)', color: 'var(--neon-blue)', fontSize: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem', border: '1px solid rgba(0, 229, 255, 0.2)' }}>
+              <i className='bx bx-chat'></i>
             </div>
-            <input type="text" name="subject" className="form-input" placeholder="Subject" style={{ marginBottom: '2.5rem', width: '100%' }} required />
-            <textarea name="message" className="form-input" placeholder="Your Message" required></textarea>
-            <button type="submit" className="btn btn-primary form-submit-btn" style={{ width: '100%', justifyContent: 'center' }}>
-              Send Message (WhatsApp) <i className='bx bxl-whatsapp'></i>
-            </button>
-            <div className="contact-privacy">
-              <i className='bx bx-check-shield'></i> Pesan Anda akan langsung dikirim melalui WhatsApp pribadi saya.
+            <h3 style={{color: '#fff', fontSize: '1.6rem', marginBottom: '1rem', textAlign: 'center', fontWeight: '600'}}>Tertarik Bekerja Sama?</h3>
+            <p style={{color: 'var(--text-muted)', textAlign: 'center', marginBottom: '2.5rem', fontSize: '1.1rem', maxWidth: '400px', lineHeight: '1.6'}}>
+              Mari diskusikan ide dan kebutuhan proyek Anda. Klik tombol di bawah ini untuk terhubung langsung.
+            </p>
+            <a href="https://wa.me/6285770029172?text=Halo%20Firdaus%2C%20saya%20ingin%20berdiskusi%20lebih%20lanjut%20tentang%20proyek%20saya." target="_blank" rel="noreferrer" className="btn btn-primary form-submit-btn" style={{ justifyContent: 'center', padding: '1.2rem 2.5rem', fontSize: '1.1rem', borderRadius: '30px' }}>
+              Kirim Pesan (WhatsApp) <i className='bx bxl-whatsapp' style={{ marginLeft: '0.5rem', fontSize: '1.3rem' }}></i>
+            </a>
+            <div className="contact-privacy" style={{ marginTop: '2rem', textAlign: 'center', fontSize: '0.9rem' }}>
+              <i className='bx bx-check-shield'></i> Pesan langsung terkirim ke WhatsApp pribadi saya.
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </section>

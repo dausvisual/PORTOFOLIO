@@ -562,3 +562,104 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
   .timeline-see-more { display: block; }
   .hide-on-mobile { display: none !important; }
 }
+
+/* Custom Mobile Overrides */
+@media (max-width: 768px) {
+  /* Layanan Utama 3 Kolom */
+  .services-grid-k3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+  .service-card-k3 {
+    padding: 1rem 0.5rem !important;
+  }
+  .service-card-k3 h3 {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+  .service-card-k3 p {
+    font-size: 0.65rem !important;
+  }
+  .service-icon-k3 {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Contact Info Side-by-Side */
+  .contact-info-list {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    gap: 0.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+  .contact-info-item {
+    flex: 1 !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0.5rem !important;
+    margin-bottom: 0 !important;
+  }
+  .contact-info-item i {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+  .contact-info-item h4 {
+    font-size: 0.85rem !important;
+  }
+  .contact-info-item p {
+    font-size: 0.7rem !important;
+    word-break: break-word !important;
+  }
+
+  /* Available For and Stats Side-by-Side */
+  .contact-glass-card {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0.5rem !important;
+  }
+  .contact-available {
+    flex: 1 !important;
+    padding: 1rem 0.5rem !important;
+  }
+  .available-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+  }
+  .available-item {
+    font-size: 0.7rem !important;
+  }
+  .contact-stats-grid {
+    flex: 1 !important;
+    padding: 1rem 0.5rem !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .contact-stat {
+    gap: 0.5rem !important;
+  }
+  .contact-stat i {
+    font-size: 1.5rem !important;
+  }
+  .contact-stat h4 {
+    font-size: 1.2rem !important;
+  }
+  .contact-stat p {
+    font-size: 0.65rem !important;
+  }
+  .contact-subheading-blue {
+    font-size: 0.9rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* Custom Mobile Map Size Override */
+@media (max-width: 768px) {
+  .my-leaflet-map {
+    height: 250px !important;
+    min-height: 250px !important;
+  }
+}
