@@ -91,7 +91,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="hero-btn-group">
-            <a href="/cv/CV FIRDAUS IKRAM.pdf" download="CV_Firdaus_Ikram.pdf" className="btn btn-primary-glow">
+            <a href="/cv/CV FIRDAUS IKRAM.pdf?v=2" download="CV_Firdaus_Ikram.pdf" className="btn btn-primary-glow">
               <i className='bx bx-download'></i> DOWNLOAD CV
             </a>
             <a href="#contact" className="btn btn-outline-glow">
