@@ -50,7 +50,7 @@ export const metadata = {
     siteName: 'FIRDAUS IKRAM, S.PWK',
     images: [
       {
-        url: 'https://firdausikram.xyz/logo/thumbnail2.webp',
+        url: 'https://firdausikram.xyz/logo/thumbnail-new.jpg',
         width: 1200,
         height: 630,
         alt: 'Preview Portofolio Firdaus Ikram',
@@ -65,7 +65,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Firdaus Ikram, S.PWK',
     description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
-    images: ['https://firdausikram.xyz/logo/thumbnail2.webp'],
+    images: ['https://firdausikram.xyz/logo/thumbnail-new.jpg'],
   },
 }
 
