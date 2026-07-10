@@ -10,7 +10,6 @@ export default function Hero() {
         <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <path fill="none" stroke="rgba(0, 229, 255, 0.15)" strokeWidth="2" d="M0,160 C320,300 420,0 720,160 C1020,320 1120,50 1440,160"></path>
           <path fill="none" stroke="rgba(79, 70, 229, 0.15)" strokeWidth="2" d="M0,200 C280,10 520,350 720,200 C920,50 1160,390 1440,200"></path>
-          <path fill="none" stroke="rgba(255, 255, 255, 0.05)" strokeWidth="1" d="M0,240 C350,350 450,10 720,240 C990,470 1090,130 1440,240"></path>
         </svg>
       </div>
 
@@ -33,7 +32,7 @@ export default function Hero() {
             <div className="glowing-ring-1"></div>
             <div className="glowing-ring-2"></div>
             <Image
-              src="/images/profile/profile.webp"
+              src="/images/profile/profile-v2.webp"
               alt="Firdaus Ikram"
               className="profile-img"
               width={300}
@@ -87,7 +86,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero-subtitle">
-            GIS SPECIALIST <span>|</span> URBAN PLANNER <span>|</span> WEB GIS DEVELOPER <span>|</span> DRONE PILOT
+            GIS SPECIALIST <span>|</span> URBAN PLANNER <span>|</span> ENVIRONMENTAL SURVEYOR <span>|</span> DRONE PILOT
           </p>
 
           {/* Buttons */}
