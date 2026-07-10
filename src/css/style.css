@@ -166,6 +166,25 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 .about-right-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 .about-img-box img { width: 100%; border-radius: 1.2rem; height: 400px; object-fit: cover; border: 1px solid var(--border-color); }
 
+.skills-image-container {
+    margin-top: 2.5rem;
+    background: #ffffff;
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
 .journey-section { padding-top: 6rem; position: relative; }
 .stats-horizontal-wrapper { margin-bottom: 5rem; width: 100%; position: relative; z-index: 10; pointer-events: auto; }
 .journey-content-container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: flex-start; width: 100%; position: relative; z-index: 10; pointer-events: auto; }

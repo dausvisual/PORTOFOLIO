@@ -9,9 +9,15 @@ export default function About() {
         <p className="about-desc">Berperan aktif sebagai <strong>Konsultan GIS</strong> dan <strong>Urban Planner</strong>, saya mengintegrasikan analisis spasial tingkat lanjut dengan perencanaan wilayah yang strategis. Melalui penyediaan <strong>Drone Mapping</strong>, pemetaan akurat, dan pengolahan data berbasis teknologi terkini.</p>
         <p className="about-desc">Sebagai seorang <strong>GIS Specialist</strong>, saya membantu instansi pemerintah dan sektor swasta merancang keputusan yang presisi demi pembangunan yang berkelanjutan.</p>
         
-        <div className="tech-tags">
-          <span>ArcGIS</span><span>QGIS</span><span>Adobe Creative</span><span>Drone Mapping</span>
-          <span>SketchUp</span><span>Global Mapper</span><span>Environment Survey</span><span>Graphic Design</span>
+        <div className="skills-image-container">
+          <Image 
+            src="/images/software-skills.png" 
+            alt="Software Skills" 
+            width={800} 
+            height={200} 
+            className="skills-image"
+            priority
+          />
         </div>
       </div>
       <div className="about-right-grid" data-aos="fade-left" data-aos-delay="200">
