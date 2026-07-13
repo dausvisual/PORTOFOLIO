@@ -172,7 +172,7 @@ export default function MyJourney() {
               <div className="stat-v-item">
                 <div className="stat-v-icon" style={{ color: '#a855f7', borderColor: '#a855f7' }}><i className='bx bx-briefcase-alt-2'></i></div>
                 <div className="stat-v-text">
-                  <h4>{language === 'en' ? '30+ Projects' : '30+ Proyek'}</h4>
+                  <h4>{language === 'en' ? '30+ Projects' : '50+ Proyek'}</h4>
                   <p>{language === 'en' ? 'Various mapping, planning, and environmental projects.' : 'Berbagai proyek pemetaan, perencanaan, dan lingkungan.'}</p>
                 </div>
               </div>
