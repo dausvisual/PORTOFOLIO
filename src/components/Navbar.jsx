@@ -2,10 +2,12 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useLanguage } from '../context/LanguageContext';
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const { language, toggleLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,23 +47,23 @@ const Navbar = () => {
         </div>
       </Link>
 
-      <i className={`bx bx-menu ${isActive ? 'bx-x' : ''}`} id="menu-icon" onClick={toggleMenu}></i>
-
       <nav className={`navbar ${isActive ? 'active' : ''}`}>
-        <a href="#home" className={activeSection === 'home' ? 'active' : ''} onClick={() => setIsActive(false)}>Home</a>
-        <a href="#about" className={activeSection === 'about' ? 'active' : ''} onClick={() => setIsActive(false)}>About</a>
-        <a href="#myjourney" className={activeSection === 'myjourney' ? 'active' : ''} onClick={() => setIsActive(false)}>Journey</a>
-        <a href="#services" className={activeSection === 'services' ? 'active' : ''} onClick={() => setIsActive(false)}>Services</a>
-        <a href="#certificates" className={activeSection === 'certificates' ? 'active' : ''} onClick={() => setIsActive(false)}>Certifications</a>
-        <a href="#projects" className={activeSection === 'projects' ? 'active' : ''} onClick={() => setIsActive(false)}>Projects</a>
-        <a href="#clients" className={activeSection === 'clients' ? 'active' : ''} onClick={() => setIsActive(false)}>Clients</a>
-        <a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={() => setIsActive(false)}>Contact</a>
-        <a href="/cv/CV FIRDAUS IKRAM.pdf" download="CV_Firdaus_Ikram.pdf" className="btn-dropdown-cv">Download CV</a>
+        <a href="#home" className={activeSection === 'home' ? 'active' : ''} onClick={() => setIsActive(false)}>{language === 'en' ? 'Home' : 'Beranda'}</a>
+        <a href="#about" className={activeSection === 'about' ? 'active' : ''} onClick={() => setIsActive(false)}>{language === 'en' ? 'About' : 'Tentang'}</a>
+        <a href="#myjourney" className={activeSection === 'myjourney' ? 'active' : ''} onClick={() => setIsActive(false)}>{language === 'en' ? 'Journey' : 'Perjalanan'}</a>
+        <a href="#services" className={activeSection === 'services' ? 'active' : ''} onClick={() => setIsActive(false)}>{language === 'en' ? 'Services' : 'Layanan'}</a>
+        <a href="#certificates" className={activeSection === 'certificates' ? 'active' : ''} onClick={() => setIsActive(false)}>{language === 'en' ? 'Certifications' : 'Sertifikasi'}</a>
+        <a href="#projects" className={activeSection === 'projects' ? 'active' : ''} onClick={() => setIsActive(false)}>{language === 'en' ? 'Projects' : 'Proyek'}</a>
+        <a href="#clients" className={activeSection === 'clients' ? 'active' : ''} onClick={() => setIsActive(false)}>{language === 'en' ? 'Clients' : 'Klien'}</a>
+        <a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={() => setIsActive(false)}>{language === 'en' ? 'Contact' : 'Kontak'}</a>
       </nav>
 
-      <a href="/cv/CV FIRDAUS IKRAM.pdf" download="CV_Firdaus_Ikram.pdf" className="btn-nav-cv">
-        <i className='bx bx-download'></i> Download CV
-      </a>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+        <button onClick={toggleLanguage} className="btn-nav-cv" style={{ cursor: 'pointer', background: 'transparent', border: '1px solid var(--neon-blue)', color: 'var(--neon-blue)', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.4rem 0.8rem', fontSize: '1rem', borderRadius: '0.5rem' }}>
+          <i className='bx bx-globe'></i> {language === 'en' ? 'ID' : 'EN'}
+        </button>
+        <i className={`bx bx-menu ${isActive ? 'bx-x' : ''}`} id="menu-icon" onClick={toggleMenu} style={{ fontSize: '2.5rem' }}></i>
+      </div>
     </header>
   );
 };

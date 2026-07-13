@@ -1,14 +1,16 @@
+'use client';
 import Image from 'next/image';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function About() {
+  const { language } = useLanguage();
   return (
     <section className="about" id="about">
       <div className="about-left" data-aos="fade-up">
-        <span className="heading-sm display-block">ABOUT ME</span>
-        <h2 className="heading about-title">Transforming Spatial Data Into Impactful Solutions</h2>
-        <p className="about-desc">Berperan aktif sebagai <strong>Konsultan GIS</strong> dan <strong>Urban Planner</strong>, saya mengintegrasikan analisis spasial tingkat lanjut dengan perencanaan wilayah yang strategis. Melalui penyediaan <strong>Drone Mapping</strong>, pemetaan akurat, dan pengolahan data berbasis teknologi terkini.</p>
-        <p className="about-desc">Sebagai seorang <strong>GIS Specialist</strong>, saya membantu instansi pemerintah dan sektor swasta merancang keputusan yang presisi demi pembangunan yang berkelanjutan.</p>
-        
+        <span className="heading-sm display-block">{language === 'en' ? 'ABOUT ME' : 'TENTANG SAYA'}</span>
+        <h2 className="heading about-title">{language === 'en' ? 'Transforming Spatial Data Into Impactful Solutions' : 'Mengubah Data Spasial Menjadi Solusi Berdampak'}</h2>
+        <p className="about-desc" dangerouslySetInnerHTML={{ __html: language === 'en' ? 'I am a professional in the fields of <strong>GIS</strong>, <strong>Urban and Regional Planning</strong>, <strong>Surveying</strong>, <strong>Drone Mapping</strong>, and <strong>Environmental Analysis</strong> focused on providing data-driven geospatial solutions.' : 'Saya adalah profesional di bidang <strong>GIS</strong>, <strong>Perencanaan Wilayah dan Kota</strong>, <strong>Survei</strong>, <strong>Drone Mapping</strong>, dan <strong>Analisis Lingkungan</strong> yang berfokus pada penyediaan solusi geospasial berbasis data.' }}></p>
+        <p className="about-desc" dangerouslySetInnerHTML={{ __html: language === 'en' ? 'By integrating modern mapping technologies and spatial analysis, I help governments, companies, and various organizations generate accurate information as a foundation for effective and sustainable decision-making.' : 'Dengan mengintegrasikan teknologi pemetaan modern dan analisis spasial, saya membantu pemerintah, perusahaan, dan berbagai organisasi menghasilkan informasi yang akurat sebagai dasar pengambilan keputusan yang efektif dan berkelanjutan.' }}></p>
         <div className="skills-image-container">
           <Image 
             src="/images/software-skills.png" 

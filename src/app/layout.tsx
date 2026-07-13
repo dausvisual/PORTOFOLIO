@@ -2,6 +2,7 @@ import '../css/style.css';
 import './globals.css';
 import Script from 'next/script';
 import type { ReactNode } from 'react';
+import { LanguageProvider } from '../context/LanguageContext';
 
 // 1. Impor font langsung dari Next.js (optimal, no render-blocking)
 import { Poppins } from 'next/font/google';
@@ -33,9 +34,16 @@ export const metadata = {
     'Surveyor',
     'PT. Sinergi Citra Karya',
     'Direktur PT. Sinergi Citra Karya',
-    'Founder Dausvisual',
-    'Dausvisual',
-    'dausvisual.site'
+    'Owner Daus Visual Creative Industry',
+    'Daus Visual',
+    'dausvisual.site',
+    'Founder FIN Bina Nusantara',
+    'FIN Bina Nusantara',
+    'Lembaga Sosial',
+    'Gerakan Sosial',
+    'Google Scholar Firdaus Ikram',
+    'Jurnal Publikasi Firdaus Ikram',
+    'Penelitian Firdaus Ikram'
   ],
   icons: {
     icon: "/logo/logo-fi.webp",
@@ -87,9 +95,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body>
-        {children}
+        <LanguageProvider>
+          {children}
 
-        {/* JSON-LD Schema Markup untuk SEO */}
+          {/* JSON-LD Schema Markup untuk SEO */}
         <Script
           id="json-ld-schema"
           type="application/ld+json"
@@ -98,13 +107,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Firdaus Ikram",
-              "jobTitle": "GIS Specialist, Urban Planner, Direktur PT. Sinergi Citra Karya, Founder Dausvisual",
+              "jobTitle": "GIS Specialist, Urban Planner, Direktur PT. Sinergi Citra Karya, Owner Daus Visual, Founder FIN Bina Nusantara",
               "url": "https://firdausikram.xyz",
               "image": "https://firdausikram.xyz/logo/logo-fi.webp",
               "sameAs": [
                 "https://www.linkedin.com/in/firdaus-ikram-86405b2a6",
                 "https://www.instagram.com/firdausikram_17",
-                "https://dausvisual.site"
+                "https://dausvisual.site",
+                "https://scholar.google.co.id/citations?user=Kxneo9AAAAAJ&hl=id",
+                "https://jurnalruang.arsitektur.fatek.untad.ac.id/index.php/JURNALRUANG/article/view/335",
+                "https://journal.unismuh.ac.id/index.php/linears/article/view/19473"
               ],
               "alumniOf": {
                 "@type": "CollegeOrUniversity",
@@ -117,8 +129,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 },
                 {
                   "@type": "Organization",
-                  "name": "Dausvisual",
+                  "name": "Daus Visual Creative Industry",
                   "url": "https://dausvisual.site"
+                },
+                {
+                  "@type": "Organization",
+                  "name": "FIN Bina Nusantara"
                 }
               ]
             })
@@ -129,8 +145,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Analytics />
 
         {/* Particles.js — efek partikel di Hero & Education section */}
-        <Script src="/js/particles.min.js" strategy="lazyOnload" />
-        <Script src="/js/particles-config.js" strategy="lazyOnload" />
+          <Script src="/js/particles.min.js" strategy="lazyOnload" />
+          <Script src="/js/particles-config.js" strategy="lazyOnload" />
+        </LanguageProvider>
       </body>
     </html>
   );
