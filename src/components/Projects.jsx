@@ -65,7 +65,7 @@ export default function Projects() {
   return (
     <section id="projects" className="projects-section-k3">
       <span className="heading-sm display-block" data-aos="fade-up">{language === 'en' ? 'PROJECTS' : 'PROYEK'}</span>
-      <h2 className="heading" data-aos="fade-up" data-aos-delay="100">{language === 'en' ? 'Selected Works' : 'Proyek Pilihan'}</h2>
+      <h2 className="heading" data-aos="fade-up" data-aos-delay="100">{language === 'en' ? 'Activity Documentation' : 'Dokumentasi Kegiatan'}</h2>
 
       <div className="projects-tabs" data-aos="fade-up" data-aos-delay="200">
         <button className={`tab-btn ${activeTab === 'All' ? 'active' : ''}`} onClick={() => setActiveTab('All')}>{language === 'en' ? 'All' : 'Semua'}</button>

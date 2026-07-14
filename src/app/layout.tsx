@@ -120,7 +120,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               ],
               "alumniOf": {
                 "@type": "CollegeOrUniversity",
-                "name": "Universitas Islam Negeri Alauddin Makassar"
+                "name": "Universitas Muhammadiyah Bulukumba"
               },
               "worksFor": [
                 {
