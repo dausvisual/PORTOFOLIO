@@ -50,9 +50,6 @@ export default function AdminLayout({ children }) {
   // === TANGKAP TOMBOL BACK (BROWSER/PONSEL) ===
   useEffect(() => {
     const handlePopState = (e) => {
-      // 1. Langsung dorong state baru untuk menetralisir efek mundur
-      window.history.pushState({ trapped: true }, '', window.location.href);
-
       const currentTrap = trapLevelRef.current;
       const currentClicks = escapeClicksRef.current;
 
@@ -70,9 +67,11 @@ export default function AdminLayout({ children }) {
     };
     
     if (isAuthenticated) {
-      // 2. Beri 2 lapis buffer history saat jebakan pertama aktif
-      window.history.pushState({ trapped: true }, '', window.location.href);
-      window.history.pushState({ trapped: true }, '', window.location.href);
+      // 2. Beri 7 lapis buffer history saat jebakan pertama aktif!
+      // Mendorong di awal lebih aman dari blokir history Chrome/Safari
+      for (let i = 0; i < 7; i++) {
+        window.history.pushState({ trapCount: i }, '', window.location.href);
+      }
       window.addEventListener('popstate', handlePopState);
     }
     
