@@ -13,7 +13,7 @@ export default function About() {
         <p className="about-desc" dangerouslySetInnerHTML={{ __html: language === 'en' ? 'By integrating modern mapping technologies and spatial analysis, I help governments, companies, and various organizations generate accurate information as a foundation for effective and sustainable decision-making.' : 'Dengan mengintegrasikan teknologi pemetaan modern dan analisis spasial, saya membantu pemerintah, perusahaan, dan berbagai organisasi menghasilkan informasi yang akurat sebagai dasar pengambilan keputusan yang efektif dan berkelanjutan.' }}></p>
         <div className="skills-image-container">
           <Image 
-            src="/images/software-skills.png" 
+            src="/images/software-skills.webp" 
             alt="Software Skills" 
             width={800} 
             height={200} 

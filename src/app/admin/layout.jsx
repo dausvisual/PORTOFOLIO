@@ -1,42 +1,101 @@
 // Lokasi File: src/app/admin/layout.jsx
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 export default function AdminLayout({ children }) {
-  // === 1. STATE MANAGEMENT (Penyimpanan Data Sementara) ===
-  // Lazy initializer: membaca sessionStorage saat pertama kali render, tanpa useEffect
-  const [isAuthenticated, setIsAuthenticated] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return sessionStorage.getItem('isAdminLoggedIn') === 'true';
-    }
-    return false;
-  });
-  const [passwordInput, setPasswordInput] = useState('');        // Menyimpan teks yang diketik di input
-  const [errorMessage, setErrorMessage] = useState('');          // Menyimpan pesan jika password salah
+  // === 1. STATE MANAGEMENT ===
+  // Hapus penggunaan sessionStorage agar jebakan ter-reset saat halaman di-refresh
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [trapLevel, setTrapLevel] = useState(0);
+  
+  const [escapeClicks, setEscapeClicks] = useState(0);
+  const [passwordInput, setPasswordInput] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  // === 3. FUNGSI UNTUK MEMPROSES LOGIN ===
+  // === FUNGSI UNTUK MEMPROSES LOGIN ===
   const handleLogin = (e) => {
-    e.preventDefault(); // Mencegah halaman ter-refresh saat tombol ditekan
+    e.preventDefault(); 
     
-    // UBAH PASSWORD INI SESUAI KEINGINANMU (Contoh: 'firdaus123')
-    const PASSWORD_RAHASIA = '1712'; 
-
-    if (passwordInput === PASSWORD_RAHASIA) {
-      setIsAuthenticated(true); // Beri izin masuk
-      sessionStorage.setItem('isAdminLoggedIn', 'true'); // Simpan tanda di browser
-      setErrorMessage(''); // Hapus pesan error jika ada
+    // HONEYPOT: Terima password APAPUN yang dimasukkan user
+    if (passwordInput.trim().length > 0) {
+      setIsAuthenticated(true); 
+      setTrapLevel(1);
+      setErrorMessage(''); 
+      
+      // Push state dummy agar tombol back di browser bisa ditangkap
+      window.history.pushState({ trap: true }, '');
     } else {
-      setErrorMessage('Akses Ditolak! Password salah.');
-      setPasswordInput(''); // Kosongkan kolom input
+      setErrorMessage('Silakan masukkan password.');
     }
   };
 
-  // === 4. FUNGSI KELUAR (LOGOUT) ===
+  // === FUNGSI KELUAR (LOGOUT) ===
   const handleLogout = () => {
     setIsAuthenticated(false);
-    sessionStorage.removeItem('isAdminLoggedIn'); // Hapus tanda dari browser
+    setTrapLevel(0);
+    setEscapeClicks(0);
+  };
+
+  const trapLevelRef = useRef(trapLevel);
+  const escapeClicksRef = useRef(escapeClicks);
+
+  // Selalu sinkronkan Ref dengan State terbaru tanpa me-retrigger event listener
+  useEffect(() => {
+    trapLevelRef.current = trapLevel;
+    escapeClicksRef.current = escapeClicks;
+  }, [trapLevel, escapeClicks]);
+
+  // === TANGKAP TOMBOL BACK (BROWSER/PONSEL) ===
+  useEffect(() => {
+    const handlePopState = (e) => {
+      // 1. Langsung dorong state baru untuk menetralisir efek mundur
+      window.history.pushState({ trapped: true }, '', window.location.href);
+
+      const currentTrap = trapLevelRef.current;
+      const currentClicks = escapeClicksRef.current;
+
+      if (currentTrap === 1) {
+        setTrapLevel(2);
+      } else if (currentTrap === 2) {
+        if (currentClicks < 6) {
+          setEscapeClicks(prev => prev + 1);
+        } else {
+          // Lepaskan jebakan
+          handleLogout();
+          window.location.href = '/';
+        }
+      }
+    };
+    
+    if (isAuthenticated) {
+      // 2. Beri 2 lapis buffer history saat jebakan pertama aktif
+      window.history.pushState({ trapped: true }, '', window.location.href);
+      window.history.pushState({ trapped: true }, '', window.location.href);
+      window.addEventListener('popstate', handlePopState);
+    }
+    
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [isAuthenticated]);
+
+  // === TANGKAP TOMBOL BACK DI LAYAR ===
+  const handleOnScreenBack = () => {
+    const currentTrap = trapLevelRef.current;
+    const currentClicks = escapeClicksRef.current;
+    
+    if (currentTrap === 1) {
+      setTrapLevel(2);
+    } else if (currentTrap === 2) {
+      if (currentClicks < 6) {
+        setEscapeClicks(prev => prev + 1);
+      } else {
+        handleLogout();
+        window.location.href = '/';
+      }
+    }
   };
 
   // =========================================================================
@@ -73,46 +132,42 @@ export default function AdminLayout({ children }) {
   }
 
   // =========================================================================
-  // TAMPILAN 2: JIKA SUDAH LOGIN (MUNCULKAN SIDEBAR & KONTEN ADMIN)
+  // TAMPILAN 2: JIKA SUDAH LOGIN (MUNCULKAN HALAMAN PALSU TAHAP 1 & 2)
   // =========================================================================
-  return (
-    <div style={styles.adminWrapper}>
-      {/* === SIDEBAR NAVIGASI KIRI === */}
-      <aside style={styles.sidebar}>
-        <h2 style={styles.sidebarTitle}>FI Admin Panel</h2>
-        
-        <nav style={styles.navMenu}>
-          <p style={styles.navCategory}>Menu Utama</p>
-          <Link href="/admin" style={styles.navLink}>📊 Dashboard</Link>
-          <Link href="/admin/hero" style={styles.navLink}>🏠 Pengaturan Hero</Link>
-          <Link href="/admin/about" style={styles.navLink}>👤 About & Journey</Link>
-          
-          <p style={styles.navCategory}>Kelola Portofolio</p>
-          <Link href="/admin/services" style={styles.navLink}>⚙️ Services</Link>
-          <Link href="/admin/projects" style={styles.navLink}>📁 Projects</Link>
-          <Link href="/admin/certifications" style={styles.navLink}>📜 Certifications</Link>
-          <Link href="/admin/clients" style={styles.navLink}>🤝 Clients</Link>
-          <Link href="/admin/gallery" style={styles.navLink}>📸 Gallery Lapangan</Link>
-          
-          {/* Tombol Logout & Kembali */}
-          <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <button onClick={handleLogout} style={styles.logoutButton}>🔒 Keluar (Logout)</button>
-            <Link href="/" style={styles.navLinkBack}>← Kembali ke Web Utama</Link>
-          </div>
-        </nav>
-      </aside>
-
-      {/* === AREA KONTEN KANAN === */}
-      <main style={styles.mainContent}>
-        <header style={styles.header}>
-          <h3>Mode Administrator</h3>
-          <div style={styles.adminProfile}>Admin FI</div>
-        </header>
-        
-        <div style={styles.contentArea}>
-          {children}
+  if (trapLevel === 1) {
+    return (
+      <div style={styles.honeypotWrapper}>
+        <div style={styles.honeypotContent}>
+          <h1 style={styles.honeypotTitle}>MAU NGAPAIN?</h1>
+          <p style={styles.honeypotSubtitle}>Akses Ditolak. Aktivitas Anda telah direkam.</p>
+          <button onClick={handleOnScreenBack} style={styles.honeypotButton}>
+            Kembali
+          </button>
         </div>
-      </main>
+      </div>
+    );
+  }
+
+  // TRAP 2: DIRETAS
+  const hackingProgress = [0, 12, 17, 70, 80, 85, 90];
+  const progressPercent = hackingProgress[Math.min(escapeClicks, 6)];
+
+  return (
+    <div style={styles.trap2Wrapper}>
+      <div style={styles.trap2Content}>
+        <div style={styles.skullIcon}>☠️</div>
+        <h1 style={styles.trap2Title}>PERANGKAT TELAH DIRETAS</h1>
+        <div style={styles.glitchBox}>
+          <p style={styles.trap2Subtitle}>MENGUNDUH SEMUA DATA PRIBADI...</p>
+          <div style={styles.progressBarWrapper}>
+            <div style={{...styles.progressBarFill, width: `${progressPercent}%`}}></div>
+          </div>
+          <p style={{color: '#ff0000', marginTop: '0.5rem', fontFamily: 'monospace', fontWeight: 'bold'}}>{progressPercent}% - Sedang Menyalin Data</p>
+        </div>
+        <button onClick={handleOnScreenBack} style={styles.trap2Button}>
+          BATALKAN
+        </button>
+      </div>
     </div>
   );
 }
@@ -127,17 +182,21 @@ const styles = {
   loginButton: { width: '100%', padding: '1rem', backgroundColor: '#4f46e5', color: '#fff', border: 'none', borderRadius: '0.5rem', fontSize: '1.1rem', fontWeight: 'bold', cursor: 'pointer', transition: '0.3s' },
   backLink: { color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem', textAlign: 'center', display: 'block', marginTop: '1rem' },
   
-  // Gaya untuk Layout Admin (Sama seperti sebelumnya)
-  adminWrapper: { display: 'flex', minHeight: '100vh', backgroundColor: '#020617', color: '#fff', fontFamily: 'sans-serif' },
-  sidebar: { width: '280px', backgroundColor: '#0b0f19', padding: '2rem', borderRight: '1px solid #1e293b', display: 'flex', flexDirection: 'column' },
-  sidebarTitle: { color: '#00e5ff', fontSize: '1.8rem', fontWeight: 'bold', marginBottom: '2.5rem', textAlign: 'center' },
-  navMenu: { display: 'flex', flexDirection: 'column', gap: '0.8rem', height: '100%' },
-  navCategory: { color: '#94a3b8', fontSize: '0.9rem', marginTop: '1.5rem', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '1px' },
-  navLink: { color: '#e2e8f0', textDecoration: 'none', fontSize: '1.1rem', padding: '0.8rem 1rem', borderRadius: '0.5rem', transition: '0.3s', backgroundColor: 'rgba(255,255,255,0.02)' },
-  navLinkBack: { color: '#00e5ff', textDecoration: 'none', fontSize: '1rem', fontWeight: '600', textAlign: 'center' },
-  logoutButton: { backgroundColor: 'transparent', color: '#ef4444', border: '1px solid #ef4444', padding: '0.8rem', borderRadius: '0.5rem', cursor: 'pointer', fontWeight: 'bold', fontSize: '1rem', transition: '0.3s' },
-  mainContent: { flex: 1, display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' },
-  header: { padding: '1.5rem 3rem', backgroundColor: '#0b0f19', borderBottom: '1px solid #1e293b', display: 'flex', justifyContent: 'space-between', alignItems: 'center' },
-  adminProfile: { padding: '0.5rem 1rem', backgroundColor: 'rgba(0, 229, 255, 0.1)', color: '#00e5ff', borderRadius: '2rem', fontWeight: 'bold' },
-  contentArea: { padding: '3rem', overflowY: 'auto', flex: 1 }
+  // Gaya untuk halaman Honeypot Tahap 1
+  honeypotWrapper: { display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', backgroundColor: '#000', fontFamily: 'sans-serif' },
+  honeypotContent: { textAlign: 'center', padding: '2rem' },
+  honeypotTitle: { fontSize: '5rem', color: '#ef4444', fontWeight: '900', letterSpacing: '2px', textShadow: '0 0 20px rgba(239, 68, 68, 0.5)', margin: 0 },
+  honeypotSubtitle: { fontSize: '1.2rem', color: '#f87171', marginTop: '1rem', marginBottom: '3rem', fontFamily: 'monospace' },
+  honeypotButton: { backgroundColor: 'transparent', color: '#ef4444', border: '1px solid #ef4444', padding: '0.8rem 2rem', borderRadius: '0.5rem', cursor: 'pointer', fontWeight: 'bold', fontSize: '1rem', transition: 'all 0.3s', textTransform: 'uppercase' },
+
+  // Gaya untuk halaman Honeypot Tahap 2 (DIRETAS)
+  trap2Wrapper: { display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', backgroundColor: '#0a0000', fontFamily: 'monospace', backgroundImage: 'radial-gradient(#3a0000 1px, transparent 1px)', backgroundSize: '10px 10px' },
+  trap2Content: { textAlign: 'center', padding: '2rem', backgroundColor: 'rgba(0,0,0,0.8)', border: '2px solid #ff0000', boxShadow: '0 0 50px rgba(255, 0, 0, 0.4)', borderRadius: '1rem', maxWidth: '600px', width: '90%' },
+  skullIcon: { fontSize: '6rem', margin: '0 auto', animation: 'pulse 1s infinite alternate', filter: 'drop-shadow(0 0 10px red)' },
+  trap2Title: { fontSize: '3rem', color: '#ff0000', fontWeight: '900', letterSpacing: '3px', textShadow: '2px 2px 0px #000, -2px -2px 0px #000', margin: '1rem 0' },
+  glitchBox: { border: '1px dashed #ff0000', padding: '1.5rem', marginBottom: '2rem', backgroundColor: 'rgba(255, 0, 0, 0.05)' },
+  trap2Subtitle: { fontSize: '1.2rem', color: '#fff', marginBottom: '1rem', fontWeight: 'bold', letterSpacing: '1px' },
+  progressBarWrapper: { width: '100%', height: '20px', backgroundColor: '#333', border: '1px solid #ff0000' },
+  progressBarFill: { height: '100%', backgroundColor: '#ff0000', transition: 'width 0.5s ease-in-out' },
+  trap2Button: { backgroundColor: '#ff0000', color: '#000', border: '2px solid #ff0000', padding: '1rem 2rem', borderRadius: '0.5rem', cursor: 'pointer', fontWeight: '900', fontSize: '1.1rem', transition: 'all 0.1s', textTransform: 'uppercase', boxShadow: '0 0 15px rgba(255,0,0,0.5)' }
 };
