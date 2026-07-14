@@ -17,10 +17,6 @@ const poppins = Poppins({
   display: 'swap',
 });
 
-export const viewport = {
-  width: 800,
-};
-
 export const metadata = {
   title: 'Firdaus Ikram, S.PWK | GIS Specialist',
   description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, Web GIS Developer, & Drone Mapping profesional.',

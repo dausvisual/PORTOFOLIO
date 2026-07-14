@@ -34,12 +34,7 @@ html {
     scroll-behavior: smooth; /* Gulir halus antar seksi */
 }
 
-@media (min-width: 1024px) { 
-    html { 
-        /* Skala dinamis dari 75% (laptop kecil 1024px) hingga 100% (monitor besar 1920px) */
-        font-size: clamp(75%, 46.43% + 2.79vw, 100%); 
-    } 
-}
+@media (min-width: 1024px) { html { font-size: 90%; } }
 
 html, body { 
     background-color: var(--bg-dark); 
