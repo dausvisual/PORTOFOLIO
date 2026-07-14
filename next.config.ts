@@ -10,7 +10,7 @@ const cspHeader = `
     object-src 'none';
     base-uri 'self';
     form-action 'self';
-    frame-ancestors 'none';
+    /* frame-ancestors 'none'; (Dinonaktifkan agar bisa di-preview di Ekstensi Mobile View) */
     upgrade-insecure-requests;
 `;
 
@@ -38,10 +38,12 @@ const nextConfig: NextConfig = {
             key: 'Content-Security-Policy',
             value: cspHeader.replace(/\n/g, ''),
           },
+          /* 
           {
             key: 'X-Frame-Options',
-            value: 'DENY', // Mencegah Clickjacking
-          },
+            value: 'SAMEORIGIN', // Diubah dari DENY agar Ekstensi Mobile View bisa bekerja
+          }, 
+          */
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff', // Mencegah MIME-type sniffing
