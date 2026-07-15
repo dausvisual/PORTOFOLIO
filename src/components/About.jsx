@@ -15,18 +15,19 @@ export default function About() {
           <Image 
             src="/images/software-skills.webp" 
             alt="Software Skills" 
-            width={800} 
-            height={200} 
+            width={1200} 
+            height={300} 
             className="skills-image"
+            quality={100}
             priority
           />
         </div>
       </div>
       <div className="about-right-grid" data-aos="fade-left" data-aos-delay="200">
-        <div className="about-img-box"><Image src="/images/projects/fcm/fcm1.webp" alt="Survey lapangan Farmel Cipta Mandiri" width={300} height={200} /></div>
-        <div className="about-img-box"><Image src="/images/projects/adp/adp2.webp" alt="Survey lapangan Alaska Dwipa" width={300} height={200} /></div>
-        <div className="about-img-box"><Image src="/images/projects/bma/bma1.webp" alt="Survey lapangan Bumi Morowali Abadi" width={300} height={200} /></div>
-        <div className="about-img-box"><Image src="/images/projects/awk/awk3.webp" alt="Survey Drone Mapping" width={300} height={200} /></div>
+        <div className="about-img-box"><Image src="/images/projects/fcm/fcm1.webp" alt="Survey lapangan Farmel Cipta Mandiri" width={800} height={600} quality={90} /></div>
+        <div className="about-img-box"><Image src="/images/projects/adp/adp2.webp" alt="Survey lapangan Alaska Dwipa" width={800} height={600} quality={90} /></div>
+        <div className="about-img-box"><Image src="/images/projects/bma/bma1.webp" alt="Survey lapangan Bumi Morowali Abadi" width={800} height={600} quality={90} /></div>
+        <div className="about-img-box"><Image src="/images/projects/awk/awk3.webp" alt="Survey Drone Mapping" width={800} height={600} quality={90} /></div>
       </div>
     </section>
   );
