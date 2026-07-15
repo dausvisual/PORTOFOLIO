@@ -33,7 +33,7 @@ export const galleryData = {
     title: "PT. Anindya Wiraputra Konsult",
     desc: "Ketua Tim Survei Pengambilan Sampel Air, Udara dan Kebisingan, PT. Anindya Wiraputra Konsult",
     periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "PT. Laboratorindo Alam Bestari",
-    images: ["/images/projects/awk/awk1.webp", "/images/projects/awk/awk5.webp", "/images/projects/awk/awk6.webp", "/images/projects/awk/awk7.webp", "/images/projects/awk/awk8.webp", "/images/projects/awk/awk9.webp", "/images/projects/awk/awk10.webp"],
+    images: ["/images/projects/awk/awk1.webp", "/images/projects/awk/awk3.webp", "/images/projects/awk/awk4.webp", "/images/projects/awk/awk5.webp", "/images/projects/awk/awk6.webp", "/images/projects/awk/awk7.webp", "/images/projects/awk/awk8.webp", "/images/projects/awk/awk9.webp", "/images/projects/awk/awk10.webp"],
   },
   igip: {
     title: "International Green Industrial Park",
@@ -87,7 +87,7 @@ export const galleryData = {
     title: "Mapping & Orthopotho",
     desc: "Pemetaan dan pembuatan peta Orthophoto (Orthophoto Mapping).",
     periode: "2022 - 2024", lokasi: "Berbagai Lokasi", peran: "Tenaga Ahli Pemetaan", perusahaan: "PT. Sinergi Citra Karya & PT. AFA Tombuku Pratama",
-    images: ["/images/projects/ortho/ortho1.webp", "/images/projects/ortho/ortho2.webp", "/images/projects/ortho/ortho3.webp", "/images/projects/ortho/ortho4.webp", "/images/projects/ortho/ortho5.webp", "/images/projects/ortho/ortho6.webp", "/images/projects/ortho/ortho7.webp", "/images/projects/ortho/ortho8.webp", "/images/projects/ortho/map1.webp", "/images/projects/ortho/map2.webp", "/images/projects/ortho/map3.webp", "/images/projects/ortho/map5.webp", "/images/projects/ortho/map6.webp", "/images/projects/ortho/map7.webp", "/images/projects/ortho/map8.webp", "/images/projects/ortho/map9.webp", "/images/projects/ortho/map10.webp"],
+    images: ["/images/projects/ortho/ortho1.webp", "/images/projects/ortho/ortho2.webp", "/images/projects/ortho/ortho3.webp", "/images/projects/ortho/ortho4.webp", "/images/projects/ortho/ortho5.webp", "/images/projects/ortho/ortho6.webp", "/images/projects/ortho/ortho7.webp", "/images/projects/ortho/ortho8.webp"],
   },
   benuanta: {
     title: "Benuanta Grup",
@@ -117,19 +117,19 @@ export const galleryData = {
     title: "Pemetaan Pariwisata Bulukumba",
     desc: "Sistem Informasi Geografis Pariwisata.",
     periode: "2024", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",peran: "GIS Engineer", perusahaan: "Dinas Pariwisata Kab. Bulukumba",
-    images: ["/images/projects/dispar/dispar1.webp"],
+    images: ["/images/projects/dispar/dispar1.webp", "/images/projects/dispar/dispar2.webp", "/images/projects/dispar/dispar3.webp", "/images/projects/dispar/dispar4.webp", "/images/projects/dispar/dispar5.webp", "/images/projects/dispar/dispar6.webp", "/images/projects/dispar/dispar7.webp", "/images/projects/dispar/dispar8.webp", "/images/projects/dispar/dispar9.webp"],
   },
   bppwsulsel: {
     title: "BPPW Sulsel",
     desc: "Tim Survey Program SPAL-DS Tahap I dan II.",
     periode: "2024", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",peran: "Tim Survei", perusahaan: "BPPW Sulsel",
-    images: ["/images/projects/bppwsulsel/bppwsulsel1.webp"],
+    images: ["/images/projects/bppwsulsel/bppwsulsel1.webp", "/images/projects/bppwsulsel/bppwsulsel2.webp", "/images/projects/bppwsulsel/bppwsulsel3.webp", "/images/projects/bppwsulsel/bppwsulsel4.webp", "/images/projects/bppwsulsel/bppwsulsel5.webp"],
   },
   disperkimtan: {
     title: "DISPERKIMTAN Bulukumba",
     desc: "Survey Kawasan Permukiman Kumuh Jalanjang.",
     periode: "2024", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",peran: "Tim Survei", perusahaan: "DISPERKIMTAN Kab. Bulukumba",
-    images: ["/images/projects/disperkimtan/disperkimtan1.webp"],
+    images: ["/images/projects/disperkimtan/disperkimtan1.webp", "/images/projects/disperkimtan/disperkimtan2.webp", "/images/projects/disperkimtan/disperkimtan3.webp", "/images/projects/disperkimtan/disperkimtan4.webp", "/images/projects/disperkimtan/disperkimtan5.webp", "/images/projects/disperkimtan/disperkimtan6.webp"],
   },
   wihamedia: {
     title: "Wiha Media Undangan Digital",
