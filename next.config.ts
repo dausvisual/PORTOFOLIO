@@ -10,7 +10,6 @@ const cspHeader = `
     object-src 'none';
     base-uri 'self';
     form-action 'self';
-    /* frame-ancestors 'none'; (Dinonaktifkan agar bisa di-preview di Ekstensi Mobile View) */
     upgrade-insecure-requests;
 `;
 
