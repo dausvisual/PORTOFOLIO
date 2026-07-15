@@ -23,10 +23,10 @@ export default function About() {
         </div>
       </div>
       <div className="about-right-grid" data-aos="fade-left" data-aos-delay="200">
-        <div className="about-img-box"><Image src="/images/projects/fcm1.webp" alt="Survey lapangan Farmel Cipta Mandiri" width={300} height={200} /></div>
-        <div className="about-img-box"><Image src="/images/projects/adp2.webp" alt="Survey lapangan Alaska Dwipa" width={300} height={200} /></div>
-        <div className="about-img-box"><Image src="/images/projects/awk4.webp" alt="Survey lapangan Anindya Wiraputra" width={300} height={200} /></div>
-        <div className="about-img-box"><Image src="/images/projects/awk3.webp" alt="Survey Drone Mapping" width={300} height={200} /></div>
+        <div className="about-img-box"><Image src="/images/projects/fcm/fcm1.webp" alt="Survey lapangan Farmel Cipta Mandiri" width={300} height={200} /></div>
+        <div className="about-img-box"><Image src="/images/projects/adp/adp2.webp" alt="Survey lapangan Alaska Dwipa" width={300} height={200} /></div>
+        <div className="about-img-box"><Image src="/images/projects/awk/awk4.webp" alt="Survey lapangan Anindya Wiraputra" width={300} height={200} /></div>
+        <div className="about-img-box"><Image src="/images/projects/awk/awk3.webp" alt="Survey Drone Mapping" width={300} height={200} /></div>
       </div>
     </section>
   );
