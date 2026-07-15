@@ -24,6 +24,12 @@ export const metadata = {
   metadataBase: new URL('https://firdausikram.xyz'),
   keywords: [
     'Firdaus Ikram',
+    'Firdaus Ikram, S.PWK',
+    'Firdaus Ikram GIS',
+    'Firdaus Ikram Web GIS',
+    'Firdaus Ikram Drone',
+    'Firdaus Ikram Surveyor',
+    'Firdaus Ikram Urban Planner',
     'GIS Specialist',
     'Drone Mapping',
     'Konsultan GIS',
@@ -44,7 +50,8 @@ export const metadata = {
     'Google Scholar Firdaus Ikram',
     'Jurnal Publikasi Firdaus Ikram',
     'Penelitian Firdaus Ikram',
-    'Komisaris Zonasvara Grup'
+    'Komisaris Zonasvara Grup',
+    'Idda'
   ],
   icons: {
     icon: "/logo/logo-fi.webp",
