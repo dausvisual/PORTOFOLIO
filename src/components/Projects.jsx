@@ -95,7 +95,7 @@ export default function Projects() {
                   {p.id === 'wihamedia' ? (language === 'en' ? 'View Web' : 'Lihat Web') : (language === 'en' ? 'View Instagram' : 'View Instagram')} <i className='bx bx-link-external'></i>
                 </a>
               ) : (
-                <Link href={`/galeri?proyek=${p.id}`} className="view-link" aria-label={`Lihat detail proyek: ${p.title}`}>
+                <Link href={`/galeri/${p.id}`} className="view-link" aria-label={`Lihat detail proyek: ${p.title}`}>
                   {language === 'en' ? 'View Project' : 'Lihat Proyek'} <i className='bx bx-right-arrow-alt'></i>
                 </Link>
               )}

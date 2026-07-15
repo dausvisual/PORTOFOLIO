@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const today = new Date().toISOString().split('T')[0];
 
   const projectUrls = projectIds.map((id) => ({
-    url: `https://firdausikram.xyz/galeri?proyek=${id}`,
+    url: `https://firdausikram.xyz/galeri/${id}`,
     lastModified: today,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
