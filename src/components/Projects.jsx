@@ -37,34 +37,35 @@ export default function Projects() {
 
   // DATA PROYEK LENGKAP
   const projects = [
-    { id: 'vale', title: 'PT. Vale Indonesia Tbk.', cat: language === 'en' ? 'Water Sampling Survey' : 'Survey Pengambilan Sampel Air', img: '/images/projects/vale1.webp' },
-    { id: 'pam', title: 'PT. PAM Mineral Tbk.', cat: language === 'en' ? 'Water and Air Sampling Survey' : 'Survey Pengambilan Sampel Air dan Udara', img: '/images/projects/pam1.webp' },
-    { id: 'mti', title: 'PT. Merdeka Tsingshan Indonesia', cat: language === 'en' ? 'Water, Air, and Noise Sampling Survey' : 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/mti3.webp' },
-    { id: 'msb', title: 'PT. Mitra Sulawesi Bersama', cat: language === 'en' ? 'Water, Air, and Noise Sampling Survey' : 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/msb1.webp' },
-    { id: 'awk', title: 'PT. Anindya Wiraputra Konsult', cat: language === 'en' ? 'Water, Air, and Noise Sampling Survey' : 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/awk1.webp' },
-    { id: 'imip', title: 'Indonesia Morowali Industrial Park (IMIP)', cat: language === 'en' ? 'Air Sampling Survey' : 'Survey Pengambilaan Sampel Udara', img: '/images/projects/imip1.webp' },
-    { id: 'igip', title: 'International Green Industrial Park (IGIP)', cat: language === 'en' ? 'Air Sampling Survey' : 'Survey Pengambilan Sampel Udara', img: '/images/projects/igip2.webp' },
-    { id: 'ihip', title: 'Indonesia Huabao Industrial Park (IHIP)', cat: language === 'en' ? 'Air Sampling Survey' : 'Survey Pengambilan Sampel Udara', img: '/images/projects/ihip1.webp' },
-    { id: 'adp', title: 'PT. Alaska Dwipa Perdana', cat: language === 'en' ? 'Water, Air, and Noise Sampling Survey' : 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/adp1.webp' },
-    { id: 'fcm', title: 'PT. Farmel Cipta Mandiri', cat: language === 'en' ? 'Water Sampling Survey' : 'Survey Pengambilan Sampel Air', img: '/images/projects/fcm1.webp' },
-    { id: 'mss', title: 'PT. Metal Smeltindo Selaras', cat: language === 'en' ? 'Water Sampling Survey' : 'Survey Pengambilan Sampel Air', img: '/images/projects/mss1.webp' },
-    { id: 'bma', title: 'PT. Bumi Morowali Abadi', cat: language === 'en' ? 'Mapping Survey' : 'Survey Pemetaan', img: '/images/projects/bma1.webp' },
-    { id: 'khubsurat', title: 'PT. Khubsurat Meherban Ilahi', cat: language === 'en' ? 'Water, Air, and Noise Sampling Survey' : 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/kmh1.webp' },
-    { id: 'ortho', title: 'Mapping & Orthopotho', cat: language === 'en' ? 'Mapping & Orthophoto' : 'Pemetaan & Orthophoto', img: '/images/projects/ortho1.webp' },
-    { id: 'benuanta', title: 'Benuanta Grup', cat: language === 'en' ? 'RDTR Survey & Mapping' : 'Survey & Pemetaan RDTR', img: '/images/projects/benuanta1.webp' },
-    { id: 'pandit', title: 'PT. Pandit Eka Nusa Agrata', cat: language === 'en' ? 'Traffic Impact Analysis Survey' : 'Survey Andalalin', img: '/images/projects/pandit1.webp' },
-    { id: 'bira', title: 'Pemerintah Desa Bira', cat: language === 'en' ? 'Survey and Mapping Team' : 'Tim Survei dan Pemetaan', img: '/images/projects/bira1.webp' },
-    { id: 'dispar', title: 'Pemetaan Pariwisata Bulukumba', cat: 'GIS', img: '/images/projects/dispar1.webp' },
-    { id: 'bppwsulsel', title: 'BPPW Sulsel', cat: language === 'en' ? 'SPAL-DS Program Survey Team Phase I & II' : 'Tim Survey Program SPAL-DS Tahap I dan II', img: '/images/projects/bppwsulsel1.webp' },
-    { id: 'rmk', title: 'PT. Ruang Meja Kerja', cat: language === 'en' ? 'Regional Planning Survey & Village Profile Preparation' : 'Survey Perencanaan Kawasan & Penyusunan Profil Desa', img: '/images/projects/rmk1.webp' },
-    { id: 'disperkimtan', title: 'DISPERKIMTAN Bulukumba', cat: language === 'en' ? 'Jalanjang Slum Area Survey' : 'Survey Kawasan Permukiman Kumuh Jalanjang', img: '/images/projects/disperkimtan1.webp' },
-    { id: 'wihamedia', title: 'Undangan Digital', cat: language === 'en' ? 'Digital Website Invitation Creation' : 'Pembuatan Undangan Digital Website', img: '/images/projects/wihamedia1.webp', href: 'https://dausvisual.site' },
-    { id: 'freelance', title: 'Freelance Foto & Video Editing', cat: 'Freelance', img: '/images/projects/freelance1.webp', href: 'https://www.instagram.com/daus_visual?igsh=NHVhMnBlbWNhd2c1' },
+    { id: 'vale', title: 'PT. Vale Indonesia Tbk.', cat: language === 'en' ? 'Water Sampling Survey' : 'Survey Pengambilan Sampel Air', img: '/images/projects/vale/vale1.webp' },
+    { id: 'pam', title: 'PT. PAM Mineral Tbk.', cat: language === 'en' ? 'Water and Air Sampling Survey' : 'Survey Pengambilan Sampel Air dan Udara', img: '/images/projects/pam/pam1.webp' },
+    { id: 'mti', title: 'PT. Merdeka Tsingshan Indonesia', cat: language === 'en' ? 'Water, Air, and Noise Sampling Survey' : 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/mti/mti3.webp' },
+    { id: 'msb', title: 'PT. Mitra Sulawesi Bersama', cat: language === 'en' ? 'Water, Air, and Noise Sampling Survey' : 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/msb/msb1.webp' },
+    { id: 'awk', title: 'PT. Anindya Wiraputra Konsult', cat: language === 'en' ? 'Water, Air, and Noise Sampling Survey' : 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/awk/awk1.webp' },
+    { id: 'imip', title: 'Indonesia Morowali Industrial Park (IMIP)', cat: language === 'en' ? 'Air Sampling Survey' : 'Survey Pengambilaan Sampel Udara', img: '/images/projects/imip/imip1.webp' },
+    { id: 'igip', title: 'International Green Industrial Park (IGIP)', cat: language === 'en' ? 'Air Sampling Survey' : 'Survey Pengambilan Sampel Udara', img: '/images/projects/igip/igip2.webp' },
+    { id: 'ihip', title: 'Indonesia Huabao Industrial Park (IHIP)', cat: language === 'en' ? 'Air Sampling Survey' : 'Survey Pengambilan Sampel Udara', img: '/images/projects/ihip/ihip1.webp' },
+    { id: 'adp', title: 'PT. Alaska Dwipa Perdana', cat: language === 'en' ? 'Water, Air, and Noise Sampling Survey' : 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/adp/adp1.webp' },
+    { id: 'fcm', title: 'PT. Farmel Cipta Mandiri', cat: language === 'en' ? 'Water Sampling Survey' : 'Survey Pengambilan Sampel Air', img: '/images/projects/fcm/fcm1.webp' },
+    { id: 'mss', title: 'PT. Metal Smeltindo Selaras', cat: language === 'en' ? 'Water Sampling Survey' : 'Survey Pengambilan Sampel Air', img: '/images/projects/mss/mss1.webp' },
+    { id: 'bma', title: 'PT. Bumi Morowali Abadi', cat: language === 'en' ? 'Mapping Survey' : 'Survey Pemetaan', img: '/images/projects/bma/bma1.webp' },
+    { id: 'khubsurat', title: 'PT. Khubsurat Meherban Ilahi', cat: language === 'en' ? 'Water, Air, and Noise Sampling Survey' : 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/khubsurat/kmh1.webp' },
+        { id: 'dlhd', title: 'DLHD Morowali', cat: language === 'en' ? 'Environmental Sampling Survey' : 'Survey Pengambilan Sampel Lingkungan', img: '/images/projects/dlhd/dlhd1.webp' },
+{ id: 'ortho', title: 'Mapping & Orthopotho', cat: language === 'en' ? 'Mapping & Orthophoto' : 'Pemetaan & Orthophoto', img: '/images/projects/ortho/ortho1.webp' },
+    { id: 'benuanta', title: 'Benuanta Grup', cat: language === 'en' ? 'RDTR Survey & Mapping' : 'Survey & Pemetaan RDTR', img: '/images/projects/benuanta/benuanta1.webp' },
+    { id: 'pandit', title: 'PT. Pandit Eka Nusa Agrata', cat: language === 'en' ? 'Traffic Impact Analysis Survey' : 'Survey Andalalin', img: '/images/projects/pandit/pandit1.webp' },
+    { id: 'bira', title: 'Pemerintah Desa Bira', cat: language === 'en' ? 'Survey and Mapping Team' : 'Tim Survei dan Pemetaan', img: '/images/projects/bira/bira1.webp' },
+    { id: 'dispar', title: 'Pemetaan Pariwisata Bulukumba', cat: 'GIS', img: '/images/projects/dispar/dispar1.webp' },
+    { id: 'bppwsulsel', title: 'BPPW Sulsel', cat: language === 'en' ? 'SPAL-DS Program Survey Team Phase I & II' : 'Tim Survey Program SPAL-DS Tahap I dan II', img: '/images/projects/bppwsulsel/bppwsulsel1.webp' },
+    { id: 'rmk', title: 'PT. Ruang Meja Kerja', cat: language === 'en' ? 'Regional Planning Survey & Village Profile Preparation' : 'Survey Perencanaan Kawasan & Penyusunan Profil Desa', img: '/images/projects/rmk/rmk1.webp' },
+    { id: 'disperkimtan', title: 'DISPERKIMTAN Bulukumba', cat: language === 'en' ? 'Jalanjang Slum Area Survey' : 'Survey Kawasan Permukiman Kumuh Jalanjang', img: '/images/projects/disperkimtan/disperkimtan1.webp' },
+    { id: 'wihamedia', title: 'Undangan Digital', cat: language === 'en' ? 'Digital Website Invitation Creation' : 'Pembuatan Undangan Digital Website', img: '/images/projects/wihamedia/wihamedia1.webp', href: 'https://dausvisual.site' },
+    { id: 'freelance', title: 'Freelance Foto & Video Editing', cat: 'Freelance', img: '/images/projects/freelance/freelance1.webp', href: 'https://www.instagram.com/daus_visual?igsh=NHVhMnBlbWNhd2c1' },
   ];
 
   return (
     <section id="projects" className="projects-section-k3">
-      <span className="heading-sm display-block" data-aos="fade-up">{language === 'en' ? 'PROJECTS' : 'PROYEK'}</span>
+      <span className="heading-sm display-block" data-aos="fade-up">{language === 'en' ? 'Projects' : 'Proyek'}</span>
       <h2 className="heading" data-aos="fade-up" data-aos-delay="100">{language === 'en' ? 'Activity Documentation' : 'Dokumentasi Kegiatan'}</h2>
 
       <div className="projects-tabs" data-aos="fade-up" data-aos-delay="200">
@@ -113,7 +114,14 @@ export default function Projects() {
             {language === 'en' ? 'See More' : 'Lihat Selengkapnya'} <i className='bx bx-chevron-down'></i>
           </button>
         ) : (
-          <button className="btn btn-outline" onClick={() => handleToggleShowAll(false)}>
+          <button className="btn btn-outline" onClick={() => {
+            handleToggleShowAll(false);
+            const el = document.getElementById('projects');
+            if (el) {
+              const y = el.getBoundingClientRect().top + window.scrollY - 100;
+              window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+          }}>
             {language === 'en' ? 'Hide' : 'Sembunyikan'} <i className='bx bx-chevron-up'></i>
           </button>
         )}

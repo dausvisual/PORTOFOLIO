@@ -6,7 +6,7 @@ export default function Contact() {
 
   return (
     <section id="contact">
-      <span className="heading-sm display-block" data-aos="fade-up">{language === 'en' ? 'CONTACT' : 'KONTAK'}</span>
+      <span className="heading-sm display-block" data-aos="fade-up">{language === 'en' ? 'Contact' : 'Kontak'}</span>
       <h2 className="heading" data-aos="fade-up" data-aos-delay="100">{language === 'en' ? "Let's Work Together" : 'Mari Bekerja Sama'}</h2>
       
       <div className="contact-container">
@@ -28,14 +28,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="contact-socials-block">
-            <h4 className="contact-subheading">{language === 'en' ? 'Connect With Me' : 'Terhubung Dengan Saya'}</h4>
-            <div className="contact-social-icons">
-              <a href="https://www.linkedin.com/in/firdaus-ikram-86405b2a6" target="_blank" rel="noreferrer" aria-label="LinkedIn Profile"><i className='bx bxl-linkedin'></i></a>
-              <a href="https://www.instagram.com/firdausikram_17" target="_blank" rel="noreferrer" aria-label="Instagram Profile"><i className='bx bxl-instagram'></i></a>
-              <a href="https://wa.me/6285770029172" target="_blank" rel="noreferrer" aria-label="WhatsApp Contact"><i className='bx bxl-whatsapp'></i></a>
-            </div>
-          </div>
+
 
           <div className="contact-glass-card">
             <div className="contact-available">

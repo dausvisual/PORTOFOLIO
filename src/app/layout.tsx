@@ -43,7 +43,8 @@ export const metadata = {
     'Gerakan Sosial',
     'Google Scholar Firdaus Ikram',
     'Jurnal Publikasi Firdaus Ikram',
-    'Penelitian Firdaus Ikram'
+    'Penelitian Firdaus Ikram',
+    'Komisaris Zonasvara Grup'
   ],
   icons: {
     icon: "/logo/logo-fi.webp",
@@ -99,52 +100,52 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
 
           {/* JSON-LD Schema Markup untuk SEO */}
-        <Script
-          id="json-ld-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Firdaus Ikram",
-              "jobTitle": "GIS Specialist, Urban Planner, Direktur PT. Sinergi Citra Karya, Owner Daus Visual, Founder FIN Bina Nusantara",
-              "url": "https://firdausikram.xyz",
-              "image": "https://firdausikram.xyz/logo/logo-fi.webp",
-              "sameAs": [
-                "https://www.linkedin.com/in/firdaus-ikram-86405b2a6",
-                "https://www.instagram.com/firdausikram_17",
-                "https://dausvisual.site",
-                "https://scholar.google.co.id/citations?user=Kxneo9AAAAAJ&hl=id",
-                "https://jurnalruang.arsitektur.fatek.untad.ac.id/index.php/JURNALRUANG/article/view/335",
-                "https://journal.unismuh.ac.id/index.php/linears/article/view/19473"
-              ],
-              "alumniOf": {
-                "@type": "CollegeOrUniversity",
-                "name": "Universitas Muhammadiyah Bulukumba"
-              },
-              "worksFor": [
-                {
-                  "@type": "Organization",
-                  "name": "PT. Sinergi Citra Karya"
+          <Script
+            id="json-ld-schema"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Firdaus Ikram",
+                "jobTitle": "GIS Specialist, Urban Planner, Direktur PT. Sinergi Citra Karya, Owner Daus Visual, Founder FIN Bina Nusantara",
+                "url": "https://firdausikram.xyz",
+                "image": "https://firdausikram.xyz/logo/logo-fi.webp",
+                "sameAs": [
+                  "https://www.linkedin.com/in/firdaus-ikram-86405b2a6",
+                  "https://www.instagram.com/firdausikram_17",
+                  "https://dausvisual.site",
+                  "https://scholar.google.co.id/citations?user=Kxneo9AAAAAJ&hl=id",
+                  "https://jurnalruang.arsitektur.fatek.untad.ac.id/index.php/JURNALRUANG/article/view/335",
+                  "https://journal.unismuh.ac.id/index.php/linears/article/view/19473"
+                ],
+                "alumniOf": {
+                  "@type": "CollegeOrUniversity",
+                  "name": "Universitas Muhammadiyah Bulukumba"
                 },
-                {
-                  "@type": "Organization",
-                  "name": "Daus Visual Creative Industry",
-                  "url": "https://dausvisual.site"
-                },
-                {
-                  "@type": "Organization",
-                  "name": "FIN Bina Nusantara"
-                }
-              ]
-            })
-          }}
-        />
+                "worksFor": [
+                  {
+                    "@type": "Organization",
+                    "name": "PT. Sinergi Citra Karya"
+                  },
+                  {
+                    "@type": "Organization",
+                    "name": "Daus Visual Creative Industry",
+                    "url": "https://dausvisual.site"
+                  },
+                  {
+                    "@type": "Organization",
+                    "name": "FIN Bina Nusantara"
+                  }
+                ]
+              })
+            }}
+          />
 
-        {/* Vercel Analytics */}
-        <Analytics />
+          {/* Vercel Analytics */}
+          <Analytics />
 
-        {/* Particles.js — efek partikel di Hero & Education section */}
+          {/* Particles.js — efek partikel di Hero & Education section */}
           <Script src="/js/particles.min.js" strategy="lazyOnload" />
           <Script src="/js/particles-config.js" strategy="lazyOnload" />
         </LanguageProvider>

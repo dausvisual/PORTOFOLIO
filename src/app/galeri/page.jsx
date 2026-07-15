@@ -9,140 +9,146 @@ const galleryData = {
   vale: {
     title: "PT. Vale Indonesia Tbk.",
     desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. VALE Indonesia Tbk.",
-    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei",
-    images: ["/images/projects/vale1.webp", "/images/projects/vale2.webp", "/images/projects/vale3.webp", "/images/projects/vale4.webp", "/images/projects/vale5.webp", "/images/projects/vale6.webp", "/images/projects/vale7.webp", "/images/projects/vale8.webp", "/images/projects/vale9.webp", "/images/projects/vale10.webp", "/images/projects/vale11.webp", "/images/projects/vale12.webp"],
+    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "PT. Laboratorindo Alam Bestari",
+    images: ["/images/projects/vale/vale1.webp", "/images/projects/vale/vale2.webp", "/images/projects/vale/vale3.webp", "/images/projects/vale/vale4.webp", "/images/projects/vale/vale5.webp", "/images/projects/vale/vale6.webp", "/images/projects/vale/vale7.webp", "/images/projects/vale/vale8.webp", "/images/projects/vale/vale9.webp", "/images/projects/vale/vale10.webp", "/images/projects/vale/vale11.webp", "/images/projects/vale/vale12.webp"],
   },
   pam: {
     title: "PT. PAM Mineral Tbk.",
     desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. PAM Mineral Tbk.",
-    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei",
-    images: ["/images/projects/pam1.webp", "/images/projects/pam3.webp", "/images/projects/pam4.webp", "/images/projects/pam5.webp"],
+    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "PT. Laboratorindo Alam Bestari",
+    images: ["/images/projects/pam/pam1.webp", "/images/projects/pam/pam3.webp", "/images/projects/pam/pam4.webp", "/images/projects/pam/pam5.webp"],
   },
   mti: {
     title: "PT. Merdeka Tsingshan Indonesia",
     desc: "Ketua Tim Survei Pengambilan Sampel Air, Udara dan Kebisingan, PT. Merdeka Tsingshan Indonesia",
-    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei",
-    images: ["/images/projects/mti1.webp", "/images/projects/mti2.webp", "/images/projects/mti3.webp", "/images/projects/mti4.webp"],
+    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "PT. Laboratorindo Alam Bestari",
+    images: ["/images/projects/mti/mti1.webp", "/images/projects/mti/mti2.webp", "/images/projects/mti/mti3.webp", "/images/projects/mti/mti4.webp"],
   },
   msb: {
     title: "PT. Mitra Sulawesi Bersama",
     desc: "Ketua Tim Survei Pengambilan Sampel Air, Udara dan Kebisingan, PT. Mitra Sulawesi Bersama",
-    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei",
-    images: ["/images/projects/msb1.webp", "/images/projects/msb2.webp", "/images/projects/msb3.webp"],
+    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "PT. Laboratorindo Alam Bestari",
+    images: ["/images/projects/msb/msb1.webp", "/images/projects/msb/msb2.webp", "/images/projects/msb/msb3.webp"],
   },
   imip: {
     title: "Indonesia Morowali Industrial Park",
     desc: "Ketua Tim Survei Pengambilan Sampel Udara, Indonesia Morowali Industrial Park",
-    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei",
-    images: ["/images/projects/imip1.webp", "/images/projects/imip2.webp"],
+    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "PT. Laboratorindo Alam Bestari",
+    images: ["/images/projects/imip/imip1.webp", "/images/projects/imip/imip2.webp"],
   },
   awk: {
     title: "PT. Anindya Wiraputra Konsult",
     desc: "Ketua Tim Survei Pengambilan Sampel Air, Udara dan Kebisingan, PT. Anindya Wiraputra Konsult",
-    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei",
-    images: ["/images/projects/awk1.webp", "/images/projects/awk5.webp", "/images/projects/awk6.webp", "/images/projects/awk7.webp", "/images/projects/awk8.webp", "/images/projects/awk9.webp", "/images/projects/awk10.webp"],
+    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "PT. Laboratorindo Alam Bestari",
+    images: ["/images/projects/awk/awk1.webp", "/images/projects/awk/awk5.webp", "/images/projects/awk/awk6.webp", "/images/projects/awk/awk7.webp", "/images/projects/awk/awk8.webp", "/images/projects/awk/awk9.webp", "/images/projects/awk/awk10.webp"],
   },
   igip: {
     title: "International Green Industrial Park",
     desc: "Ketua Tim Survei Pengambilan Sampel Udara, International Green Industrial Park",
-    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei",
-    images: ["/images/projects/igip1.webp", "/images/projects/igip2.webp"],
+    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "PT. Laboratorindo Alam Bestari",
+    images: ["/images/projects/igip/igip1.webp", "/images/projects/igip/igip2.webp"],
   },
   ihip: {
     title: "Indonesia Huabao Industrial Park",
     desc: "Ketua Tim Survei Pengambilan Sampel Udara, Indonesia Huabao Industrial Park",
-    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei",
-    images: ["/images/projects/ihip1.webp", "/images/projects/ihip2.webp", "/images/projects/ihip3.webp"],
+    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "PT. Laboratorindo Alam Bestari",
+    images: ["/images/projects/ihip/ihip1.webp", "/images/projects/ihip/ihip2.webp", "/images/projects/ihip/ihip3.webp"],
   },
   adp: {
     title: "PT. Alaska Dwipa Perdana",
     desc: "Ketua Tim Survei Pengambilan Sampel Air, Udara dan Kebisingan, PT. Alaska Dwipa Perdana",
-    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei",
-    images: ["/images/projects/adp1.webp", "/images/projects/adp2.webp", "/images/projects/adp3.webp", "/images/projects/adp4.webp"],
+    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "PT. Laboratorindo Alam Bestari",
+    images: ["/images/projects/adp/adp1.webp", "/images/projects/adp/adp2.webp", "/images/projects/adp/adp3.webp", "/images/projects/adp/adp4.webp"],
   },
   fcm: {
     title: "PT. Farmel Cipta Mandiri",
     desc: "Ketua Tim Survei Pengambilan Sampel Air, Udara dan Kebisingan, PT. Farmel Cipta Mandiri",
-    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei",
-    images: ["/images/projects/fcm1.webp", "/images/projects/fcm2.webp", "/images/projects/fcm3.webp", "/images/projects/fcm4.webp", "/images/projects/fcm5.webp", "/images/projects/fcm6.webp", "/images/projects/fcm7.webp", "/images/projects/fcm8.webp", "/images/projects/fcm9.webp", "/images/projects/fcm10.webp"],
+    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "PT. Laboratorindo Alam Bestari",
+    images: ["/images/projects/fcm/fcm1.webp", "/images/projects/fcm/fcm2.webp", "/images/projects/fcm/fcm3.webp", "/images/projects/fcm/fcm4.webp", "/images/projects/fcm/fcm5.webp", "/images/projects/fcm/fcm6.webp", "/images/projects/fcm/fcm7.webp", "/images/projects/fcm/fcm8.webp", "/images/projects/fcm/fcm9.webp", "/images/projects/fcm/fcm10.webp"],
   },
   mss: {
     title: "PT. Metal Smeltindo Selaras",
     desc: "Ketua Tim Survei Pengambilan Sampel Air, PT. Metal Smeltindo Selaras",
-    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei",
-    images: ["/images/projects/mss1.webp", "/images/projects/mss2.webp", "/images/projects/mss3.webp", "/images/projects/mss4.webp", "/images/projects/mss5.webp", "/images/projects/mss6.webp", "/images/projects/mss7.webp", "/images/projects/mss8.webp"],
+    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "PT. Laboratorindo Alam Bestari",
+    images: ["/images/projects/mss/mss1.webp", "/images/projects/mss/mss2.webp", "/images/projects/mss/mss3.webp", "/images/projects/mss/mss4.webp", "/images/projects/mss/mss5.webp", "/images/projects/mss/mss6.webp", "/images/projects/mss/mss7.webp", "/images/projects/mss/mss8.webp"],
   },
   bma: {
     title: "PT. Bumi Morowali Abadi",
     desc: "Survei Pemetaan, PT. Bumi Morowali Abadi",
-    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei",
-    images: ["/images/projects/bma1.webp", "/images/projects/bma2.webp", "/images/projects/bma3.webp", "/images/projects/bma4.webp"],
+    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "PT. AFA Tombuku Pratama",
+    images: ["/images/projects/bma/bma1.webp", "/images/projects/bma/bma2.webp", "/images/projects/bma/bma3.webp", "/images/projects/bma/bma4.webp"],
   },
   khubsurat: {
     title: "PT. Khubsurat Meherban Ilahi",
     desc: "Ketua Tim Survei Pengambilan Sampel Air, Udara dan Kebisingan, PT. Khubsurat Meherban Ilahi",
-    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei",
-    images: ["/images/projects/kmh1.webp", "/images/projects/kmh2.webp", "/images/projects/kmh3.webp", "/images/projects/kmh4.webp", "/images/projects/kmh5.webp", "/images/projects/kmh6.webp", "/images/projects/kmh7.webp", "/images/projects/kmh8.webp"],
+    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "PT. Laboratorindo Alam Bestari",
+    images: ["/images/projects/khubsurat/kmh1.webp", "/images/projects/khubsurat/kmh2.webp", "/images/projects/khubsurat/kmh3.webp", "/images/projects/khubsurat/kmh4.webp", "/images/projects/khubsurat/kmh5.webp", "/images/projects/khubsurat/kmh6.webp", "/images/projects/khubsurat/kmh7.webp", "/images/projects/khubsurat/kmh8.webp"],
+  },
+  dlhd: {
+    title: "DLHD Morowali",
+    desc: "Pengambilan Sampel Lingkungan DLHD Morowali.",
+    periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim Survei", perusahaan: "DLHD Morowali",
+    images: ["/images/projects/dlhd/dlhd1.webp", "/images/projects/dlhd/dlhd2.webp", "/images/projects/dlhd/dlhd3.webp", "/images/projects/dlhd/dlhd4.webp", "/images/projects/dlhd/dlhd5.webp", "/images/projects/dlhd/dlhd6.webp", "/images/projects/dlhd/dlhd7.webp", "/images/projects/dlhd/dlhd8.webp", "/images/projects/dlhd/dlhd9.webp", "/images/projects/dlhd/dlhd10.webp", "/images/projects/dlhd/dlhd11.webp", "/images/projects/dlhd/dlhd12.webp", "/images/projects/dlhd/dlhd13.webp", "/images/projects/dlhd/dlhd14.webp", "/images/projects/dlhd/dlhd15.webp"],
   },
   ortho: {
     title: "Mapping & Orthopotho",
     desc: "Pemetaan dan pembuatan peta Orthophoto (Orthophoto Mapping).",
-    periode: "2022 - 2024", lokasi: "Berbagai Lokasi", peran: "Tim Pemetaan",
-    images: ["/images/projects/ortho1.webp", "/images/projects/ortho2.webp", "/images/projects/ortho3.webp", "/images/projects/ortho4.webp", "/images/projects/ortho5.webp", "/images/projects/ortho6.webp", "/images/projects/ortho7.webp", "/images/projects/ortho8.webp", "/images/projects/map1.webp", "/images/projects/map2.webp", "/images/projects/map3.webp", "/images/projects/map5.webp", "/images/projects/map6.webp", "/images/projects/map7.webp", "/images/projects/map8.webp", "/images/projects/map9.webp", "/images/projects/map10.webp"],
+    periode: "2022 - 2024", lokasi: "Berbagai Lokasi", peran: "Tenaga Ahli Pemetaan", perusahaan: "PT. Sinergi Citra Karya & PT. AFA Tombuku Pratama",
+    images: ["/images/projects/ortho/ortho1.webp", "/images/projects/ortho/ortho2.webp", "/images/projects/ortho/ortho3.webp", "/images/projects/ortho/ortho4.webp", "/images/projects/ortho/ortho5.webp", "/images/projects/ortho/ortho6.webp", "/images/projects/ortho/ortho7.webp", "/images/projects/ortho/ortho8.webp", "/images/projects/ortho/map1.webp", "/images/projects/ortho/map2.webp", "/images/projects/ortho/map3.webp", "/images/projects/ortho/map5.webp", "/images/projects/ortho/map6.webp", "/images/projects/ortho/map7.webp", "/images/projects/ortho/map8.webp", "/images/projects/ortho/map9.webp", "/images/projects/ortho/map10.webp"],
   },
   benuanta: {
     title: "Benuanta Grup",
     desc: "Gabungan proyek survei pemetaan RDTR, Masterplan Jalan, dan kajian kawasan bersama Benuanta Grup.",
-    periode: "2023", lokasi: "Provinsi Papua",
-    images: ["/images/projects/benuanta1.webp", "/images/projects/benuanta2.webp", "/images/projects/benuanta3.webp", "/images/projects/benuanta4.webp", "/images/projects/benuanta5.webp", "/images/projects/benuanta6.webp", "/images/projects/benuanta7.webp", "/images/projects/benuanta8.webp", "/images/projects/benuanta9.webp", "/images/projects/benuanta10.webp"],
+    periode: "2023", lokasi: "Provinsi Papua",peran: "Tim Survei & Pemetaan", perusahaan: "Benuanta Grup",
+    images: ["/images/projects/benuanta/benuanta1.webp", "/images/projects/benuanta/benuanta2.webp", "/images/projects/benuanta/benuanta3.webp", "/images/projects/benuanta/benuanta4.webp", "/images/projects/benuanta/benuanta5.webp", "/images/projects/benuanta/benuanta6.webp", "/images/projects/benuanta/benuanta7.webp", "/images/projects/benuanta/benuanta8.webp", "/images/projects/benuanta/benuanta9.webp", "/images/projects/benuanta/benuanta10.webp"],
   },
   rmk: {
     title: "PT. Ruang Meja Kerja",
     desc: "Survei perencanaan kawasan pariwisata, profil desa, dan perintisan jalan di bawah PT. Ruang Meja Kerja.",
-    periode: "2025", lokasi: "Kabupaten Luwu, Provinsi Sulawesi Selatan",
-    images: ["/images/projects/rmk1.webp", "/images/projects/rmk2.webp", "/images/projects/rmk3.webp"],
+    periode: "2025", lokasi: "Kabupaten Luwu, Provinsi Sulawesi Selatan",peran: "Tim Survei & Pemetaan", perusahaan: "PT. Ruang Meja Kerja",
+    images: ["/images/projects/rmk/rmk1.webp", "/images/projects/rmk/rmk2.webp", "/images/projects/rmk/rmk3.webp"],
   },
   pandit: {
     title: "PT. Pandit Eka Nusa Agrata",
     desc: "Survei Andalalin.",
-    periode: "2022", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",
-    images: ["/images/projects/pandit1.webp"],
+    periode: "2022", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",peran: "Tim Survei", perusahaan: "PT. Pandit Eka Nusa Agrata",
+    images: ["/images/projects/pandit/pandit1.webp"],
   },
   bira: {
     title: "Pemerintah Desa Bira",
     desc: "Tim Survei dan Pemetaan Desa.",
-    periode: "2024", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",
-    images: ["/images/projects/bira1.webp"],
+    periode: "2024", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",peran: "Tim Survei & Pemetaan", perusahaan: "Pemerintah Desa Bira",
+    images: ["/images/projects/bira/bira1.webp"],
   },
   dispar: {
     title: "Pemetaan Pariwisata Bulukumba",
     desc: "Sistem Informasi Geografis Pariwisata.",
-    periode: "2024", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",
-    images: ["/images/projects/dispar1.webp"],
+    periode: "2024", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",peran: "GIS Engineer", perusahaan: "Dinas Pariwisata Kab. Bulukumba",
+    images: ["/images/projects/dispar/dispar1.webp"],
   },
   bppwsulsel: {
     title: "BPPW Sulsel",
     desc: "Tim Survey Program SPAL-DS Tahap I dan II.",
-    periode: "2024", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",
-    images: ["/images/projects/bppwsulsel1.webp"],
+    periode: "2024", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",peran: "Tim Survei", perusahaan: "BPPW Sulsel",
+    images: ["/images/projects/bppwsulsel/bppwsulsel1.webp"],
   },
   disperkimtan: {
     title: "DISPERKIMTAN Bulukumba",
     desc: "Survey Kawasan Permukiman Kumuh Jalanjang.",
-    periode: "2024", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",
-    images: ["/images/projects/disperkimtan1.webp"],
+    periode: "2024", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",peran: "Tim Survei", perusahaan: "DISPERKIMTAN Kab. Bulukumba",
+    images: ["/images/projects/disperkimtan/disperkimtan1.webp"],
   },
   wihamedia: {
     title: "Wiha Media Undangan Digital",
     desc: "Mapping dan Desain Digital.",
-    periode: "2020 - Sekarang", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",
-    images: ["/images/projects/wihamedia1.webp"],
+    periode: "2020 - Sekarang", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",peran: "Desainer", perusahaan: "Daus Visual",
+    images: ["/images/projects/wihamedia/wihamedia1.webp"],
   },
   freelance: {
     title: "Freelance Foto & Video Editing",
     desc: "Layanan Editing Visual dan Mapping.",
-    periode: "2020 - Sekarang", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",
-    images: ["/images/projects/freelance1.webp"],
+    periode: "2020 - Sekarang", lokasi: "Kabupaten Bulukumba, Provinsi Sulawesi Selatan",peran: "Owner", perusahaan: "Daus Visual",
+    images: ["/images/projects/freelance/freelance1.webp"],
   },
 };
 
@@ -180,6 +186,13 @@ function GalleryContent() {
               <div className="meta-text">
                 <span>Peran</span>
                 <strong>{currentGallery.peran || 'Tim Ahli'}</strong>
+              </div>
+            </div>
+            <div className="meta-item">
+              <i className='bx bx-buildings'></i>
+              <div className="meta-text">
+                <span>Perusahaan Penugasan</span>
+                <strong>{currentGallery.perusahaan || '-'}</strong>
               </div>
             </div>
             <div className="meta-item">

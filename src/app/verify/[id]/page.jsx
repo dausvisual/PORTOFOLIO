@@ -99,9 +99,6 @@ function VerifyITS({ data }) {
           </div>
           <div className="v-its-footer">
             <span>Secure Academic Portal</span>
-            <Link href="/">
-              <i className='bx bx-arrow-back'></i> Back to Portfolio
-            </Link>
           </div>
         </div>
       </div>
@@ -130,8 +127,6 @@ function VerifyPGP({ data }) {
           <p className="cert-no">ID: {data.certNo} | Date: {data.date}</p>
         </div>
         <div className="v-pgp-footer">
-          <Link href="/">Return to Portfolio</Link>
-          <span>|</span>
           <span>Verified by {data.issuer}</span>
         </div>
       </div>
@@ -175,7 +170,6 @@ function VerifyLAB({ data }) {
         </div>
         <div className="v-lab-footer">
           <span style={{ color: '#64748b', fontSize: '0.9rem' }}>Issuer: {data.issuer}</span>
-          <Link href="/">Back to Portfolio</Link>
         </div>
       </div>
     </div>
@@ -216,7 +210,6 @@ function VerifyIMC({ data }) {
           </div>
           <div className="v-imc-footer">
             <span>SYS_AUTH: {data.issuer}</span>
-            <Link href="/">[ TERMINATE CONNECTION ]</Link>
           </div>
         </div>
       </div>
@@ -229,12 +222,6 @@ function VerifyIMC({ data }) {
 function VerifyBNSP({ data }) {
   return (
     <div className="verify-global-container" style={{ background: '#e5e7eb', flexDirection: 'column', padding: '2rem 1rem' }}>
-      <div style={{ maxWidth: '800px', width: '100%', marginBottom: '2rem' }}>
-        <Link href="/" style={{ color: '#111827', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, background: '#fff', padding: '0.8rem 1.5rem', borderRadius: '30px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
-          <i className='bx bx-arrow-back'></i> Kembali ke Portofolio
-        </Link>
-      </div>
-      
       <div className="v-bnsp-wrapper" data-aos="fade-up" style={{ padding: '3rem 2rem', display: 'flex', flexDirection: 'column', gap: '2rem', background: '#fff', border: '1px solid #d1d5db', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.1)', maxWidth: '800px', width: '100%' }}>
         <div style={{ textAlign: 'center', marginBottom: '1rem', borderBottom: '2px solid #f3f4f6', paddingBottom: '1.5rem' }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#16a34a', color: '#fff', padding: '0.5rem 1rem', borderRadius: '4px', fontWeight: 700, marginBottom: '1rem', letterSpacing: '1px' }}>

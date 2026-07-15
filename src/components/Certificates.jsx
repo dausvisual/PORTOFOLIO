@@ -24,7 +24,7 @@ export default function Certificates() {
   return (
     <section id="certificates" className="projects-section-k3">
       <div className="section-header section-header-spacing" data-aos="fade-up">
-        <span className="heading-sm display-block">{language === 'en' ? 'CERTIFICATION' : 'SERTIFIKASI'}</span>
+        <span className="heading-sm display-block">{language === 'en' ? 'Certification' : 'Sertifikasi'}</span>
         <h2 className="heading">{language === 'en' ? 'Training & Certification' : 'Pelatihan & Sertifikasi'}</h2>
       </div>
 
@@ -63,7 +63,14 @@ export default function Certificates() {
             {language === 'en' ? 'See More' : 'Lihat Selengkapnya'} <i className='bx bx-chevron-down'></i>
           </button>
         ) : (
-          <button className="btn btn-outline" onClick={() => setShowAll(false)}>
+          <button className="btn btn-outline" onClick={() => {
+            setShowAll(false);
+            const el = document.getElementById('certificates');
+            if (el) {
+              const y = el.getBoundingClientRect().top + window.scrollY - 100;
+              window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+          }}>
             {language === 'en' ? 'Hide' : 'Sembunyikan'} <i className='bx bx-chevron-up'></i>
           </button>
         )}

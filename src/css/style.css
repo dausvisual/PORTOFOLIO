@@ -161,7 +161,7 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 
 .about { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
 .about-title { font-size: 1.5rem; font-weight: 500; margin-bottom: 2rem; line-height: 1.2; color: #fff; }
-.about-desc { font-size: 1.4rem; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.8; text-align: justify; }
+.about-desc { font-size: 1.4rem; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.8; text-align: left; }
 .tech-tags { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 3rem; }
 .tech-tags span { padding: 0.8rem 1.8rem; background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 0.8rem; font-size: 1.2rem; color: var(--text-muted); transition: 0.3s; }
 .about-right-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -218,8 +218,6 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 
 
 
-.services-title-box .subtitle { color: var(--neon-blue); font-size: 3.2rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: capitalize; line-height: 1.2; display: block; }
-.services-title-box h2 { font-size: 1.5rem; font-weight: 500; line-height: 1.2; color: #fff; }
 .services-subtitle-desc { display: none; }
 
 .services-grid-k3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
@@ -239,7 +237,7 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 .tab-btn { padding: 0.8rem 2.2rem; border: 1px solid var(--border-color); background: rgba(15,23,42,0.4); color: var(--text-muted); border-radius: 2rem; font-size: 1.3rem; font-weight: 500; cursor: pointer; transition: 0.3s; white-space: nowrap; flex-shrink: 0; }
 .tab-btn.active { background: var(--main-color); color: white; border-color: var(--main-color); box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4); }
 
-.projects-grid-container, .certs-grid-container, .clients-grid-container { position: relative; overflow: hidden; width: 100%; transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+.projects-grid-container, .certs-grid-container, .clients-grid-container { position: relative; overflow: hidden; width: 100%; max-height: 5000px; transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
 .projects-grid-container.is-collapsed { max-height: 510px; } 
 .certs-grid-container.is-collapsed { max-height: 480px; }     
 .clients-grid-container.is-collapsed { max-height: 380px; }   
@@ -306,6 +304,82 @@ section { padding: 10rem 10% 6rem; position: relative; width: 100%; }
 .client-card img { width: 75px; height: 75px; object-fit: contain; margin-bottom: 1.5rem; background: #ffffff; border-radius: 0.8rem; padding: 0.5rem; }
 .client-card p { font-size: 1.1rem; color: var(--text-muted); font-weight: 500; line-height: 1.4; }
 
+/* TESTIMONIALS SECTION */
+.testimonials-section { width: 100%; overflow: hidden; padding-bottom: 1rem; }
+.testimonials-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.testimonials-grid::-webkit-scrollbar { height: 8px; }
+.testimonials-grid::-webkit-scrollbar-track { background: var(--bg-dark); border-radius: 10px; }
+.testimonials-grid::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 10px; }
+.testimonials-grid::-webkit-scrollbar-thumb:hover { background: var(--neon-blue); }
+
+.testimonial-card {
+  flex: 0 0 auto;
+  width: 350px;
+  scroll-snap-align: start;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: 1.4rem;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--neon-blue);
+  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.1);
+}
+.testi-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.testi-avatar {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 229, 255, 0.1);
+  color: var(--neon-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+}
+.testi-info h4 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+.testi-info p {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+.testi-text {
+  font-size: 1.15rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.testi-rating {
+  color: #fbbf24;
+  font-size: 1.2rem;
+  display: flex;
+  gap: 0.3rem;
+}
+
 /* SKILLS & CONTACT */
 .skills-container { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; }
 .skill-bar { margin-bottom: 2.5rem; }
@@ -353,6 +427,21 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
 
 /* FOOTER & SATELIT */
 .footer { background: var(--bg-dark); border-top: 1px solid var(--border-color); padding: 6rem 10% 3rem; display: flex; flex-direction: column; align-items: center; gap: 3rem; position: relative; z-index: 10; }
+
+.footer-content { display: flex; flex-direction: column; align-items: center; gap: 2.5rem; width: 100%; }
+.footer-brand { text-align: center; }
+.footer-brand h3 { font-size: 1.8rem; font-weight: 600; color: #fff; letter-spacing: 1px; margin-bottom: 0.5rem; }
+.footer-skills { color: var(--neon-blue); font-size: 1rem; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; line-height: 1.6; }
+@media (max-width: 768px) {
+  .footer { padding: 3rem 5% 1.5rem; gap: 1.5rem; }
+  .footer-skills { font-size: 0.8rem; padding: 0 1rem; line-height: 1.6; letter-spacing: 0.5px; }
+  .footer-brand h3 { font-size: 1.4rem; margin-bottom: 0.3rem; }
+  .footer-content { gap: 1rem; }
+  .footer .social { gap: 1.2rem; }
+  .footer .social a { width: 40px; height: 40px; font-size: 1.8rem; }
+  .footer .copyright { padding-top: 1.5rem; margin-top: 0.5rem; font-size: 0.9rem; }
+}
+
 .footer .social { display: flex; gap: 2rem; }
 .footer .social a { width: 50px; height: 50px; border-radius: 50%; background: rgba(0, 229, 255, 0.05); border: 1px solid rgba(0, 229, 255, 0.2); display: flex; justify-content: center; align-items: center; font-size: 2.4rem; color: var(--neon-blue); transition: 0.3s; }
 .footer .social a:hover { background: var(--neon-blue); color: var(--bg-dark); box-shadow: var(--neon-glow); transform: translateY(-5px); }
@@ -502,6 +591,7 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
     .certificates-grid .cert-link-btn, .certificates-grid .cert-link-icon { display: none !important; }
     .certificates-grid .project-desc { font-size: 0.85rem; margin-bottom: 0; line-height: 1.4; color: var(--text-muted); }
     .certificates-grid .tech-stack { display: none; }
+    .certificates-grid .verify-btn { padding: 0.4rem 0.8rem; font-size: 0.8rem; margin-top: 0.8rem; width: fit-content; border-radius: 0.4rem; }
     
     .skills-container, .contact-container { grid-template-columns: 1fr; gap: 3rem; }
     .contact-form { padding: 2rem 1.5rem; }
@@ -510,7 +600,9 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
     .available-grid { grid-template-columns: 1fr; }
     .contact-social-icons { flex-wrap: wrap; justify-content: flex-start; }
     .contact-info-item { flex-direction: column; align-items: flex-start; gap: 1rem; }
-    .contact-info-item i { width: 40px; height: 40px; font-size: 2rem; }
+    .contact-info-item i { flex-shrink: 0; min-width: 40px; min-height: 40px; }
+    
+    .testimonial-card { width: 260px; padding: 1.5rem; }
 
     /* Gallery Mobile Fix */
     .gallery-section { padding: 10rem 6% 4rem; }
@@ -546,7 +638,7 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
 
     .my-leaflet-map { height: 380px; }
 
-    .footer { padding-top: 4rem; }
+    
 }
 /* =========================================================================
    MY JOURNEY NEW UI (V2)
@@ -658,8 +750,7 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
   }
   
 
-  .services-title-box h2 { font-size: 2rem !important; margin-bottom: 0.5rem !important; }
-  .services-subtitle-desc { display: block !important; font-size: 0.9rem !important; }
+        .services-subtitle-desc { display: block !important; font-size: 0.9rem !important; }
 
   /* Contact Info Side-by-Side */
   .contact-info-list {
@@ -678,10 +769,13 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
     margin-bottom: 0 !important;
   }
   .contact-info-item i {
-    width: 35px !important;
-    height: 35px !important;
-    font-size: 1.5rem !important;
-    margin-bottom: 0.2rem !important;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    flex-shrink: 0 !important;
+    font-size: 1.6rem !important;
+    margin-bottom: 0.5rem !important;
   }
   .contact-info-item h4 {
     font-size: 0.85rem !important;
@@ -740,7 +834,7 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
   }
 .my-leaflet-map { height: 380px; }
 
-    .footer { padding-top: 4rem; }
+    
 }
 /* =========================================================================
    MY JOURNEY NEW UI (V2)
@@ -852,8 +946,7 @@ textarea.form-input { height: 140px; resize: none; margin-bottom: 2.5rem; }
   }
   
 
-  .services-title-box h2 { font-size: 2rem !important; margin-bottom: 0.5rem !important; }
-  .services-subtitle-desc { display: block !important; font-size: 0.9rem !important; }
+        .services-subtitle-desc { display: block !important; font-size: 0.9rem !important; }
 
   /* Contact Info Side-by-Side */
   .contact-info-list {

@@ -35,9 +35,8 @@ export default function Services() {
       {/* Header Layanan */}
       <div className="section-header-spacing" data-aos="fade-up">
         <div className="services-title-box">
-          <span className="subtitle display-block">{language === 'en' ? 'Main Services' : 'Layanan Utama'}</span>
-          <h2>{language === 'en' ? 'Professional Solutions For Spatial Needs' : 'Solusi Profesional Untuk Kebutuhan Spasial'}</h2>
-          <p className="services-subtitle-desc">{language === 'en' ? 'Professional solutions for your geospatial needs. Accurate, innovative, and impactful.' : 'Solusi profesional untuk kebutuhan geospasial Anda. Akurat, inovatif, dan berdampak.'}</p>
+          <span className="heading-sm display-block" data-aos="fade-up">{language === 'en' ? 'Main Services' : 'Layanan Utama'}</span>
+          <h2 className="heading" data-aos="fade-up" data-aos-delay="100">{language === 'en' ? 'Professional Solutions For Spatial Needs' : 'Solusi Profesional Untuk Kebutuhan Spasial'}</h2>
         </div>
       </div>
 
