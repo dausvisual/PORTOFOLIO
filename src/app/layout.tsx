@@ -21,7 +21,7 @@ export const metadata = {
   title: 'Firdaus Ikram, S.PWK | GIS Specialist',
   description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, Web GIS Developer, & Drone Mapping profesional.',
   applicationName: 'FIRDAUS IKRAM, S.PWK',
-  metadataBase: new URL('https://firdausikram.xyz'),
+  metadataBase: new URL('https://firdausikram.com'),
   keywords: [
     'Firdaus Ikram',
     'Firdaus Ikram, S.PWK',
@@ -62,11 +62,11 @@ export const metadata = {
   openGraph: {
     title: 'Firdaus Ikram, S.PWK',
     description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
-    url: 'https://firdausikram.xyz',
+    url: 'https://firdausikram.com',
     siteName: 'FIRDAUS IKRAM, S.PWK',
     images: [
       {
-        url: 'https://firdausikram.xyz/logo/thumbnail-new.jpg',
+        url: 'https://firdausikram.com/logo/thumbnail-new.jpg',
         width: 1200,
         height: 630,
         alt: 'Preview Portofolio Firdaus Ikram',
@@ -81,7 +81,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Firdaus Ikram, S.PWK',
     description: 'Portofolio Firdaus Ikram - GIS Specialist, Urban Planner, & Surveyor.',
-    images: ['https://firdausikram.xyz/logo/thumbnail-new.jpg'],
+    images: ['https://firdausikram.com/logo/thumbnail-new.jpg'],
   },
 }
 
@@ -116,8 +116,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 "@type": "Person",
                 "name": "Firdaus Ikram",
                 "jobTitle": "GIS Specialist, Urban Planner, Direktur PT. Sinergi Citra Karya, Owner Daus Visual, Founder FIN Bina Nusantara",
-                "url": "https://firdausikram.xyz",
-                "image": "https://firdausikram.xyz/logo/logo-fi.webp",
+                "url": "https://firdausikram.com",
+                "image": "https://firdausikram.com/logo/logo-fi.webp",
                 "sameAs": [
                   "https://www.linkedin.com/in/firdaus-ikram-86405b2a6",
                   "https://www.instagram.com/firdausikram_17",

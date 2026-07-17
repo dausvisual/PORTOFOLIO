@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       }
     ],
-    sitemap: 'https://firdausikram.xyz/sitemap.xml',
+    sitemap: 'https://firdausikram.com/sitemap.xml',
   }
 }

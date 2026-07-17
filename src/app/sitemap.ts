@@ -17,14 +17,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const today = new Date().toISOString().split('T')[0];
 
   const projectUrls = projectIds.map((id) => ({
-    url: `https://firdausikram.xyz/galeri/${id}`,
+    url: `https://firdausikram.com/galeri/${id}`,
     lastModified: today,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
 
   const verifyUrls = verifyIds.map((id) => ({
-    url: `https://firdausikram.xyz/verify/${id}`,
+    url: `https://firdausikram.com/verify/${id}`,
     lastModified: today,
     changeFrequency: 'monthly' as const,
     priority: 0.6,
@@ -32,13 +32,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: 'https://firdausikram.xyz',
+      url: 'https://firdausikram.com',
       lastModified: today,
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
-      url: 'https://firdausikram.xyz/galeri',
+      url: 'https://firdausikram.com/galeri',
       lastModified: today,
       changeFrequency: 'monthly',
       priority: 0.9,
