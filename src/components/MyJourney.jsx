@@ -12,6 +12,7 @@ export default function MyJourney() {
       {/* HEADER SECTION */}
       <div className="section-header-spacing" data-aos="fade-down">
         <h2 className="section-title-new" data-aos="fade-up">
+          <i className="bx bx-map-alt" style={{ marginRight: '8px' }}></i>
           {language === 'en' ? 'MY ' : 'PERJALANAN '}
           <span>{language === 'en' ? 'JOURNEY' : 'SAYA'}</span>
         </h2>

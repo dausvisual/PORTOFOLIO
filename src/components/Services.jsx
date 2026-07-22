@@ -36,6 +36,7 @@ export default function Services() {
       <div className="section-header-spacing" data-aos="fade-up">
         <div className="services-title-box">
           <h2 className="section-title-new" data-aos="fade-up">
+            <i className="bx bx-briefcase-alt-2" style={{ marginRight: '8px' }}></i>
             {language === 'en' ? 'MAIN ' : 'LAYANAN '}
             <span>{language === 'en' ? 'SERVICES' : 'UTAMA'}</span>
           </h2>

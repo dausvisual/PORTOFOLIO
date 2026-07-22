@@ -112,7 +112,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="hero-btn-group">
-            <a href="/cv/CV_FIRDAUS_IKRAM.pdf?v=2" download="CV_Firdaus_Ikram.pdf" className="btn btn-primary-glow">
+            <a href="/cv/CV_FIRDAUS_IKRAM.pdf?v=3" download="CV_Firdaus_Ikram.pdf" className="btn btn-primary-glow">
               <i className='bx bx-download'></i> {language === 'en' ? 'DOWNLOAD CV' : 'UNDUH CV'}
             </a>
             <a href="#contact" className="btn btn-outline-glow">

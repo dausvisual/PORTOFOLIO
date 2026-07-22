@@ -7,6 +7,7 @@ export default function Contact() {
   return (
     <section id="contact">
       <h2 className="section-title-new" data-aos="fade-up">
+        <i className="bx bx-envelope" style={{ marginRight: '8px' }}></i>
         {language === 'en' ? 'LETS WORK ' : 'MARI BEKERJA '}
         <span>{language === 'en' ? 'TOGETHER' : 'SAMA'}</span>
       </h2>

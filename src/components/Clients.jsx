@@ -100,6 +100,7 @@ export default function Clients() {
   return (
     <section id="clients" className="projects-section-k3">
       <h2 className="section-title-new" data-aos="fade-up">
+        <i className="bx bx-buildings" style={{ marginRight: '8px' }}></i>
         {language === 'en' ? 'TRUSTED ' : 'MITRA '}
         <span>{language === 'en' ? 'PARTNERS' : 'TERPERCAYA'}</span>
       </h2>
@@ -130,6 +131,7 @@ export default function Clients() {
       {/* TESTIMONIALS SECTION */}
       <div className="testimonials-section" style={{ marginTop: '3rem' }}>
         <h2 className="section-title-new" data-aos="fade-up">
+          <i className="bx bx-chat" style={{ marginRight: '8px' }}></i>
           {language === 'en' ? 'CLIENT ' : 'TESTIMONI '}
           <span>{language === 'en' ? 'TESTIMONIALS' : 'KLIEN'}</span>
         </h2>

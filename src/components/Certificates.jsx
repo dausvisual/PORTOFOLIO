@@ -25,6 +25,7 @@ export default function Certificates() {
     <section id="certificates" className="projects-section-k3">
       <div className="section-header section-header-spacing" data-aos="fade-up">
         <h2 className="section-title-new">
+          <i className="bx bx-award" style={{ marginRight: '8px' }}></i>
           {language === 'en' ? 'TRAINING & ' : 'PELATIHAN & '}
           <span>{language === 'en' ? 'CERTIFICATIONS' : 'SERTIFIKASI'}</span>
         </h2>
@@ -44,9 +45,7 @@ export default function Certificates() {
                   <h3>{c.title}</h3>
                 </div>
                 <p className="project-desc">{c.desc}</p>
-                <div className="tech-stack">
-                  {c.tags.map((t, idx) => <span key={idx}>{t}</span>)}
-                </div>
+
                 {c.verifyLink && (
                   <a href={c.verifyLink} target={c.verifyLink.startsWith('http') ? '_blank' : '_self'} rel={c.verifyLink.startsWith('http') ? 'noopener noreferrer' : ''} className="verify-btn">
                     <i className='bx bx-check-shield'></i> {language === 'en' ? 'Verify Credential' : 'Verifikasi Sertifikat'}

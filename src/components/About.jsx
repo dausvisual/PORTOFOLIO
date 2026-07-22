@@ -8,6 +8,7 @@ export default function About() {
     <section className="about" id="about">
       <div className="about-left" data-aos="fade-up">
         <h2 className="section-title-new" data-aos="fade-up">
+          <i className="bx bx-user-pin" style={{ marginRight: '8px' }}></i>
           {language === 'en' ? 'ABOUT ' : 'TENTANG '}
           <span>{language === 'en' ? 'ME' : 'SAYA'}</span>
         </h2>

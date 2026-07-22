@@ -3,6 +3,7 @@ import './globals.css';
 import Script from 'next/script';
 import type { ReactNode } from 'react';
 import { LanguageProvider } from '../context/LanguageContext';
+import LenisProvider from '../components/LenisProvider';
 
 // 1. Impor font langsung dari Next.js (optimal, no render-blocking)
 import { Poppins } from 'next/font/google';
@@ -119,8 +120,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body>
-        <LanguageProvider>
-          <div style={{ overflowX: 'hidden', width: '100%', position: 'relative', minHeight: '100vh' }}>
+        <LenisProvider>
+          <LanguageProvider>
+            <div style={{ overflowX: 'hidden', width: '100%', position: 'relative', minHeight: '100vh' }}>
             {children}
           </div>
 
@@ -170,10 +172,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {/* Vercel Analytics */}
           <Analytics />
 
-          {/* Particles.js — efek partikel di Hero & Education section */}
-          <Script src="/js/particles.min.js" strategy="beforeInteractive" />
-          <Script src="/js/particles-config.js" strategy="lazyOnload" />
-        </LanguageProvider>
+            <Script src="/js/particles.min.js" strategy="beforeInteractive" />
+            <Script src="/js/particles-config.js" strategy="lazyOnload" />
+          </LanguageProvider>
+        </LenisProvider>
       </body>
     </html>
   );

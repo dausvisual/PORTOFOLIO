@@ -5,6 +5,7 @@ import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import * as toGeoJSON from '@tmcw/togeojson';
 import L from 'leaflet';
+import { useLanguage } from '../context/LanguageContext';
 
 // Fix Leaflet icon issue
 delete L.Icon.Default.prototype._getIconUrl;
@@ -41,6 +42,7 @@ function MapResizer() {
 }
 
 export default function JourneyMapClient() {
+  const { language } = useLanguage();
   const [geoJsonData, setGeoJsonData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -81,14 +83,15 @@ export default function JourneyMapClient() {
       <div className="maps-header-container">
         <div className="maps-label">MAPS <span></span></div>
         <h2 className="maps-title">
-          Peta Riwayat <span className="text-blue">Perjalanan</span>
+          {language === 'en' ? 'Travel History ' : 'Peta Riwayat '}
+          <span className="text-blue">{language === 'en' ? 'Map' : 'Perjalanan'}</span>
         </h2>
         <p className="maps-desc">
-          Perjalanan profesional di berbagai wilayah di Indonesia.
+          {language === 'en' ? 'Professional journeys across various regions in Indonesia.' : 'Perjalanan profesional di berbagai wilayah di Indonesia.'}
         </p>
       </div>
 
-      {isLoading && <p className="map-loading-msg">Memuat data peta...</p>}
+      {isLoading && <p className="map-loading-msg">{language === 'en' ? 'Loading map data...' : 'Memuat data peta...'}</p>}
       {errorMsg && <p className="map-error-msg">{errorMsg}</p>}
 
       <div className="map-frame-container">

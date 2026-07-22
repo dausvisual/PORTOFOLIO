@@ -2,12 +2,22 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Projects() {
+  const router = useRouter();
   const { language } = useLanguage();
   const [showAll, setShowAll] = useState(false);
   const [activeTab, setActiveTab] = useState('All');
+
+  const handleCardClick = (p) => {
+    if (p.href) {
+      window.open(p.href, '_blank');
+    } else {
+      router.push(`/galeri/${p.id}`);
+    }
+  };
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -66,6 +76,7 @@ export default function Projects() {
   return (
     <section id="projects" className="projects-section-k3">
       <h2 className="section-title-new" data-aos="fade-up">
+        <i className="bx bx-folder-open" style={{ marginRight: '8px' }}></i>
         {language === 'en' ? 'PROJECT ' : 'DOKUMENTASI '}
         <span>{language === 'en' ? 'DOCUMENTATION' : 'PROYEK'}</span>
       </h2>
@@ -91,9 +102,9 @@ export default function Projects() {
             if (activeTab === 'Survey') return cat.includes('survey') || cat.includes('survei');
             return true;
           }).map((p, i) => (
-            <div id={`project-${p.id}`} className="project-card" key={i}>
+            <div id={`project-${p.id}`} className="project-card" key={i} onClick={() => handleCardClick(p)} style={{ cursor: 'pointer' }}>
               <div className="project-img-wrapper">
-                <Image src={p.img} alt={p.title} width={600} height={400} sizes="(max-width: 768px) 100vw, 33vw" />
+                <Image src={p.img} alt={p.title} width={600} height={400} sizes="(max-width: 768px) 100vw, 33vw" priority={i < 6} />
                 <div className="bottom-bar-accent"></div>
               </div>
               <div className="project-content">
@@ -102,11 +113,11 @@ export default function Projects() {
                   <span className="author">{p.cat}</span>
                   <span className="dot">&bull;</span>
                   {p.href ? (
-                    <a href={p.href} target="_blank" rel="noopener noreferrer" className="view-link" aria-label={`Kunjungi link: ${p.title}`}>
+                    <a href={p.href} target="_blank" rel="noopener noreferrer" className="view-link" aria-label={`Kunjungi link: ${p.title}`} onClick={(e) => e.stopPropagation()}>
                       {p.id === 'wihamedia' ? (language === 'en' ? 'View Web' : 'Lihat Web') : (language === 'en' ? 'View IG' : 'Lihat IG')} <i className='bx bx-right-arrow-alt'></i>
                     </a>
                   ) : (
-                    <Link href={`/galeri/${p.id}`} className="view-link" aria-label={`Lihat detail proyek: ${p.title}`}>
+                    <Link href={`/galeri/${p.id}`} className="view-link" aria-label={`Lihat detail proyek: ${p.title}`} onClick={(e) => e.stopPropagation()}>
                       {language === 'en' ? 'View' : 'Lihat'} <i className='bx bx-right-arrow-alt'></i>
                     </Link>
                   )}
