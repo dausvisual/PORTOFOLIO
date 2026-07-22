@@ -99,8 +99,13 @@ export default function Clients() {
 
   return (
     <section id="clients" className="projects-section-k3">
-      <span className="heading-sm display-block" data-aos="fade-up">{language === 'en' ? 'Clients & Partners' : 'Klien & Mitra'}</span>
-      <h2 className="heading" data-aos="fade-up" data-aos-delay="100">{language === 'en' ? 'Collaboration History' : 'Riwayat Kolaborasi'}</h2>
+      <h2 className="section-title-new" data-aos="fade-up">
+        {language === 'en' ? 'TRUSTED ' : 'MITRA '}
+        <span>{language === 'en' ? 'PARTNERS' : 'TERPERCAYA'}</span>
+      </h2>
+      <p className="section-desc-new" data-aos="fade-up" data-aos-delay="100">
+        {language === 'en' ? 'Companies and agencies we have worked with' : 'Perusahaan dan instansi yang telah bekerja sama'}
+      </p>
 
       <div className="clients-grid-container">
         <div className="clients-grid">
@@ -124,9 +129,13 @@ export default function Clients() {
 
       {/* TESTIMONIALS SECTION */}
       <div className="testimonials-section" style={{ marginTop: '3rem' }}>
-        <h2 className="heading" data-aos="fade-up">
-          {language === 'en' ? 'Client Testimonials' : 'Testimoni Klien'}
+        <h2 className="section-title-new" data-aos="fade-up">
+          {language === 'en' ? 'CLIENT ' : 'TESTIMONI '}
+          <span>{language === 'en' ? 'TESTIMONIALS' : 'KLIEN'}</span>
         </h2>
+        <p className="section-desc-new" data-aos="fade-up" data-aos-delay="100">
+          {language === 'en' ? 'What they say about our services' : 'Apa yang mereka katakan tentang layanan kami'}
+        </p>
 
         <div className="testimonials-grid" data-aos="fade-up" data-aos-delay="200">
           {testimonials.map((testi, i) => (

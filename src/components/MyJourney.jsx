@@ -11,9 +11,13 @@ export default function MyJourney() {
 
       {/* HEADER SECTION */}
       <div className="section-header-spacing" data-aos="fade-down">
-        <span className="heading-sm display-block">{language === 'en' ? 'My Journey' : 'My Journey'}</span>
-        <h2 className="heading" style={{ marginBottom: '1rem', textTransform: 'none' }}>{language === 'en' ? 'Professional & Personal Development Journey' : 'Perjalanan Profesional & Pengembangan Diri'}</h2>
-        <p className="journey-desc-sub">{language === 'en' ? 'A long journey that shaped me into a professional in GIS, Surveying, Drone Mapping, Regional Planning, and Environmental Consulting.' : 'Perjalanan panjang yang membentuk saya menjadi profesional di bidang GIS, Survey, Drone Mapping, Perencanaan Wilayah, dan Konsultan Lingkungan.'}</p>
+        <h2 className="section-title-new" data-aos="fade-up">
+          {language === 'en' ? 'MY ' : 'PERJALANAN '}
+          <span>{language === 'en' ? 'JOURNEY' : 'SAYA'}</span>
+        </h2>
+        <p className="section-desc-new" data-aos="fade-up" data-aos-delay="100">
+          {language === 'en' ? 'Professional Journey & Self Development' : 'Perjalanan Profesional & Pengembangan Diri'}
+        </p>
       </div>
 
       {/* GRID CONTAINER 2 KOLOM */}

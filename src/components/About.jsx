@@ -7,7 +7,13 @@ export default function About() {
   return (
     <section className="about" id="about">
       <div className="about-left" data-aos="fade-up">
-        <span className="heading-sm display-block">{language === 'en' ? 'About Me' : 'Tentang Saya'}</span>
+        <h2 className="section-title-new" data-aos="fade-up">
+          {language === 'en' ? 'ABOUT ' : 'TENTANG '}
+          <span>{language === 'en' ? 'ME' : 'SAYA'}</span>
+        </h2>
+        <p className="section-desc-new" data-aos="fade-up" data-aos-delay="100">
+          {language === 'en' ? 'Me & My Skills' : 'Saya & Keahlian'}
+        </p>
         <h2 className="heading about-title">{language === 'en' ? 'Transforming Spatial Data Into Impactful Solutions' : 'Mengubah Data Spasial Menjadi Solusi Berdampak'}</h2>
         <p className="about-desc" dangerouslySetInnerHTML={{ __html: language === 'en' ? 'I am a professional in the fields of <strong>GIS</strong>, <strong>Urban and Regional Planning</strong>, <strong>Surveying</strong>, <strong>Drone Mapping</strong>, and <strong>Environmental Analysis</strong> focused on providing data-driven geospatial solutions.' : 'Saya adalah profesional di bidang <strong>GIS</strong>, <strong>Perencanaan Wilayah dan Kota</strong>, <strong>Survei</strong>, <strong>Drone Mapping</strong>, dan <strong>Analisis Lingkungan</strong> yang berfokus pada penyediaan solusi geospasial berbasis data.' }}></p>
         <p className="about-desc" dangerouslySetInnerHTML={{ __html: language === 'en' ? 'By integrating modern mapping technologies and spatial analysis, I help governments, companies, and various organizations generate accurate information as a foundation for effective and sustainable decision-making.' : 'Dengan mengintegrasikan teknologi pemetaan modern dan analisis spasial, saya membantu pemerintah, perusahaan, dan berbagai organisasi menghasilkan informasi yang akurat sebagai dasar pengambilan keputusan yang efektif dan berkelanjutan.' }}></p>

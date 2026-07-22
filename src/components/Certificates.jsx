@@ -24,8 +24,13 @@ export default function Certificates() {
   return (
     <section id="certificates" className="projects-section-k3">
       <div className="section-header section-header-spacing" data-aos="fade-up">
-        <span className="heading-sm display-block">{language === 'en' ? 'Certification' : 'Sertifikasi'}</span>
-        <h2 className="heading">{language === 'en' ? 'Training & Certification' : 'Pelatihan & Sertifikasi'}</h2>
+        <h2 className="section-title-new">
+          {language === 'en' ? 'TRAINING & ' : 'PELATIHAN & '}
+          <span>{language === 'en' ? 'CERTIFICATIONS' : 'SERTIFIKASI'}</span>
+        </h2>
+        <p className="section-desc-new">
+          {language === 'en' ? 'List of professional licenses and certifications' : 'Daftar lisensi dan sertifikasi profesional'}
+        </p>
       </div>
 
       {/* Pembungkus Grid dengan Efek Potong */}

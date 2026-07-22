@@ -6,8 +6,13 @@ export default function Contact() {
 
   return (
     <section id="contact">
-      <span className="heading-sm display-block" data-aos="fade-up">{language === 'en' ? 'Contact' : 'Kontak'}</span>
-      <h2 className="heading" data-aos="fade-up" data-aos-delay="100">{language === 'en' ? "Let's Work Together" : 'Mari Bekerja Sama'}</h2>
+      <h2 className="section-title-new" data-aos="fade-up">
+        {language === 'en' ? 'LETS WORK ' : 'MARI BEKERJA '}
+        <span>{language === 'en' ? 'TOGETHER' : 'SAMA'}</span>
+      </h2>
+      <p className="section-desc-new" data-aos="fade-up" data-aos-delay="100">
+        {language === 'en' ? 'Contact me for further discussion' : 'Hubungi saya untuk diskusi lebih lanjut'}
+      </p>
       
       <div className="contact-container">
         <div data-aos="fade-right">

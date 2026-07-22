@@ -78,17 +78,23 @@ export default function JourneyMapClient() {
 
   return (
     <div className="journey-map-wrapper">
-      <div className="map-header">
-        <h3 className="heading journey-heading">Peta Riwayat Perjalanan</h3>
-        {/* Fitur upload dihapus dari tampilan klien, KML diload secara statis dari file */}
+      <div className="maps-header-container">
+        <div className="maps-label">MAPS <span></span></div>
+        <h2 className="maps-title">
+          Peta Riwayat <span className="text-blue">Perjalanan</span>
+        </h2>
+        <p className="maps-desc">
+          Perjalanan profesional di berbagai wilayah di Indonesia.
+        </p>
       </div>
 
       {isLoading && <p className="map-loading-msg">Memuat data peta...</p>}
       {errorMsg && <p className="map-error-msg">{errorMsg}</p>}
 
-      <div className="map-frame">
-        <MapContainer 
-          center={defaultCenter} 
+      <div className="map-frame-container">
+        <div className="map-frame">
+          <MapContainer 
+            center={defaultCenter} 
           zoom={defaultZoom} 
           className="my-leaflet-map"
           style={{ width: '100%', zIndex: 1 }}
@@ -126,6 +132,11 @@ export default function JourneyMapClient() {
             </>
           )}
         </MapContainer>
+        </div>
+
+        <button className="map-gps-btn" aria-label="Current Location">
+          <i className="bx bx-target-lock"></i>
+        </button>
       </div>
     </div>
   );
