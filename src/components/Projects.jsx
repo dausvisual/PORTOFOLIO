@@ -95,6 +95,7 @@ export default function Projects() {
                 <h3>{p.title}</h3>
                 <div className="project-footer">
                   <span className="author">{p.cat}</span>
+                  <span className="dot">&bull;</span>
                   {p.href ? (
                     <a href={p.href} target="_blank" rel="noopener noreferrer" className="view-link" aria-label={`Kunjungi link: ${p.title}`}>
                       {p.id === 'wihamedia' ? (language === 'en' ? 'View Web' : 'Lihat Web') : (language === 'en' ? 'View IG' : 'Lihat IG')} <i className='bx bx-right-arrow-alt'></i>

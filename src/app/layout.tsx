@@ -120,7 +120,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <LanguageProvider>
-          {children}
+          <div style={{ overflowX: 'hidden', width: '100%', position: 'relative', minHeight: '100vh' }}>
+            {children}
+          </div>
 
           {/* JSON-LD Schema Markup untuk SEO */}
           <Script
