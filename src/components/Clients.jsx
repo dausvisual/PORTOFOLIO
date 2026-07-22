@@ -108,12 +108,12 @@ export default function Clients() {
             <div className="client-card" key={index} data-aos="zoom-in" data-aos-delay={(index % 4) * 50}>
               {client.url ? (
                 <a href={client.url} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', color: 'inherit', width: '100%', height: '100%' }}>
-                  <Image src={client.img} alt={client.name} width={75} height={75} />
+                  <Image src={client.img} alt={client.name} width={150} height={150} />
                   <p>{client.name}</p>
                 </a>
               ) : (
                 <>
-                  <Image src={client.img} alt={client.name} width={75} height={75} />
+                  <Image src={client.img} alt={client.name} width={150} height={150} />
                   <p>{client.name}</p>
                 </>
               )}

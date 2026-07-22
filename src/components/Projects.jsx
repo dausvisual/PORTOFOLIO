@@ -86,19 +86,26 @@ export default function Projects() {
             if (activeTab === 'Survey') return cat.includes('survey') || cat.includes('survei');
             return true;
           }).map((p, i) => (
-            <div id={`project-${p.id}`} className="project-card" key={i} data-aos="fade-up" data-aos-delay={(i % 3) * 100}>
-              <Image src={p.img} alt={p.title} width={600} height={400} sizes="(max-width: 768px) 100vw, 33vw" />
-              <h3>{p.title}</h3>
-              <p>{p.cat}</p>
-              {p.href ? (
-                <a href={p.href} target="_blank" rel="noopener noreferrer" className="view-link" aria-label={`Kunjungi link: ${p.title}`}>
-                  {p.id === 'wihamedia' ? (language === 'en' ? 'View Web' : 'Lihat Web') : (language === 'en' ? 'View Instagram' : 'View Instagram')} <i className='bx bx-link-external'></i>
-                </a>
-              ) : (
-                <Link href={`/galeri/${p.id}`} className="view-link" aria-label={`Lihat detail proyek: ${p.title}`}>
-                  {language === 'en' ? 'View Project' : 'Lihat Proyek'} <i className='bx bx-right-arrow-alt'></i>
-                </Link>
-              )}
+            <div id={`project-${p.id}`} className="project-card" key={i}>
+              <div className="project-img-wrapper">
+                <Image src={p.img} alt={p.title} width={600} height={400} sizes="(max-width: 768px) 100vw, 33vw" />
+                <div className="bottom-bar-accent"></div>
+              </div>
+              <div className="project-content">
+                <h3>{p.title}</h3>
+                <div className="project-footer">
+                  <span className="author">{p.cat}</span>
+                  {p.href ? (
+                    <a href={p.href} target="_blank" rel="noopener noreferrer" className="view-link" aria-label={`Kunjungi link: ${p.title}`}>
+                      {p.id === 'wihamedia' ? (language === 'en' ? 'View Web' : 'Lihat Web') : (language === 'en' ? 'View IG' : 'Lihat IG')} <i className='bx bx-right-arrow-alt'></i>
+                    </a>
+                  ) : (
+                    <Link href={`/galeri/${p.id}`} className="view-link" aria-label={`Lihat detail proyek: ${p.title}`}>
+                      {language === 'en' ? 'View' : 'Lihat'} <i className='bx bx-right-arrow-alt'></i>
+                    </Link>
+                  )}
+                </div>
+              </div>
             </div>
           ))}
         </div>
