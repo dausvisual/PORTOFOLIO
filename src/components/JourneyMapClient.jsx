@@ -5,7 +5,12 @@ import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import * as toGeoJSON from '@tmcw/togeojson';
 import L from 'leaflet';
+import { GestureHandling } from 'leaflet-gesture-handling';
+import 'leaflet-gesture-handling/dist/leaflet-gesture-handling.css';
 import { useLanguage } from '../context/LanguageContext';
+
+// Initialize Gesture Handling plugin
+L.Map.addInitHook('addHandler', 'gestureHandling', GestureHandling);
 
 // Fix Leaflet icon issue
 delete L.Icon.Default.prototype._getIconUrl;
@@ -101,8 +106,16 @@ export default function JourneyMapClient() {
           zoom={defaultZoom} 
           className="my-leaflet-map"
           style={{ width: '100%', zIndex: 1 }}
-          scrollWheelZoom={true}
+          scrollWheelZoom={false}
           dragging={true}
+          gestureHandling={true}
+          gestureHandlingOptions={{
+            text: {
+              touch: language === 'en' ? "Use two fingers to move the map" : "Gunakan dua jari untuk menggeser peta",
+              scroll: language === 'en' ? "Use ctrl + scroll to zoom the map" : "Gunakan ctrl + scroll untuk memperbesar peta",
+              scrollMac: language === 'en' ? "Use \u2318 + scroll to zoom the map" : "Gunakan \u2318 + scroll untuk memperbesar peta"
+            }
+          }}
         >
           <MapResizer />
           
