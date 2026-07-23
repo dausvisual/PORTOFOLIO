@@ -108,24 +108,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <link rel="preconnect" href="https://unpkg.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://unpkg.com" />
-        {/* Preload hero background image for faster LCP */}
-        <link
-          rel="preload"
-          href="/images/bg/city.webp"
-          as="image"
-          type="image/webp"
-        />
-        {/* Preload hero profile image for faster LCP */}
-        <link
-          rel="preload"
-          href="/images/profile/profile-v2.webp"
-          as="image"
-          type="image/webp"
-        />
-        {/* Boxicons CSS — loaded with low priority to avoid render-blocking */}
+        {/* Boxicons CSS — loaded asynchronously to avoid render-blocking */}
+        {/* Boxicons CSS — loaded asynchronously to avoid render-blocking */}
         <link
           rel="stylesheet"
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+          media="print"
+          id="boxicons-css"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.getElementById('boxicons-css').media='all';"
+          }}
         />
       </head>
       <body>

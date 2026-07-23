@@ -4,6 +4,17 @@ import { HeroText, HeroFloatingCards } from './HeroClient';
 export default function Hero() {
   return (
     <section className="hero-k3" id="home">
+      {/* Background LCP Image */}
+      <Image 
+        src="/images/bg/city.webp" 
+        alt="Background City" 
+        fill 
+        priority 
+        style={{ objectFit: 'cover', zIndex: -2 }}
+      />
+      {/* Overlay Gradient pengganti CSS background-image */}
+      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(rgba(2, 6, 23, 0.75), rgba(2, 6, 23, 0.85))', zIndex: -1 }}></div>
+      
       <div className="hero-bg-glow"></div>
       {/* Latar Belakang Garis Kontur Topografi */}
       <div className="topography-bg">
