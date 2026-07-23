@@ -234,12 +234,30 @@ function VerifyBNSP({ data }) {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', alignItems: 'center' }}>
           <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
             <span style={{ color: '#6b7280', fontSize: '0.9rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>Halaman Depan</span>
-            <img src="/images/certificate/Sertifikat SKK FIRDAUS IKRAM_1.webp" alt="Sertifikat Halaman 1" style={{ width: '100%', maxWidth: '700px', height: 'auto', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' }} />
+            <div style={{ position: 'relative', width: '100%', maxWidth: '700px', borderRadius: '8px', border: '1px solid #e5e7eb', overflow: 'hidden', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)', userSelect: 'none' }} onContextMenu={(e) => e.preventDefault()}>
+              <img src="/images/certificate/Sertifikat SKK FIRDAUS IKRAM_1.webp" alt="Sertifikat Halaman 1" style={{ width: '100%', height: 'auto', display: 'block', WebkitUserDrag: 'none', pointerEvents: 'none' }} />
+              <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '60%', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', background: 'linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.9) 60%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ background: '#fff', padding: '1.2rem 1.5rem', borderRadius: '8px', border: '1px solid #e5e7eb', boxShadow: '0 4px 20px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', transform: 'translateY(15px)' }}>
+                  <i className='bx bxs-lock-alt' style={{ fontSize: '2.5rem', color: '#16a34a' }}></i>
+                  <span style={{ color: '#111827', fontWeight: 700, fontSize: '1.1rem' }}>Dokumen Terkunci</span>
+                  <span style={{ color: '#6b7280', fontSize: '0.85rem', textAlign: 'center', maxWidth: '250px', lineHeight: '1.4' }}>Menampilkan sebagian dokumen untuk mencegah penyalahgunaan.</span>
+                </div>
+              </div>
+            </div>
           </div>
           
           <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
             <span style={{ color: '#6b7280', fontSize: '0.9rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>Halaman Belakang</span>
-            <img src="/images/certificate/Sertifikat SKK FIRDAUS IKRAM_2.webp" alt="Sertifikat Halaman 2" style={{ width: '100%', maxWidth: '700px', height: 'auto', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' }} />
+            <div style={{ position: 'relative', width: '100%', maxWidth: '700px', borderRadius: '8px', border: '1px solid #e5e7eb', overflow: 'hidden', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)', userSelect: 'none' }} onContextMenu={(e) => e.preventDefault()}>
+              <img src="/images/certificate/Sertifikat SKK FIRDAUS IKRAM_2.webp" alt="Sertifikat Halaman 2" style={{ width: '100%', height: 'auto', display: 'block', WebkitUserDrag: 'none', pointerEvents: 'none' }} />
+              <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '70%', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', background: 'linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.9) 60%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ background: '#fff', padding: '1.2rem 1.5rem', borderRadius: '8px', border: '1px solid #e5e7eb', boxShadow: '0 4px 20px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                  <i className='bx bxs-lock-alt' style={{ fontSize: '2.5rem', color: '#16a34a' }}></i>
+                  <span style={{ color: '#111827', fontWeight: 700, fontSize: '1.1rem' }}>Dokumen Terkunci</span>
+                  <span style={{ color: '#6b7280', fontSize: '0.85rem', textAlign: 'center', maxWidth: '250px', lineHeight: '1.4' }}>Informasi disembunyikan untuk melindungi privasi data.</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

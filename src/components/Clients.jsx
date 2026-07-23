@@ -1,4 +1,5 @@
 'use client';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -97,6 +98,106 @@ export default function Clients() {
     }
   ];
 
+  const scrollRef = useRef(null);
+  const [scrollX, setScrollX] = useState(0);
+  const [containerWidth, setContainerWidth] = useState(0);
+  const [itemWidth, setItemWidth] = useState(350);
+  const [itemGap, setItemGap] = useState(32);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    
+    const handleScroll = () => {
+      if (el) {
+        setScrollX(el.scrollLeft);
+        
+        // Infinite scroll logic
+        const totalOriginal = testimonials.length;
+        if (el.children.length > 0) {
+          const itemW = el.children[0].offsetWidth;
+          const gapStr = window.getComputedStyle(el).gap;
+          const gap = gapStr !== 'normal' ? parseFloat(gapStr) : 32;
+          const setWidth = totalOriginal * (itemW + gap);
+          
+          // Teleport back to middle set silently when reaching edges
+          if (el.scrollLeft <= 1) {
+            el.scrollLeft = setWidth;
+          } else if (el.scrollLeft >= setWidth * 2 - 1) {
+            el.scrollLeft = el.scrollLeft - setWidth;
+          }
+        }
+      }
+    };
+    
+    const updateDimensions = () => {
+      if (el) {
+        setContainerWidth(el.offsetWidth);
+        if (el.children.length > 0) {
+          const child = el.children[0];
+          setItemWidth(child.offsetWidth);
+          // Get gap from computed style
+          let currentGap = 32;
+          const gapStr = window.getComputedStyle(el).gap;
+          if (gapStr && gapStr !== 'normal') {
+            currentGap = parseFloat(gapStr);
+            setItemGap(currentGap);
+          }
+          
+          // Initialize scroll position to the middle set
+          if (!el.dataset.initialized) {
+            const setWidth = testimonials.length * (child.offsetWidth + currentGap);
+            el.scrollLeft = setWidth;
+            el.dataset.initialized = "true";
+          }
+        }
+      }
+    };
+
+    if (el) {
+      el.addEventListener('scroll', handleScroll, { passive: true });
+      updateDimensions();
+      window.addEventListener('resize', updateDimensions);
+      
+      // Request animation frame for initial render positioning
+      requestAnimationFrame(() => {
+        handleScroll();
+        if (el.dataset.initialized !== "true") {
+           updateDimensions();
+        }
+      });
+      
+      return () => {
+        el.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('resize', updateDimensions);
+      };
+    }
+  }, [testimonials.length]);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
   return (
     <section id="clients" className="projects-section-k3">
       <h2 className="section-title-new" data-aos="fade-up">
@@ -113,7 +214,7 @@ export default function Clients() {
           {clients.map((client, index) => (
             <div className="client-card" key={index} data-aos="zoom-in" data-aos-delay={(index % 4) * 50}>
               {client.url ? (
-                <a href={client.url} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', color: 'inherit', width: '100%', height: '100%' }}>
+                <a href={client.url} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', textDecoration: 'none', color: 'inherit', width: '100%', height: '100%' }}>
                   <Image src={client.img} alt={client.name} width={150} height={150} />
                   <p>{client.name}</p>
                 </a>
@@ -139,29 +240,71 @@ export default function Clients() {
           {language === 'en' ? 'What they say about our services' : 'Apa yang mereka katakan tentang layanan kami'}
         </p>
 
-        <div className="testimonials-grid" data-aos="fade-up" data-aos-delay="200">
-          {testimonials.map((testi, i) => (
-            <div className="testimonial-card" key={i}>
-              <div className="testi-header">
-                <div className="testi-avatar">
-                  <i className='bx bxs-quote-alt-left'></i>
+        <div 
+          className="testimonials-grid" 
+          data-aos="fade-up" 
+          data-aos-delay="200"
+          ref={scrollRef}
+          onMouseDown={handleMouseDown}
+          onMouseLeave={handleMouseLeave}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          style={{ 
+            cursor: isDragging ? 'grabbing' : 'grab',
+            paddingTop: '60px',
+            paddingBottom: '60px'
+          }}
+        >
+          {[...testimonials, ...testimonials, ...testimonials].map((testi, i) => {
+            const cardCenter = (i * (itemWidth + itemGap)) + (itemWidth / 2);
+            const viewCenter = scrollX + (containerWidth / 2);
+            const distanceFromCenter = cardCenter - viewCenter;
+            
+            let normalizedDist = 0;
+            if (containerWidth > 0) {
+              normalizedDist = distanceFromCenter / (containerWidth * 0.7);
+            }
+            
+            // Limit normalized distance so the curve doesn't go off screen
+            const limitedDist = Math.max(-1.5, Math.min(1.5, normalizedDist));
+            
+            // Parabola: cards in center (0) have 0 translateY. Cards at edges have higher translateY.
+            const maxShift = 80; 
+            const translateY = Math.pow(limitedDist, 2) * maxShift;
+            
+            // Rotate slightly for coverflow effect
+            const rotateZ = limitedDist * 8; // -8deg to +8deg
+            
+            return (
+              <div 
+                className="testimonial-card" 
+                key={i}
+                style={{
+                  transform: `translateY(${translateY}px) rotateZ(${rotateZ}deg) scale(${1 - Math.abs(limitedDist) * 0.1})`,
+                  transition: isDragging ? 'none' : 'transform 0.1s ease-out'
+                }}
+              >
+                <div className="testi-header">
+                  <div className="testi-avatar">
+                    <i className='bx bxs-quote-alt-left'></i>
+                  </div>
+                  <div className="testi-info">
+                    <h4>{testi.name}</h4>
+                  </div>
                 </div>
-                <div className="testi-info">
-                  <h4>{testi.name}</h4>
+                <p className="testi-text">
+                  "{language === 'en' ? testi.textEn : testi.textId}"
+                </p>
+                <div className="testi-rating">
+                  <i className='bx bxs-star'></i>
+                  <i className='bx bxs-star'></i>
+                  <i className='bx bxs-star'></i>
+                  <i className='bx bxs-star'></i>
+                  <i className='bx bxs-star'></i>
                 </div>
               </div>
-              <p className="testi-text">
-                "{language === 'en' ? testi.textEn : testi.textId}"
-              </p>
-              <div className="testi-rating">
-                <i className='bx bxs-star'></i>
-                <i className='bx bxs-star'></i>
-                <i className='bx bxs-star'></i>
-                <i className='bx bxs-star'></i>
-                <i className='bx bxs-star'></i>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

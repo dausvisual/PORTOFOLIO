@@ -172,7 +172,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {/* Vercel Analytics */}
           <Analytics />
 
-            <Script src="/js/particles.min.js" strategy="beforeInteractive" />
+            <Script src="/js/particles.min.js" strategy="lazyOnload" />
             <Script src="/js/particles-config.js" strategy="lazyOnload" />
           </LanguageProvider>
         </LenisProvider>
