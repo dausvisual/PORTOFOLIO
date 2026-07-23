@@ -251,8 +251,10 @@ export default function Clients() {
           onMouseMove={handleMouseMove}
           style={{ 
             cursor: isDragging ? 'grabbing' : 'grab',
-            paddingTop: '60px',
-            paddingBottom: '60px'
+            paddingTop: '100px',
+            paddingBottom: '20px',
+            marginBottom: '-60px',
+            overflowY: 'hidden'
           }}
         >
           {[...testimonials, ...testimonials, ...testimonials].map((testi, i) => {
@@ -268,9 +270,9 @@ export default function Clients() {
             // Limit normalized distance so the curve doesn't go off screen
             const limitedDist = Math.max(-1.5, Math.min(1.5, normalizedDist));
             
-            // Parabola: cards in center (0) have 0 translateY. Cards at edges have higher translateY.
+            // Center cards shift UP (negative translateY), edge cards stay at 0 or shift down slightly.
             const maxShift = 80; 
-            const translateY = Math.pow(limitedDist, 2) * maxShift;
+            const translateY = - (1 - Math.pow(limitedDist, 2)) * maxShift;
             
             // Rotate slightly for coverflow effect
             const rotateZ = limitedDist * 8; // -8deg to +8deg

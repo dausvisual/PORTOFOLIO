@@ -19,8 +19,16 @@ export default function About() {
         <p className="about-desc" dangerouslySetInnerHTML={{ __html: language === 'en' ? 'I am a professional in the fields of <strong>GIS</strong>, <strong>Urban and Regional Planning</strong>, <strong>Surveying</strong>, <strong>Drone Mapping</strong>, and <strong>Environmental Analysis</strong> focused on providing data-driven geospatial solutions.' : 'Saya adalah profesional di bidang <strong>GIS</strong>, <strong>Perencanaan Wilayah dan Kota</strong>, <strong>Survei</strong>, <strong>Drone Mapping</strong>, dan <strong>Analisis Lingkungan</strong> yang berfokus pada penyediaan solusi geospasial berbasis data.' }}></p>
         <p className="about-desc" dangerouslySetInnerHTML={{ __html: language === 'en' ? 'By integrating modern mapping technologies and spatial analysis, I help governments, companies, and various organizations generate accurate information as a foundation for effective and sustainable decision-making.' : 'Dengan mengintegrasikan teknologi pemetaan modern dan analisis spasial, saya membantu pemerintah, perusahaan, dan berbagai organisasi menghasilkan informasi yang akurat sebagai dasar pengambilan keputusan yang efektif dan berkelanjutan.' }}></p>
         <div className="skills-image-container">
+          <div style={{ textAlign: 'center', marginBottom: '1.2rem', width: '100%' }}>
+            <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: '#ffffff', letterSpacing: '1px', marginBottom: '0.2rem' }}>SOFTWARE <span style={{ color: '#00e5ff' }}>SKILLS</span></h3>
+            <p style={{ fontSize: '0.85rem', color: '#94a3b8', fontWeight: '600', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '0.6rem' }}>
+              {language === 'en' ? 'TOOLS I MASTER' : 'TOOLS YANG SAYA KUASAI'}
+            </p>
+            <div style={{ width: '100%', maxWidth: '300px', height: '1px', background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)', margin: '0 auto' }}></div>
+            <div style={{ width: '40px', height: '3px', background: '#00e5ff', margin: '-2px auto 0', borderRadius: '2px' }}></div>
+          </div>
           <Image
-            src="/images/software-skills.webp"
+            src="/images/software-skills-transparent.webp"
             alt="Software Skills"
             width={1200}
             height={300}
