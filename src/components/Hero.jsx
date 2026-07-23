@@ -7,7 +7,6 @@ export default function Hero() {
   return (
     <section className="hero-k3" id="home">
       <div className="hero-bg-glow"></div>
-      <div id="particles-js" className="particles-k3"></div>
       {/* Latar Belakang Garis Kontur Topografi */}
       <div className="topography-bg">
         <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -42,6 +41,7 @@ export default function Hero() {
               height={300}
               sizes="(max-width: 768px) 150px, 300px"
               priority
+              fetchPriority="high"
             />
 
             {/* Floating Cards */}
