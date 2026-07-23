@@ -4,6 +4,7 @@ import Script from 'next/script';
 import type { ReactNode } from 'react';
 import { LanguageProvider } from '../context/LanguageContext';
 import LenisProvider from '../components/LenisProvider';
+import BoxiconsStyle from '../components/BoxiconsStyle';
 
 // 1. Impor font langsung dari Next.js (optimal, no render-blocking)
 import { Poppins } from 'next/font/google';
@@ -109,18 +110,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="preconnect" href="https://unpkg.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://unpkg.com" />
         {/* Boxicons CSS — loaded asynchronously to avoid render-blocking */}
-        {/* Boxicons CSS — loaded asynchronously to avoid render-blocking */}
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-          media="print"
-          id="boxicons-css"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: "document.getElementById('boxicons-css').media='all';"
-          }}
-        />
+        <BoxiconsStyle />
       </head>
       <body>
         <LenisProvider>
