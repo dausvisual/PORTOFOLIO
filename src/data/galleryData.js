@@ -87,7 +87,7 @@ export const galleryData = {
     title: "PT. Sinergi Citra Karya",
     desc: "Proyek pengembangan website.",
     periode: "2025", lokasi: "Berbagai Lokasi", peran: "Web Developer", perusahaan: "PT. Sinergi Citra Karya",
-    images: ["/images/projects/webdev/afatombukupratama.jpg", "/images/projects/webdev/dausvisual.png", "/images/projects/webdev/zonasvara-logo.png"],
+    images: ["/images/projects/webdev/afatombukupratama.jpg", "/images/projects/webdev/dausvisual.png", "/images/projects/webdev/zonasvara-logo.png", "/images/projects/webdev/1.webp"],
     links: ["https://afatombukupratama.com", "https://dausvisual.site", "https://zonasvara.space"],
   },
   ortho: {
