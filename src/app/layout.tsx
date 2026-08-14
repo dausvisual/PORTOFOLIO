@@ -132,7 +132,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 "url": "https://firdausikram.com",
                 "image": "https://firdausikram.com/logo/logo-fi.webp",
                 "sameAs": [
-                  "https://www.linkedin.com/in/firdaus-ikram-86405b2a6",
+                  "https://www.linkedin.com/in/firdaus-ikram-s-pwk-86405b2a6?utm_source=share_via&utm_content=profile&utm_medium=member_android",
                   "https://www.instagram.com/firdausikram_17",
                   "https://dausvisual.site",
                   "https://scholar.google.co.id/citations?user=Kxneo9AAAAAJ&hl=id",
