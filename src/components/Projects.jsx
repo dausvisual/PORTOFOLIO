@@ -61,6 +61,7 @@ export default function Projects() {
     { id: 'bma', title: 'PT. Bumi Morowali Abadi', cat: language === 'en' ? 'Mapping Survey' : 'Survey Pemetaan', img: '/images/projects/bma/bma1.webp' },
     { id: 'khubsurat', title: 'PT. Khubsurat Meherban Ilahi', cat: language === 'en' ? 'Water, Air, and Noise Sampling Survey' : 'Survey Pengambilan Sampel Air, Udara dan Kebisingan', img: '/images/projects/khubsurat/kmh1.webp' },
         { id: 'dlhd', title: 'DLHD Morowali', cat: language === 'en' ? 'Environmental Sampling Survey' : 'Survey Pengambilan Sampel Lingkungan', img: '/images/projects/dlhd/dlhd1.webp' },
+    { id: 'webdev', title: 'Web Developer', cat: language === 'en' ? 'Web Development' : 'Web Developer', img: '/images/projects/webdev/afatombukupratama.jpg' },
 { id: 'ortho', title: 'Mapping & Orthopotho', cat: language === 'en' ? 'Mapping & Orthophoto' : 'Pemetaan & Orthophoto', img: '/images/projects/ortho/ortho1.webp' },
     { id: 'benuanta', title: 'Benuanta Grup', cat: language === 'en' ? 'RDTR Survey & Mapping' : 'Survey & Pemetaan RDTR', img: '/images/projects/benuanta/benuanta1.webp' },
     { id: 'pandit', title: 'PT. Pandit Eka Nusa Agrata', cat: language === 'en' ? 'Traffic Impact Analysis Survey' : 'Survey Andalalin', img: '/images/projects/pandit/pandit1.webp' },

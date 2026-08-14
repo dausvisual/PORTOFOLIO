@@ -83,6 +83,13 @@ export const galleryData = {
     periode: "2026", lokasi: "Kabupaten Morowali, Provinsi Sulawesi Tengah", peran: "Ketua Tim", perusahaan: "PT. Laboratorindo Alam Bestari",
     images: ["/images/projects/dlhd/dlhd1.webp", "/images/projects/dlhd/dlhd2.webp", "/images/projects/dlhd/dlhd3.webp", "/images/projects/dlhd/dlhd4.webp", "/images/projects/dlhd/dlhd5.webp", "/images/projects/dlhd/dlhd6.webp", "/images/projects/dlhd/dlhd7.webp", "/images/projects/dlhd/dlhd8.webp", "/images/projects/dlhd/dlhd9.webp", "/images/projects/dlhd/dlhd10.webp", "/images/projects/dlhd/dlhd11.webp", "/images/projects/dlhd/dlhd12.webp", "/images/projects/dlhd/dlhd13.webp", "/images/projects/dlhd/dlhd14.webp", "/images/projects/dlhd/dlhd15.webp"],
   },
+  webdev: {
+    title: "Web Developer",
+    desc: "Proyek pengembangan website (https://afatombukupratama.com, https://dausvisual.site, https://zonasvara.space).",
+    periode: "2024 - Sekarang", lokasi: "Berbagai Lokasi", peran: "Web Developer", perusahaan: "Daus Visual",
+    images: ["/images/projects/webdev/afatombukupratama.jpg", "/images/projects/webdev/dausvisual.png", "/images/projects/webdev/zonasvara-logo.png"],
+    links: ["https://afatombukupratama.com", "https://dausvisual.site", "https://zonasvara.space"],
+  },
   ortho: {
     title: "Mapping & Orthopotho",
     desc: "Pemetaan dan pembuatan peta Orthophoto (Orthophoto Mapping).",

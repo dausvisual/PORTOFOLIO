@@ -60,14 +60,21 @@ export default function GalleryContent({ proyekId, currentGallery }) {
           </div>
 
           <div className="gallery-grid">
-            {currentGallery.images.map((src, index) => (
-              <div className="gallery-card" key={index} onClick={() => setActiveImg(src)}>
-                <Image src={src} alt={`${currentGallery.title} ${index + 1}`} width={600} height={600} sizes="(max-width: 768px) 100vw, 20vw" />
-                <div className="gallery-card-overlay">
-                  <i className='bx bx-zoom-in'></i>
+            {currentGallery.images.map((src, index) => {
+              const linkUrl = currentGallery.links ? currentGallery.links[index] : null;
+              return (
+                <div 
+                  className="gallery-card" 
+                  key={index} 
+                  onClick={() => linkUrl ? window.open(linkUrl, '_blank', 'noopener,noreferrer') : setActiveImg(src)}
+                >
+                  <Image src={src} alt={`${currentGallery.title} ${index + 1}`} width={600} height={600} sizes="(max-width: 768px) 100vw, 20vw" />
+                  <div className="gallery-card-overlay">
+                    <i className={linkUrl ? 'bx bx-link-external' : 'bx bx-zoom-in'}></i>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="gallery-pagination">
